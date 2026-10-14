@@ -16,6 +16,15 @@ const CollegeDisplay = (() => {
   return programs.length?`<p class="program-note">本科优势 / 代表专业：依据所列本科排名或项目特色，不是热门程度；保留来源原年份。</p><ul class="program-list">${programs.map(p=>`<li><strong>${esc(p.name_cn||p.name_en||'未命名专业')}</strong>${p.name_en?`<p>${esc(p.name_en)}</p>`:''}<p>${esc(p.evidence_category||'依据类型未标明')}</p><p>${esc(p.reason||'具体依据待核实')}</p><p>${sources(p.sources)||'来源待核实'}</p></li>`).join('')}</ul>`:'<p>本科优势 / 代表专业：暂无已核实数据</p>';
  }
  function policyHTML(row){return `<strong>${esc(policy(row.test_policy))}</strong><p>申请周期：${esc(row.test_policy_cycle||'未核实')}</p>`}
- function costText(row){return `${money(row.coa)} · 学年：${row.coa_year||'未核实'}`}
- return {esc,money,policy,aid,aidHTML,programsHTML,policyHTML,costText};
+ function cost(row){
+  // Prefer a verified API COA if one is later available; preserve the original row.
+  const complete=typeof row.coa==='number'&&Number.isFinite(row.coa)&&row.coa>0;
+  const ref=CollegeReferenceBudgets[row.school_id];
+  return complete?{amount:row.coa,year:row.coa_year,reference:null}:{amount:ref?.amount_usd??null,year:ref?.year,reference:ref};
+ }
+ function costText(row){const c=cost(row);return `${money(c.amount)} · 学年：${c.year||'未核实'}`}
+ function costHTML(row){const c=cost(row);return `<strong>${esc(money(c.amount))}</strong><small class="cost-note">${c.reference?esc(c.reference.note_cn):'国际生额外费用未核验，实际年度支出可能更高。'}</small><small class="cost-note">学年：${esc(c.year||'未核实')}${c.amount==null?'':` · 约${esc((c.amount*7/10000).toFixed(2))}万元人民币（1 USD≈7 CNY，非实时）`}</small>${c.reference?`<small class="cost-note">${esc(c.reference.scope_cn)}；${esc(c.reference.basis_cn)}<br>${sources(c.reference.sources)}</small>`:''}`}
+ function costBand(row){const n=cost(row).amount;if(n==null)return null;const cny=n*7;return cny<200000?'low':cny<350000?'mid':cny<500000?'high':'top'}
+
+ return {esc,money,policy,aid,aidHTML,programsHTML,policyHTML,costText,cost,costHTML,costBand};
 })();
