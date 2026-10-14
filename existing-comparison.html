@@ -321,7 +321,7 @@ h1{
 .metric-sub{display:block;font-size:12px;font-weight:400;color:#777;margin-top:5px}.currency-note{font-size:12px;color:#777;padding:0 16px}
 @media(max-width:480px){.profile-grid{gap:14px}.profile-name{font-size:15px}.profile-stats{display:grid;gap:8px}.profile-stat strong{font-size:16px}}
 .status:empty,.error:empty{display:none}.currency-note{margin:12px 0}
-</style>
+.rich-cell{display:block;min-width:0;overflow-wrap:anywhere}.rich-cell p{margin:6px 0;font-size:13px}.rich-cell a{color:#245a49}.program-list{padding-left:18px;margin:12px 0}.program-list li{margin:14px 0}.program-note{font-size:12px}</style>
 </head>
 <body>
 <main>
@@ -373,7 +373,7 @@ h1{
 </div>
 
 
-<script src="api.js"></script><script>
+<script src="api.js?v=20261014-five"></script><script src="aid-notes.js?v=20261014-five"></script><script src="display.js?v=20261014-five"></script><script>
 
 
 let schools = {};
@@ -430,7 +430,7 @@ function normalize(r){
     graduation:percent(r.graduation_rate_4yr),
     sat:scoreRange(r.sat_25,r.sat_75),
     act:scoreRange(r.act_25,r.act_75),
-    testPolicy:({required:"必须提交 SAT / ACT",test_optional:"可选择提交 SAT / ACT",test_free:"不考虑 SAT / ACT"})[r.test_policy] || "",
+    testPolicy:CollegeDisplay.policy(r.test_policy),
     testCycle:r.test_policy_cycle || "",
     englishPolicy:({required:"要求英语能力证明",conditional:"视条件要求，可符合豁免条件",not_required:"不要求英语能力证明"})[r.english_proficiency_policy] || "",
     englishTests:list(r.english_tests_accepted),
@@ -505,6 +505,7 @@ function secondaryMetric(title,a,b,aSub="",bSub=""){
 }
 function rankingText(s){ return s.rank!=null && s.rankCategory ? `U.S. News · ${s.rankCategory} #${s.rank}` : ""; }
 function englishText(s){ return [s.englishPolicy,s.englishTests.length?`接受：${s.englishTests.join(" / ")}`:""].filter(Boolean).join("；"); }
+function richMetric(title,a,b){return `<section class="metric"><h3 class="metric-title">${esc(title)}</h3><div class="metric-cols"><div class="metric-cell rich-cell">${a}</div><div class="metric-cell rich-cell">${b}</div></div></section>`}
 function comparisonDetail(a,b){
   const aHead=a.shortName||a.nameEn||a.name, bHead=b.shortName||b.nameEn||b.name;
   return `<div class="compare-detail">
@@ -516,18 +517,18 @@ function comparisonDetail(a,b){
     ${secondaryMetric("大学排名（U.S. News）",rankingText(a),rankingText(b))}
     ${secondaryMetric("本科生规模",enrollmentText(a),enrollmentText(b))}
     ${secondaryMetric("国际生比例",a.internationalPct,b.internationalPct)}
-    ${metric("优势专业",a.signaturePrograms,b.signaturePrograms)}
+    ${richMetric("本科优势 / 代表专业",CollegeDisplay.programsHTML(a.years),CollegeDisplay.programsHTML(b.years))}
     ${secondaryMetric("录取率",a.acceptance,b.acceptance)}
-    ${secondaryMetric("标化政策",a.testPolicy,b.testPolicy)}
+    ${secondaryMetric("标化政策",a.testPolicy,b.testPolicy,"申请周期："+(a.testCycle||"未核实"),"申请周期："+(b.testCycle||"未核实"))}
     ${secondaryMetric("SAT（25–75百分位）",a.sat,b.sat)}
     ${secondaryMetric("ACT（25–75百分位）",a.act,b.act)}
     ${secondaryMetric("未加权 GPA（25–75百分位）",a.gpa,b.gpa,a.gpaContext,b.gpaContext)}
     ${secondaryMetric("英语要求",englishText(a),englishText(b))}
     ${secondaryMetric("学杂费",moneyRmbWan(a.tuition),moneyRmbWan(b.tuition))}
-    ${secondaryMetric("总费用",moneyRmbWan(a.coa),moneyRmbWan(b.coa))}
+    ${secondaryMetric("年度总费用（美元）",CollegeDisplay.money(a.coa),CollegeDisplay.money(b.coa),"学年："+(a.coaYear||"未核实")+(a.coa==null?"":" · 约"+moneyRmbWan(a.coa)),"学年："+(b.coaYear||"未核实")+(b.coa==null?"":" · 约"+moneyRmbWan(b.coa)))}
     <p class="currency-note">COA：国际生额外费用未核验。</p>
-    ${metric("国际生助学金",a.needAid,b.needAid)}
-    ${metric("国际生奖学金",a.meritAid,b.meritAid)}
+    ${richMetric("国际本科生助学金（Need-based）",CollegeDisplay.aidHTML(a.years,"international_need_aid"),CollegeDisplay.aidHTML(b.years,"international_need_aid"))}
+    ${richMetric("国际本科生奖学金（Merit）",CollegeDisplay.aidHTML(a.years,"international_merit_aid"),CollegeDisplay.aidHTML(b.years,"international_merit_aid"))}
     ${secondaryMetric("四年毕业率",a.graduation,b.graduation)}
   </div>`;
 }
