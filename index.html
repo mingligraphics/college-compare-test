@@ -44,7 +44,16 @@ dialog.about-page{position:fixed;inset:0;margin:0;width:100%;max-width:none;heig
 .consult-prompt{grid-column:1/-1;padding:22px 24px;border:1px solid #d6e0d5;border-radius:12px;background:#eef3ec}.consult-prompt h3{margin:0 0 6px;font-size:18px}.consult-link{display:inline-block;color:var(--green);min-height:44px;padding:10px 0;font-weight:600}.empty .consult-link{display:block}.empty{padding:32px 20px}
 #trayConsult{color:var(--green);font-size:12px;text-align:center;text-decoration:underline;min-height:32px;align-content:center}#trayConsult[hidden]{display:none}.trayinner{flex-wrap:wrap;justify-content:center}.tray #trayConsult{flex-basis:100%;order:3}.tray{background:#fffffff5;border:1px solid var(--line);border-radius:20px;padding:8px 12px;box-shadow:0 4px 18px #18342f15}.tray .primary,.tray #clearComparison{box-shadow:none}body.has-selection main{padding-bottom:calc(170px + env(safe-area-inset-bottom))}
 .about-page #close:focus:not(:focus-visible){outline:none}.service-flow{line-height:2}.about-consult{scroll-margin-top:20px}.qr-instruction{font-weight:600;color:var(--green)}
-.school .stat.admission strong{color:var(--green);font-size:18px}</style><header><nav><div class="brand">College Compare</div><div class="navlinks"><button class="active" id="exploreNav">探索大学</button><button id="compareNav">比较大学</button><a id="aboutNav" href="?view=about">免费选校咨询</a><span class="tag">独立测试版</span></div></nav></header><main><section class="hero"><div><h1>美国大学选校指南</h1><p id="catalogTotal" hidden>正在获取美国高校目录…</p></div></section><div class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="搜索大学" placeholder="搜索大学或代表专业"></div><div class="filters primary-filters">
+.school .stat.admission strong{color:var(--green);font-size:18px}/* Restore e89ef40's simple right-side menu, anchored to the desktop trigger. */
+@media(min-width:561px){
+ .filter-shade{background:transparent}
+ .primary-filters .filter-menu .filter-panel{left:var(--filter-left,16px);right:auto;top:var(--filter-top,100px);width:280px;max-width:calc(100vw - 24px);max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);border-radius:12px;padding:8px;box-shadow:0 8px 28px #17222f24}
+ .filter-heading{padding:0 4px 4px}
+ .filter-options{border-radius:8px}
+ .filter-options button{min-height:44px;padding:9px 12px}
+ .filter-menu summary:after{content:'›'}
+}
+</style><header><nav><div class="brand">College Compare</div><div class="navlinks"><button class="active" id="exploreNav">探索大学</button><button id="compareNav">比较大学</button><a id="aboutNav" href="?view=about">免费选校咨询</a><span class="tag">独立测试版</span></div></nav></header><main><section class="hero"><div><h1>美国大学选校指南</h1><p id="catalogTotal" hidden>正在获取美国高校目录…</p></div></section><div class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="搜索大学" placeholder="搜索大学或代表专业"></div><div class="filters primary-filters">
 <details class="filter-menu"><summary>地区 <span id="regionSummary">全部</span></summary><button class="filter-shade" aria-label="关闭筛选菜单" type="button"></button><div class="filter-panel"><div class="filter-heading"><strong>地区</strong><button class="filter-close" type="button" aria-label="关闭筛选菜单">关闭 ×</button></div><select id="region" hidden aria-label="地区"><option value="">全部</option></select><p class="note">大区</p><div class="filter-options" data-options="region" aria-label="大区"></div><label for="state">州 / 特区</label><select id="state" aria-label="州 / 特区"><option value="">全部州 / 特区</option></select></div></details>
 <details class="filter-menu"><summary>预算 <span id="tuitionSummary">全部</span></summary><button class="filter-shade" aria-label="关闭筛选菜单" type="button"></button><div class="filter-panel"><div class="filter-heading"><strong>预算</strong><button class="filter-close" type="button" aria-label="关闭筛选菜单">关闭 ×</button></div><label>按年度总预算筛选（人民币）<select id="tuition" hidden><option value="">全部年度预算</option><option value="low">30万元以下</option><option value="mid">30万–50万元</option><option value="high">50万–65万元</option><option value="top">65万元及以上</option></select></label><div class="filter-options" data-options="tuition" aria-label="年度总预算"></div><p class="note">含生活费等年度预算，并非仅学费。</p></div></details>
 <details class="filter-menu"><summary>专业 <span id="programSummary">全部</span></summary><button class="filter-shade" aria-label="关闭筛选菜单" type="button"></button><div class="filter-panel"><div class="filter-heading"><strong>专业</strong><button class="filter-close" type="button" aria-label="关闭筛选菜单">关闭 ×</button></div><select id="programCategory" hidden disabled aria-label="本科优势专业大类"><option value="">正在载入…</option></select><select id="program" hidden disabled><option value="">全部已录入优势专业</option></select><div class="filter-options program-options" data-options="programCategory" aria-label="本科优势专业大类"></div><p class="note" id="programCoverage" role="status">正在载入优势专业索引…</p></div></details></div>
@@ -96,7 +105,23 @@ document.addEventListener('click',event=>{if(event.target.closest('.filter-shade
 document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelectorAll('.filter-menu[open]').forEach(menu=>{menu.open=false;menu.querySelector('summary').focus()})});
 function updateFilterSummary(){renderFilterOptions();for(const [id,target] of [['region','regionSummary'],['tuition','tuitionSummary'],['programCategory','programSummary']]){$(target).textContent=id==='region'&&$('state').value?$('state').selectedOptions[0].textContent:$(id).value?$(id).selectedOptions[0].textContent:'全部'}}
 $('programCategory').addEventListener('change',()=>{ $('program').value='';ProgramFilters.options();apply()});
-document.querySelectorAll('.filter-menu').forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open){menu.querySelector('.filter-heading strong').textContent=menu.querySelector('summary').firstChild.textContent.trim();document.querySelectorAll('.filter-menu').forEach(other=>{if(other!==menu)other.open=false})}}));
+// Prefer the right of the trigger; flip left or below when space is limited.
+function positionFilterMenu(menu){
+ const panel=menu.querySelector('.filter-panel');
+ if(innerWidth<=560){panel.style.removeProperty('--filter-left');panel.style.removeProperty('--filter-top');return}
+ const trigger=menu.querySelector('summary').getBoundingClientRect(),gap=8,edge=12;
+ const width=panel.getBoundingClientRect().width,height=panel.getBoundingClientRect().height;
+ let left=trigger.right+gap,top=trigger.top;
+ if(left+width>innerWidth-edge){
+  if(trigger.left-gap-width>=edge)left=trigger.left-gap-width;
+  else{left=trigger.left;top=trigger.bottom+gap}
+ }
+ left=Math.max(edge,Math.min(left,innerWidth-width-edge));
+ top=Math.max(edge,Math.min(top,innerHeight-height-edge));
+ panel.style.setProperty('--filter-left',left+'px');panel.style.setProperty('--filter-top',top+'px');
+}
+window.addEventListener('resize',()=>document.querySelectorAll('.filter-menu[open]').forEach(positionFilterMenu));
+document.querySelectorAll('.filter-menu').forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open){positionFilterMenu(menu);menu.querySelector('.filter-heading strong').textContent=menu.querySelector('summary').firstChild.textContent.trim();document.querySelectorAll('.filter-menu').forEach(other=>{if(other!==menu)other.open=false})}}));
 function fitCardNames(){for(const e of document.querySelectorAll('.monogram')){e.style.fontSize='';e.style.minHeight='0';for(let n=0;n<12;n++){const c=getComputedStyle(e),height=e.getBoundingClientRect().height-parseFloat(c.paddingTop)-parseFloat(c.paddingBottom),font=parseFloat(c.fontSize);if(height<=2*parseFloat(c.lineHeight)+1||font<=9)break;e.style.fontSize=(font-0.5)+'px'}}}
 window.addEventListener('resize',fitCardNames);
 function abbreviationBadge(s){const name=typeof s.short_name==='string'?s.short_name.trim():'';return /[A-Za-z]/.test(name)&&!/[\u3400-\u9fff]/.test(name)?`<span class="monogram">${esc(name)}</span>`:''}
