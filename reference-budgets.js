@@ -1,4 +1,4 @@
-/* Test-site presentation only; never write these estimates to coa/coa_year. */
+/* Official partial reference budgets; kept separate from full coa fields. */
 const CollegeReferenceBudgets = Object.freeze({
   "bc": {
     "amount_usd": 100314.0,
@@ -217,5 +217,95 @@ const CollegeReferenceBudgets = Object.freeze({
     ],
     "scope_cn": "South Florida非居民本科校内、28学分/年，秋春",
     "basis_cn": "校方预算表总额"
+  },
+  "us_168342": {
+    "amount_usd": 95960,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "校方综合收费（学费、住宿、餐饮、学生活动）；未含书本、个人开支、交通和保险，不是完整COA。",
+    "sources": [
+      {
+        "url": "https://www.williams.edu/admission-aid/tuition-aid/calculate-your-cost/",
+        "year": "2026-27",
+        "checked_at": "2026-10-15T19:29:34.273575+00:00"
+      }
+    ],
+    "scope_cn": "住校本科、不参加Study Away",
+    "basis_cn": "校方公布小计",
+    "method": "official_direct_cost_subtotal",
+    "collected_at": "2026-10-15T19:29:34.273575+00:00"
+  },
+  "us_161004": {
+    "amount_usd": 97900,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "校方公布97900美元起；标准21餐住宿预算，未含浮动交通及适用医疗保险。",
+    "sources": [
+      {
+        "url": "https://www.bowdoin.edu/student-aid/cost-of-attendance/",
+        "year": "2026-27",
+        "checked_at": "2026-10-15T19:29:34.273575+00:00"
+      }
+    ],
+    "scope_cn": "住校本科、标准21餐计划",
+    "basis_cn": "校方预算表或明确分项合计",
+    "method": "official_coa_excluding_variable_items",
+    "collected_at": "2026-10-15T19:29:34.273575+00:00"
+  },
+  "us_168218": {
+    "amount_usd": 98186,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "校方分项合计；未含交通及需另缴的医疗保险，不是完整COA。",
+    "sources": [
+      {
+        "url": "https://www.wellesley.edu/admission-aid/student-financial-services/tuition-cost",
+        "year": "2026-27",
+        "checked_at": "2026-10-15T19:29:34.273575+00:00"
+      }
+    ],
+    "scope_cn": "住校本科、秋春两学期",
+    "basis_cn": "校方预算表或明确分项合计",
+    "method": "calculated_partial_budget",
+    "collected_at": "2026-10-15T19:29:34.273575+00:00"
+  },
+  "us_115409": {
+    "amount_usd": 104512,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "校方住校新生预算含250美元迎新费；交通按住址另算，适用SHIP医疗保险另计。",
+    "sources": [
+      {
+        "url": "https://www.hmc.edu/admission/afford/cost-of-attendance/",
+        "year": "2026-27",
+        "checked_at": "2026-10-15T19:29:34.273575+00:00"
+      }
+    ],
+    "scope_cn": "住校本科新生、19餐计划",
+    "basis_cn": "校方预算表或明确分项合计",
+    "method": "official_coa_excluding_variable_items",
+    "collected_at": "2026-10-15T19:29:34.273575+00:00"
+  },
+  "us_121345": {
+    "amount_usd": 95670,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "仅校方学费、杂费、食宿小计；交通与个人开支1500–2600美元及医疗保险估计3312美元另计，不是完整COA。",
+    "sources": [
+      {
+        "url": "https://www.pomona.edu/administration/finance-office/student-accounts/tuition-and-costs",
+        "year": "2026-27",
+        "checked_at": "2026-10-15T19:29:34.273575+00:00"
+      }
+    ],
+    "scope_cn": "住校本科、Ultimate餐饮计划",
+    "basis_cn": "校方公布小计",
+    "method": "official_direct_cost_subtotal",
+    "collected_at": "2026-10-15T19:29:34.273575+00:00"
   }
 });

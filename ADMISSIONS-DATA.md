@@ -1,13 +1,11 @@
-# Homepage admission rates
+# Overall undergraduate first-year admission data
 
-The homepage uses an independently verified Fall 2023 snapshot of overall first-time, first-year undergraduate admissions. It does not use international applicant rates, and does not relabel the snapshot with the API's admissions_year. The details/comparison API is unchanged and may have a different reporting year.
+Each record in admissions-verified.js carries its own cohort, source, reporting unit, and method. Values refer to overall first-time, first-year undergraduate admission, including domestic and international applicants; they are not international-only, early-round-only, or major-specific rates.
 
-Source: https://nces.ed.gov/ipeds/datacenter/data/ADM2023.zip
-Calculation: ADMSSN / APPLCN * 100, stored to two decimals, displayed to one decimal.
-Saved project adm2023.csv SHA256: 7ced24c8df30f7235af429b4963eb09f3966a2ff5def4c12e58772cb3522bd11.
+The federal historical fallback is NCES IPEDS ADM2023: https://nces.ed.gov/ipeds/datacenter/data/ADM2023.zip . Rates are calculated from total ADMSSN / APPLCN * 100. School identities are matched by UNITID through HD2024, with explicit aliases for Columbia, Penn State University Park, Purdue West Lafayette, and Washington Seattle.
 
-All 301 public test-directory schools were matched to NCES UNITID using the existing HD2024 institution directory. Numeric school IDs carry UNITID directly. Named IDs use exact institution names after punctuation normalization, with four explicit name aliases: Columbia University → 190150; Pennsylvania State University (University Park) → 214777; Purdue University (West Lafayette) → 243780; University of Washington–Seattle → 236948. Each verified record includes UNITID and original total applicant/admitted counts.
+Selected newer records use university-published CDS C1 tables or an explicitly reported overall first-year profile rate. Their source_checked_at records the original source review date; reviewed_at records later review of archived evidence. A new local review does not imply a fresh external retrieval. Displayed rates round to one decimal; source values and available calculations are retained.
 
-Coverage: 300 / 301 schools. University of Alaska Fairbanks (102614) has no usable overall counts in this saved admissions file; its homepage rate remains absent. A future rate requires sourced overall undergraduate first-year applicant and admit counts, with the reporting year and institutional scope confirmed.
+Alaska Fairbanks: the university's linked 2025-2026 CDS has stale 2024-2025 template footers, but C1 explicitly identifies Fall 2025. Gender-category applicant totals 2577 + 3224 + 35 = 5836 and admit totals 1678 + 2056 + 15 = 3749 agree with the residency table totals on the same page. Overall rate = 3749 / 5836 * 100 = 64.24%.
 
-The earlier f525582 implementation was deployed, but its 244-entry verification table omitted all named IDs, including MIT and Princeton. Its strict comparison with live API values/years also suppressed any mismatched records. The corrected homepage reads the source snapshot with its own scope and year and uses a new script cache version. No database records or APIs were changed.
+Detail and comparison use the sourced record for refreshed schools. For other schools, an existing API rate with a newer cohort is preserved; absent API rates can use the explicitly dated sourced fallback. Homepage historical rates can therefore differ from a newer detail record, with cohort years shown. An old rate is never relabeled with a newer API year. Original API/database fields are not modified.
