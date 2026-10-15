@@ -17,10 +17,11 @@ const CollegeDisplay = (() => {
  }
  function policyHTML(row){return `<strong>${esc(policy(row.test_policy))}</strong><p>申请周期：${esc(row.test_policy_cycle||'未核实')}</p>`}
  function cost(row){
-  // Preserve existing API amounts; fill missing values using explicitly scoped official budgets.
+  // Prefer a scoped official budget when present; keep the original API row unchanged.
   const complete=typeof row.coa==='number'&&Number.isFinite(row.coa)&&row.coa>0;
   const ref=CollegeReferenceBudgets[row.school_id];
-  return complete?{amount:row.coa,year:row.coa_year,reference:null}:{amount:ref?.amount_usd??null,year:ref?.year,reference:ref?.complete_coa===true?null:ref,verified:ref?.complete_coa===true?ref:null};
+  if(ref)return {amount:ref.amount_usd,year:ref.year,reference:ref.complete_coa===true?null:ref,verified:ref.complete_coa===true?ref:null};
+  return {amount:complete?row.coa:null,year:row.coa_year,reference:null};
  }
  function costContext(row){const c=cost(row);if(c.reference)return c.reference;if(c.verified)return c.verified;const m=typeof CollegeCostProvenance==='undefined'?null:CollegeCostProvenance[row.school_id];return m&&m.amount_usd===row.coa&&m.year===row.coa_year?m:null}
  function costText(row){const c=cost(row);return `${money(c.amount)} · 学年：${c.year||'未核实'}`}

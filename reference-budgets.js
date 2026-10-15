@@ -627,5 +627,309 @@ const CollegeReferenceBudgets = Object.freeze({
       }
     ],
     "verified_at": "2026-10-15T19:43:44.428121+00:00"
+  },
+  "harvard": {
+    "amount_usd": 95134,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Harvard College全日制住校本科",
+    "note_cn": "Harvard College全日制住校本科。官方范围95134–100134美元，本处为交通0美元的下限；保险4954美元另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://college.harvard.edu/financial-aid/how-aid-works",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "princeton": {
+    "amount_usd": 94624,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Princeton住校本科、一个学年",
+    "note_cn": "Princeton住校本科、一个学年。含学费68140美元、食宿、杂费、书本及个人预算；交通50–5000美元、适用保险另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://admission.princeton.edu/cost-aid/fees-payment-options",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "mit": {
+    "amount_usd": 92760,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "MIT全日制住校本科、一个学年",
+    "note_cn": "MIT全日制住校本科、一个学年。含学费66720美元、杂费、食宿、书本和个人预算；国际交通及适用医疗保险另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "stanford": {
+    "amount_usd": 98320,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Stanford本科新生，秋冬春三个学季",
+    "note_cn": "Stanford本科新生，秋冬春三个学季。官方标准预算97545美元加迎新525和文件250美元；含学费67731美元；交通另计。国际生通常加入Cardinal Care保险，该保险未含在此金额。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://financialaid.stanford.edu/undergrad/budget/index.html",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "yale": {
+    "amount_usd": 97985,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Yale College全日制住校本科、一个学年",
+    "note_cn": "Yale College全日制住校本科、一个学年。72500学费+185活动费+12080住宿+9520餐饮+1000书本用品+2700个人预算；按家庭地址计算的交通另计，医疗保险适用费用另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://finaid.yale.edu/coa",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "columbia": {
+    "amount_usd": 105947,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Columbia College国际本科新生、纽约住校九个月",
+    "note_cn": "Columbia College国际本科新生、纽约住校九个月。99044美元基础预算+迎新625+文件105+国际服务350+全年保险5823（秋2218、春3605）；含学费72800美元。交通另计；不代表工程学院或General Studies预算。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://bulletin.columbia.edu/columbia-college/fees-expenses-financial-aid/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "penn": {
+    "amount_usd": 99082,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Penn传统本科标准住校全年预算",
+    "note_cn": "Penn传统本科标准住校全年预算。学费65670美元、杂费8308美元，另含食宿、书本、交通及个人预算；国际往返旅费及适用PSIP保险另计；护理新生及Wharton高年级书本预算较高。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://srfs.upenn.edu/costs-budgeting/undergraduate-cost-attendance",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "cornell": {
+    "amount_usd": 99734,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Cornell Ithaca本科私立学院或纽约州外合同学院学生",
+    "note_cn": "Cornell Ithaca本科私立学院或纽约州外合同学院学生。含学费73946美元、杂费、食宿、书本及个人预算；非纽约州居民口径适用于国际生。交通和医疗保险另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://finaid.cornell.edu/cost-to-attend",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "brown": {
+    "amount_usd": 99994,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Brown全日制住校本科新生、秋春两学期",
+    "note_cn": "Brown全日制住校本科新生、秋春两学期。按当前官网更新：74568学费+3084杂费+10710住宿+8754餐饮+2878个人预算；未再叠加旧书本预算。保险、交通及个人额外开支另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://finaid.brown.edu/estimate-cost-aid/cost",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "dartmouth": {
+    "amount_usd": 98946,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Dartmouth住校本科新生、三个学期",
+    "note_cn": "Dartmouth住校本科新生、三个学期。已含519美元新生迎新费用；交通、电脑及适用保险5216美元另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://admissions.dartmouth.edu/estimate-your-cost/cost-attendance",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "ucb": {
+    "amount_usd": 93944,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Berkeley 2026入学非居民本科、校内宿舍两学期",
+    "note_cn": "Berkeley 2026入学非居民本科、校内宿舍两学期。新生住校预算54674美元加非居民附加学费39270美元；含校方医疗保险与个人预算；国际服务及一次性新生收费未计，国际交通可能高于标准预算。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://financialaid.berkeley.edu/how-aid-works/student-budgets-cost-of-attendance/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "ucla": {
+    "amount_usd": 84770,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "UCLA非居民本科、校内宿舍九个月（官网2026年7月更新）",
+    "note_cn": "UCLA非居民本科、校内宿舍九个月（官网2026年7月更新）。州内基础预算45500美元加非居民附加学费39270美元；含3885美元UC SHIP保险、书本、个人和969美元交通预算；国际交通及新生个别收费可能另增。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://admission.ucla.edu/tuition-aid/tuition-fees",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "nyu": {
+    "amount_usd": 100998,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "NYU纽约校区CAS等标准本科、非与家人同住、秋春全日制",
+    "note_cn": "NYU纽约校区CAS等标准本科、非与家人同住、秋春全日制。含学杂费68576、食宿26438、书本1492、交通2438、个人2054美元；Stern为102886、Tisch为107748美元；不代表上海或阿布扎比。保险及个别附加费另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://bulletins.nyu.edu/nyu/cost-attendance/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "usc": {
+    "amount_usd": 103612,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "USC本科新生、校内住宿、两学期每学期12–18学分",
+    "note_cn": "USC本科新生、校内住宿、两学期每学期12–18学分。官方标准预算103162美元加首学期新生费450美元；含学费75384美元。适用保险、专业实验或工作室费和超出标准预算的国际交通另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://financialaid.usc.edu/undergraduate-financial-aid/cost-of-attendance/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "caltech": {
+    "amount_usd": 99222,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Caltech全日制住校本科新生、九个月",
+    "note_cn": "Caltech全日制住校本科新生、九个月。标准直接费用93225+间接预算5397+新生迎新600美元；适用医疗保险5388美元及交通另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://catalog.caltech.edu/current/information-for-undergraduate-students/undergraduate-expenses/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "jhu": {
+    "amount_usd": 94858,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Johns Hopkins Homewood住校本科新生、秋春两学期",
+    "note_cn": "Johns Hopkins Homewood住校本科新生、秋春两学期。含学费68670、入学费500、食宿、书本、个人和738美元标准交通预算；适用保险与额外国际交通另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://sfs.jhu.edu/cost-tuition/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "northwestern": {
+    "amount_usd": 99375,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Northwestern Evanston住校本科、秋冬春三个学季",
+    "note_cn": "Northwestern Evanston住校本科、秋冬春三个学季。含71802美元学费、食宿、杂费、书本、个人及54美元条件性贷款费；交通另计，适用学生保险5996美元另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://undergradaid.northwestern.edu/aid-basics-eligibility/cost-of-attendance.html",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "vanderbilt": {
+    "amount_usd": 99994,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Vanderbilt全日制本科、标准校内或校外生活预算",
+    "note_cn": "Vanderbilt全日制本科、标准校内或校外生活预算。直接费用96896美元加书本1100和个人1998美元；交通按个人情况另计，适用学生医疗保险另计。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://www.vanderbilt.edu/financialaid/costs-undergraduate/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
+  },
+  "washu": {
+    "amount_usd": 102260,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "WashU全日制本科、现代双人间及Platinum餐计划",
+    "note_cn": "WashU全日制本科、现代双人间及Platinum餐计划。大学收费96994美元加书本1412、交通1050和杂项2804美元；医疗保险另计，国际交通及个人开支可能更高。 奖助前参考预算，非完整COA。",
+    "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
+    "sources": [
+      {
+        "url": "https://financialaid.washu.edu/costs/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15"
   }
 });
