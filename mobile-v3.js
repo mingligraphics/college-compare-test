@@ -50,9 +50,9 @@ async function shareLink(rows=[]){
  await copyLink(url);
 }
 async function copyLink(url){try{await navigator.clipboard.writeText(url);notify('链接已复制')}catch{prompt('请复制以下链接',url)}}
-function addLinkActions(rows){const box=document.createElement('div');box.className='share-link-actions';const share=document.createElement('button');share.textContent='分享给家人一起看';share.onclick=()=>shareLink(rows);box.append(share);($('dialogContent').querySelector('.next-step .share-link-actions')||$('dialogContent')).append(box)}
+function addLinkActions(rows){const box=document.createElement('div');box.className='share-link-actions';const share=document.createElement('button');share.textContent='分享给家人一起看';share.onclick=()=>shareLink(rows);box.append(share);($('dialogContent').querySelector('.share-link-actions')||$('dialogContent')).append(box)}
 $('homeShare').onclick=()=>shareLink();
-$('homeConsult').onclick=()=>{$('homeQR').hidden=false;countEvent('consultation')};
+document.addEventListener('click',event=>{if(event.target.closest('.consult-qr'))countEvent('consultation')});
 for(const id of stateFields)$(id).addEventListener(id==='search'?'input':'change',()=>{listScroll=0;scrollTo(0,0);saveState();updateChips();if(id==='search'){clearTimeout(searchTimer);searchTimer=setTimeout(()=>countEvent('search'),500)}else if(id!=='sort')countEvent('filter')});
 $('reset').addEventListener('click',()=>{listScroll=0;saveState();updateChips()});
 const originalAdd=add;add=function(id){originalAdd(id);saveState()};
