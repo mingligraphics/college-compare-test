@@ -8,11 +8,11 @@ const CollegeDisplay = (() => {
  function sources(items){return (Array.isArray(items)?items:[]).map((s,i)=>{const url=safeURL(s.url);return url?`<a href="${url}" target="_blank" rel="noopener noreferrer">来源 ${i+1}</a>${s.year?` · ${esc(s.year)}`:''}`:''}).filter(Boolean).join('<br>')}
  function aidHTML(row,field){
   const status=row[field], note=CollegeAidNotes[row.school_id]?.[field];
-  const matched=note?.expected_value===status;
+  const matched=!!note&&note.expected_value===status;
   return `<strong>${esc(aid(status))}</strong>${matched?`<p>已核实项目：${esc(note.project_name)}（不代表该校全部资助项目）</p><p>${esc(note.restriction_cn)}</p><p>适用说明：${esc(note.period)}</p><p>资料核查：${esc(note.checked_date)}；申请前请复核校方最新要求。</p><p>${sources(note.official_urls.map(url=>({url})))}</p>`:status==='limited'?'<p>具体资格、适用人群及年度待核实；请勿据此假定所有国际本科新生均符合。</p>':''}`;
  }
  function programsHTML(row){
-  const programs=Array.isArray(row.signature_programs)?row.signature_programs:[];
+  const programs=(Array.isArray(row.signature_programs)?row.signature_programs:[]).filter(p=>['localhost','127.0.0.1','[::1]'].includes(location.hostname)||p.evidence_category!=='本科专业排名');
   return programs.length?`<ul class="program-list">${programs.map(p=>`<li><strong>${esc(p.name_cn||p.name_en||'未命名专业')}</strong>${p.name_en?`<p>${esc(p.name_en)}</p>`:''}<p>${esc(p.evidence_category||'依据类型未标明')}</p><p>${esc(p.reason||'具体依据待核实')}</p><p>${sources(p.sources)||'来源待核实'}</p></li>`).join('')}</ul>`:'<p>本科优势 / 代表专业：暂无已核实数据</p>';
  }
  function policyHTML(row){return `<strong>${esc(policy(row.test_policy))}</strong><p>申请周期：${esc(row.test_policy_cycle||'未核实')}</p>`}

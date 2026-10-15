@@ -1,10 +1,10 @@
 /* Local canvas and QR rendering: no remote images, fonts, or QR service. */
 const CollegeShare=(()=>{
- const base='https://mingligraphics.github.io/college-compare-test/';
+ const base=new URL('./',location.href).href;
  function link(rows){const u=new URL(base);rows.forEach(s=>u.searchParams.append('school',s.school_id));u.searchParams.set('view',rows.length===2?'compare':'detail');return u.href}
  function qrCanvas(url){const qr=qrcode(0,'M');qr.addData(url);qr.make();const n=qr.getModuleCount(),scale=6,c=document.createElement('canvas');c.width=c.height=(n+8)*scale;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.fillStyle='#18342f';for(let y=0;y<n;y++)for(let z=0;z<n;z++)if(qr.isDark(y,z))x.fillRect((z+4)*scale,(y+4)*scale,scale,scale);return c}
  function qrURL(url){return qrCanvas(url).toDataURL('image/png')}
- function fields(s){const c=CollegeDisplay.cost(s),ps=Array.isArray(s.signature_programs)?s.signature_programs:[];return [
+ function fields(s){const c=CollegeDisplay.cost(s),ps=(Array.isArray(s.signature_programs)?s.signature_programs:[]).filter(p=>['localhost','127.0.0.1','[::1]'].includes(location.hostname)||p.evidence_category!=='本科专业排名');return [
  ['学校',s.school_name_cn||s.school_name],['英文名',s.school_name],['排名类别',ranking(s)],['地区 / 性质',[schoolLocation(s),control(s)].join(' · ')],
  ['年度总费用（美元）',CollegeDisplay.costText(s)],['费用口径',c.reference?[c.reference.note_cn,c.reference.scope_cn,c.reference.basis_cn].filter(Boolean).join('；'):'学校公布的年度预算，学年见上方。'],
  ['本科优势 / 代表专业',ps.length?ps.map(p=>p.name_cn||p.name_en).filter(Boolean).join('、'):'暂无已核实数据（未录入不代表没有该专业）']];}

@@ -2,7 +2,7 @@
 const ProgramFilters=(()=>{
  let data=null;
  const el=id=>document.getElementById(id);
- function entries(id){return data?.schools[id]||[]}
+ function entries(id){return (data?.schools[id]||[]).filter(p=>['localhost','127.0.0.1','[::1]'].includes(location.hostname)||p.evidence_category!=='本科专业排名')}
  function matches(id,category,program){return !category&&!program||entries(id).some(p=>(!category||data.mapping[p.name_cn]?.categories.includes(category))&&(!program||p.name_cn===program))}
  function options(){
   if(!data)return;
@@ -19,11 +19,11 @@ const ProgramFilters=(()=>{
   const params=new URLSearchParams(location.search);el('programCategory').value=params.get('programCategory')||'';options();// Legacy specific-program links now select their first mapped category.
   if(!el('programCategory').value&&params.has('program'))el('programCategory').value=data.mapping[params.get('program')]?.categories[0]||'';el('program').value='';
   el('programCoverage').textContent='按已录入优势专业筛选 · 未录入不代表未开设。';
-  if(el('coverageShort'))el('coverageShort').textContent=' 当前覆盖 108 校、222 项（2026-10-14）。';
+  if(el('coverageShort'))el('coverageShort').textContent=' 专业资料快照：2026-10-14；待核实授权的排名依据暂不展示。';
  }catch{data=null;el('programCategory').replaceChildren(new Option('暂不可用',''));el('programCategory').disabled=true;el('program').disabled=true;el('programCoverage').textContent='专业索引暂时无法载入，请刷新重试；其他筛选仍可使用。';if(el('coverageShort'))el('coverageShort').textContent=' 专业索引暂不可用。'} }
- function cardHTML(id,esc){if(!data)return '';let ps=entries(id);const category=el('programCategory').value,program=el('program').value;
+ function cardHTML(id,esc){if(!data)return '<p class="program-preview">暂无专业数据 · 专业索引暂不可用</p>';let ps=entries(id);const category=el('programCategory').value,program=el('program').value;
   if(category||program)ps=ps.filter(p=>(!category||data.mapping[p.name_cn]?.categories.includes(category))&&(!program||p.name_cn===program));
-  return ps.length?`<p class="program-preview">专业：${ps.slice(0,2).map(p=>esc(p.name_cn)).join(' · ')}${ps.length>2?' 等':''}<span> · 依据及年份见详情</span></p>`:'<p class="program-preview"><span>优势专业尚未录入 · 不代表未开设</span></p>';
+  return ps.length?`<p class="program-preview">优势／代表专业：${ps.slice(0,2).map(p=>esc(p.name_cn)).join(' · ')}${ps.length>2?' 等':''}<span> · 依据及年份见详情</span></p>`:'<p class="program-preview"><span>暂无专业数据 · 未录入不代表未开设</span></p>';
  }
  return {load,options,matches,cardHTML};
 })();
