@@ -31,15 +31,15 @@ const shareDescription='301所美国大学最新官方数据，找到最适合�
 function shareTitle(rows){return rows.length?rows.map(s=>s.school_name_cn||s.school_name).join('、')+(rows.length===2?'对比':''):homeTitle}
 function updateTitle(view,ids){
  const rows=ids.map(id=>schools.find(s=>s.school_id===id)).filter(Boolean);
- document.title=shareTitle(rows);
- const metadata={'meta[name="description"]':shareDescription,'meta[property="og:title"]':document.title,'meta[property="og:description"]':shareDescription,'meta[property="og:url"]':rows.length?CollegeShare.link(rows):new URL('./',location.href).href,'meta[name="twitter:title"]':document.title,'meta[name="twitter:description"]':shareDescription};
+ document.title=view==='about'?'关于我们｜明希教育':shareTitle(rows);
+ const metadata={'meta[name="description"]':shareDescription,'meta[property="og:title"]':document.title,'meta[property="og:description"]':shareDescription,'meta[property="og:url"]':view==='about'?new URL('?view=about',location.href).href:rows.length?CollegeShare.link(rows):new URL('./',location.href).href,'meta[name="twitter:title"]':document.title,'meta[name="twitter:description"]':shareDescription};
  for(const [selector,value] of Object.entries(metadata)){const tag=document.querySelector(selector);if(tag)tag.content=value}
 }
 
 const originalDetail=detail,originalCompare=compare,originalAbout=showAbout;
 detail=async function(id){if(!schools.some(s=>s.school_id===id))return;setRoute('detail',[id]);countEvent('detail');const work=originalDetail(id);addLinkActions([schools.find(s=>s.school_id===id)]);await work};
 compare=async function(){if(selected.length!==2){notify('请先加入两所大学再比较');return}setRoute('compare',selected);countEvent('compare');await originalCompare()};
-showAbout=function(){setRoute('about');originalAbout();wireConsultation($('dialogContent'))};
+showAbout=function(){setRoute('about');originalAbout();wireConsultation($('dialogContent'));$('dialog').setAttribute('aria-labelledby','aboutTitle')};
 const originalComparison=showComparison;showComparison=function(rows){originalComparison(rows);addLinkActions(rows);wireConsultation($('dialogContent'))};
 function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>{const section=a.parentElement;section.querySelector('h3')?.remove();section.querySelector('small')?.remove();a.hidden=true;const b=document.createElement('button');b.textContent='预约明希团队一对一诊断';b.onclick=()=>{a.hidden=false;countEvent('consultation')};a.before(b)})}
 async function shareLink(rows=[]){
@@ -57,11 +57,12 @@ for(const id of stateFields)$(id).addEventListener(id==='search'?'input':'change
 $('reset').addEventListener('click',()=>{listScroll=0;saveState();updateChips()});
 const originalAdd=add;add=function(id){originalAdd(id);saveState()};
 addEventListener('scroll',()=>{if(!$('dialog').open){listScroll=scrollY;saveState()}},{passive:true});
-$('dialog').addEventListener('close',()=>{detailRequest++;comparisonRequest++;if(routeBusy)return;if(history.state?.overlay){history.back()}else{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');history.replaceState({mobileV3:true},'',u);updateTitle(null,[]);requestAnimationFrame(()=>scrollTo(0,listScroll))}});
+$('dialog').addEventListener('close',()=>{$('dialog').removeAttribute('aria-labelledby');detailRequest++;comparisonRequest++;if(routeBusy)return;if(history.state?.overlay){history.back()}else{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');history.replaceState({mobileV3:true},'',u);updateTitle(null,[]);requestAnimationFrame(()=>scrollTo(0,listScroll))}});
 addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2){selected=ids.filter(id=>schools.some(s=>s.school_id===id));compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}updateTitle(p.get('view'),ids);setTimeout(()=>routeBusy=false,0)});
 
 
-$("compare").onclick=compare;$("compareNav").onclick=compare;$("aboutNav").onclick=showAbout;
+$("compare").onclick=compare;$("compareNav").onclick=compare;$("aboutNav").onclick=e=>{e.preventDefault();showAbout()};
+if(new URLSearchParams(location.search).get('view')==='about')showAbout();
 Promise.all([ProgramFilters.load(),loadDirectory()]).then(restoreInitial);
 
 new MutationObserver(()=>tray()).observe($('dialog'),{attributes:true,attributeFilter:['open']});
