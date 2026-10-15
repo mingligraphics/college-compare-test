@@ -25,7 +25,7 @@ function updateChips(){
  if($('activeFilters').children.length){const b=document.createElement('button');b.textContent='全部清除';b.onclick=()=>$('reset').click();$('activeFilters').append(b)}
 }
 function setRoute(view,ids=[]){
- if(routeBusy)return;if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
+ if(routeBusy)return;if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.hash='';u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
 const shareDescription='探索美国大学，比较排名、费用与代表专业';
@@ -40,7 +40,7 @@ function updateTitle(view,ids){
 const originalDetail=detail,originalCompare=compare,originalAbout=showAbout;
 detail=async function(id){if(!schools.some(s=>s.school_id===id))return;setRoute('detail',[id]);countEvent('detail');const work=originalDetail(id);addLinkActions([schools.find(s=>s.school_id===id)]);await work};
 compare=async function(){if(selected.length!==2){notify('请先加入两所大学再比较');return}setRoute('compare',selected);countEvent('compare');await originalCompare()};
-showAbout=function(){setRoute('about');originalAbout();wireConsultation($('dialogContent'));$('dialog').setAttribute('aria-labelledby','aboutTitle')};
+showAbout=function(){const consultAnchor=location.hash==='#aboutConsult';setRoute('about');originalAbout();wireConsultation($('dialogContent'));$('dialog').setAttribute('aria-labelledby','aboutTitle');if(consultAnchor)requestAnimationFrame(()=>$('aboutConsult')?.scrollIntoView({block:'start'}))};
 const originalComparison=showComparison;showComparison=function(rows){originalComparison(rows);addReplacementActions(rows);addLinkActions(rows);wireConsultation($('dialogContent'))};
 function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>{const section=a.parentElement;section.querySelector('h3')?.remove();section.querySelector('small')?.remove();a.hidden=true;const b=document.createElement('button');b.textContent='预约免费 20 分钟初谈';b.onclick=()=>{a.hidden=false;countEvent('consultation')};a.before(b)})}
 async function shareLink(rows=[]){
@@ -88,7 +88,7 @@ function addReplacementActions(rows){
   $('replacementResults').querySelectorAll('[data-replacement]').forEach(b=>b.onclick=()=>{
    const id=b.dataset.replacement;if(id===selected[1-slot]||!schools.some(s=>s.school_id===id)){notify('请选择另一所大学');return}
    selected[slot]=id;persistSelection();
-   const u=new URL(location.href);u.searchParams.delete('school');selected.forEach(id=>u.searchParams.append('school',id));u.searchParams.set('view','compare');
+   const u=new URL(location.href);u.hash='';u.searchParams.delete('school');selected.forEach(id=>u.searchParams.append('school',id));u.searchParams.set('view','compare');
    history.replaceState({...history.state},'',u);updateTitle('compare',selected);compare();
   });
  }
