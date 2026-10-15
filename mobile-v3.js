@@ -1,5 +1,5 @@
 /* Mobile navigation state and local preview behavior. */
-const stateFields=['search','region','tuition','size','international','programCategory','program','sort'];
+const stateFields=['search','region','state','tuition','size','international','programCategory','program','sort'];
 const homeTitle='明希教育｜美国大学选校指南';
 let routeBusy=false, listScroll=0, searchTimer, stateReady=false;
 let initialSavedState;try{initialSavedState=JSON.parse(sessionStorage.getItem('cc-mobile-v3')||'null')}catch{}
@@ -14,7 +14,7 @@ function viewIsList(params){return !['compare','detail'].includes(params.get('vi
 function restoreInitial(){
  if(!schools.length){stateReady=true;return;}
  const params=new URLSearchParams(location.search);const saved=initialSavedState;
- if(saved){if(!stateFields.some(id=>params.has(id)))for(const id of stateFields)$(id).value=saved.values?.[id]|| (id==='sort'?'rank':'');
+ if(saved){if(!stateFields.some(id=>params.has(id))){for(const id of stateFields.filter(id=>id!=='state'))$(id).value=saved.values?.[id]|| (id==='sort'?'rank':'');updateStateOptions(saved.values?.state);}
  apply();page=Math.max(1,Number(saved.page)||1);if(viewIsList(params)||(params.get('view')==='detail'&&saved.selected?.includes(params.get('school'))))selected=(saved.selected||[]).filter(id=>schools.some(s=>s.school_id===id)).slice(0,2);render();tray();listScroll=Number(saved.scroll)||0;if(!params.has('view'))requestAnimationFrame(()=>scrollTo(0,listScroll));}
  const requested=params.getAll('school'),view=params.get('view');
  if((view==='detail'&&(requested.length!==1||!schools.some(s=>s.school_id===requested[0])))||(view==='compare'&&(requested.length!==2||new Set(requested).size!==2||requested.some(id=>!schools.some(s=>s.school_id===id))))){modal('<h2>分享链接已失效或学校不存在</h2><p>请返回列表重新选择学校。</p><button id="close">返回列表</button>')}
@@ -59,7 +59,7 @@ $('reset').addEventListener('click',()=>{listScroll=0;saveState();updateChips()}
 const originalAdd=add;add=function(id){originalAdd(id);saveState()};
 addEventListener('scroll',()=>{if(!$('dialog').open){listScroll=scrollY;saveState()}},{passive:true});
 $('dialog').addEventListener('close',()=>{$('dialog').removeAttribute('aria-labelledby');detailRequest++;comparisonRequest++;if(routeBusy)return;if(history.state?.overlay){history.back()}else{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');history.replaceState({mobileV3:true},'',u);updateTitle(null,[]);requestAnimationFrame(()=>scrollTo(0,listScroll))}});
-addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2&&new Set(ids).size===2&&ids.every(id=>schools.some(s=>s.school_id===id))){selected=[...ids];persistSelection();compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}updateTitle(p.get('view'),ids);setTimeout(()=>routeBusy=false,0)});
+addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');for(const id of stateFields.filter(id=>id!=='state'))$(id).value=p.get(id)||(id==='sort'?'rank':'');updateStateOptions(p.get('state'));apply();updateChips();if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2&&new Set(ids).size===2&&ids.every(id=>schools.some(s=>s.school_id===id))){selected=[...ids];persistSelection();compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}updateTitle(p.get('view'),ids);setTimeout(()=>routeBusy=false,0)});
 
 
 $("compare").onclick=compare;$("compareNav").onclick=compare;$("aboutNav").onclick=e=>{e.preventDefault();showAbout()};
