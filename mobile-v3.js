@@ -1,6 +1,6 @@
 /* Mobile navigation state and local preview behavior. */
 const stateFields=['search','region','state','tuition','size','international','programCategory','program','sort'];
-const homeTitle='明希教育｜美国大学选校指南';
+const homeTitle='美国大学选校指南';
 let routeBusy=false, listScroll=0, searchTimer, stateReady=false;
 let initialSavedState;try{initialSavedState=JSON.parse(sessionStorage.getItem('cc-mobile-v3')||'null')}catch{}
 function saveState(){
@@ -28,7 +28,7 @@ function setRoute(view,ids=[]){
  if(routeBusy)return;if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.hash='';u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
-const shareDescription='探索美国大学，比较排名、费用与代表专业';
+const shareDescription='300所美国大学最新数据，比较费用、优势专业和申请要求';
 function shareTitle(rows){return rows.length?rows.map(s=>s.school_name_cn||s.school_name).join('、')+(rows.length===2?'对比':''):homeTitle}
 function updateTitle(view,ids){
  const rows=ids.map(id=>schools.find(s=>s.school_id===id)).filter(Boolean);
