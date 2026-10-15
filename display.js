@@ -17,12 +17,12 @@ const CollegeDisplay = (() => {
  }
  function policyHTML(row){return `<strong>${esc(policy(row.test_policy))}</strong><p>申请周期：${esc(row.test_policy_cycle||'未核实')}</p>`}
  function cost(row){
-  // Prefer a verified API COA if one is later available; preserve the original row.
+  // Preserve existing API amounts; fill missing values using explicitly scoped official budgets.
   const complete=typeof row.coa==='number'&&Number.isFinite(row.coa)&&row.coa>0;
   const ref=CollegeReferenceBudgets[row.school_id];
-  return complete?{amount:row.coa,year:row.coa_year,reference:null}:{amount:ref?.amount_usd??null,year:ref?.year,reference:ref};
+  return complete?{amount:row.coa,year:row.coa_year,reference:null}:{amount:ref?.amount_usd??null,year:ref?.year,reference:ref?.complete_coa===true?null:ref,verified:ref?.complete_coa===true?ref:null};
  }
- function costContext(row){const c=cost(row);if(c.reference)return c.reference;const m=typeof CollegeCostProvenance==='undefined'?null:CollegeCostProvenance[row.school_id];return m&&m.amount_usd===row.coa&&m.year===row.coa_year?m:null}
+ function costContext(row){const c=cost(row);if(c.reference)return c.reference;if(c.verified)return c.verified;const m=typeof CollegeCostProvenance==='undefined'?null:CollegeCostProvenance[row.school_id];return m&&m.amount_usd===row.coa&&m.year===row.coa_year?m:null}
  function costText(row){const c=cost(row);return `${money(c.amount)} · 学年：${c.year||'未核实'}`}
  function costHTML(row){const c=cost(row);return `<strong>${esc(money(c.amount))}</strong>${c.reference?`<small class="cost-note">${esc(c.reference.note_cn)}</small>`:''}<small class="cost-note">学年：${esc(c.year||'未核实')}${c.amount==null?'':` · 约${esc((c.amount*7/10000).toFixed(2))}万元人民币`}</small>${c.reference?`<small class="cost-note">${esc(c.reference.scope_cn)}；${esc(c.reference.basis_cn)}<br>${sources(c.reference.sources)}</small>`:''}`}
  function cardCostHTML(row){const amount=cost(row).amount;return `<strong>${typeof amount==='number'&&Number.isFinite(amount)&&amount>0?'¥'+Math.round(amount*7/10000).toLocaleString('en-US')+'万元':'暂无数据'}</strong>`}

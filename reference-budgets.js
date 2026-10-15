@@ -1,4 +1,4 @@
-/* Official partial reference budgets; kept separate from full coa fields. */
+/* Official scoped annual budgets. complete_coa is true only for a documented full scenario. */
 const CollegeReferenceBudgets = Object.freeze({
   "bc": {
     "amount_usd": 100314.0,
@@ -307,5 +307,325 @@ const CollegeReferenceBudgets = Object.freeze({
     "basis_cn": "校方公布小计",
     "method": "official_direct_cost_subtotal",
     "collected_at": "2026-10-15T19:29:34.273575+00:00"
+  },
+  "case_western": {
+    "amount_usd": 95704,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "住校本科新生；非护理专业",
+    "note_cn": "住校本科新生；非护理专业。交通金额未定、医疗保险另计；住宿部门表与奖助预算不同，保留奖助预算原方案。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://case.edu/financialaid/undergraduates/cost-undergraduate-attendance",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428005+00:00"
+  },
+  "rutgers": {
+    "amount_usd": 62782,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "New Brunswick州外本科住校标准方案",
+    "note_cn": "New Brunswick州外本科住校标准方案。仅学费杂费食宿；未含书本、交通、个人、保险及F/J学生至少500美元SEVIS管理费。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://admissions.newbrunswick.rutgers.edu/costs-and-aid/tuition-fees",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428101+00:00"
+  },
+  "uiuc": {
+    "amount_usd": 62050,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Fall 2026入学国际本科基础学费专业，秋春各12学分",
+    "note_cn": "Fall 2026入学国际本科基础学费专业，秋春各12学分。基础专业参考金额；商科/工程同表72880美元；保险及国际生全部附加收费是否涵盖尚需逐项确认。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.cost.illinois.edu/Home/Cost/I/U/Compare/12/120268/120268",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428103+00:00"
+  },
+  "us_160755": {
+    "amount_usd": 98710,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Newcomb-Tulane全日制住校本科新生",
+    "note_cn": "Newcomb-Tulane全日制住校本科新生。交通未定；保险、首年300美元迎新费、适用专业/实验费另计；含58美元条件性联邦贷款费。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://admission.tulane.edu/tuition-aid/cost",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428104+00:00"
+  },
+  "us_191515": {
+    "amount_usd": 95250,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科住校综合收费",
+    "note_cn": "本科住校综合收费。仅学费杂费食宿；书本800、个人至多1000、交通至多1800及适用保险另计，不将范围上限伪装固定COA。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://my.hamilton.edu/admission/tuition",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428105+00:00"
+  },
+  "us_130697": {
+    "amount_usd": 101080,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科住校新生（含300美元入学费）",
+    "note_cn": "本科住校新生（含300美元入学费）。含书本用品个人预算；交通和适用保险未含/未定；不采用staging站数据。实际年度支出可能更高。",
+    "basis_cn": "校方小计或明确新生方案",
+    "sources": [
+      {
+        "url": "https://www.wesleyan.edu/about/news/2026/03/tuition-increase-2026-27.html",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428107+00:00"
+  },
+  "us_173902": {
+    "amount_usd": 92154,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科标准宿舍和餐计划综合收费，课程材料含在学费中",
+    "note_cn": "本科标准宿舍和餐计划综合收费，课程材料含在学费中。未含3329美元保险、交通、个人及电脑预算；不混用美国公民联邦COA与国际生I-20示例。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.macalester.edu/financial-aid/?p=2777",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428108+00:00"
+  },
+  "us_195526": {
+    "amount_usd": 93260,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科传统宿舍双人间及餐饮",
+    "note_cn": "本科传统宿舍双人间及餐饮。仅学费杂费食宿；书本、个人、交通、医疗保险和新生记录费等另计。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.skidmore.edu/bursar/cost.php",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428109+00:00"
+  },
+  "us_150400": {
+    "amount_usd": 80120,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科住校18次刷卡餐计划直接收费",
+    "note_cn": "本科住校18次刷卡餐计划直接收费。仅直接费用；奖助COA采用不同21餐方案；书本800、交通1000、个人1700、适用贷款费/洗衣费及保险另计，不将校方标题误当完整COA。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.depauw.edu/offices/finance-administration/student-and-parent-information/payment-services/tuition-and-fees/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428110+00:00"
+  },
+  "us_174844": {
+    "amount_usd": 81200,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "住校全日制本科综合收费",
+    "note_cn": "住校全日制本科综合收费。未含书本、交通、个人、适用保险及专业课程费用。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://catalog.stolaf.edu/admissions-financial-aid/financing-your-education/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428111+00:00"
+  },
+  "us_221351": {
+    "amount_usd": 76256,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科标准住宿及Unlimited All-Access餐计划",
+    "note_cn": "本科标准住宿及Unlimited All-Access餐计划。仅学费杂费食宿；书本、个人、交通及适用医疗保险另计。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.rhodes.edu/admission-aid/cost-affordability/tuition-fees",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428112+00:00"
+  },
+  "us_221519": {
+    "amount_usd": 77680,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "全日制本科综合收费",
+    "note_cn": "全日制本科综合收费。官方小计未含表列530美元可退出书本计划及466美元可退出学费险；其他书本用品个人交通估计2500–5000及医疗保险另核。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://e-catalog.sewanee.edu/arts-sciences/admission-expenses-financial-aid/tuition-fees/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428113+00:00"
+  },
+  "us_164739": {
+    "amount_usd": 91390,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科住校基本双人间和新生餐计划",
+    "note_cn": "本科住校基本双人间和新生餐计划。未含2650美元适用保险；新英格兰/纽约/新泽西以外交通另加。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.bentley.edu/offices/financial-assistance/cost-and-billing",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428114+00:00"
+  },
+  "us_212009": {
+    "amount_usd": 93706,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科住校标准双人间Any21餐计划",
+    "note_cn": "本科住校标准双人间Any21餐计划。未含适用保险1829、新生迎新125；交通仅300美元，中大西洋地区外另加；含64美元条件性贷款费。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.dickinson.edu/info/20082/financial_operations/1436/annual_fees_tuition_room_board",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428115+00:00"
+  },
+  "us_204501": {
+    "amount_usd": 94070,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "本科校内住宿及餐计划",
+    "note_cn": "本科校内住宿及餐计划。交通因居住地不同未定；3028美元适用保险另计；费用含可退50美元Green Fee。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.oberlin.edu/admissions-and-aid/tuition-and-fees",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428116+00:00"
+  },
+  "us_229267": {
+    "amount_usd": 75446,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Fall 2026本科新生，传统双人间Silver餐计划，秋春两学期",
+    "note_cn": "Fall 2026本科新生，传统双人间Silver餐计划，秋春两学期。仅学费食宿预测；未含保险、书本、个人、交通及其他适用收费。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://admissions.trinity.edu/register/cost_worksheet",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428117+00:00"
+  },
+  "us_209922": {
+    "amount_usd": 95120,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "全日制本科宿舍Board A方案",
+    "note_cn": "全日制本科宿舍Board A方案。含1950美元书本杂项；交通未定；国际保险3654或普通保险4272及可退出学费险692另计。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://www.reed.edu/student-accounts/tuition-and-fees/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428118+00:00"
+  },
+  "us_199193": {
+    "amount_usd": 54779,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "州外全日制本科住校秋春标准方案",
+    "note_cn": "州外全日制本科住校秋春标准方案。未含适用医疗保险及工程/建筑/高尔夫等专业附加费；含44美元条件性贷款费；国际生附加费用未全核。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://studentservices.ncsu.edu/finances/estimated-cost-of-attendance/undergraduate-student-estimated-cost-of-attendance/",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428119+00:00"
+  },
+  "us_171100": {
+    "amount_usd": 70725,
+    "year": "2025-26",
+    "currency": "USD",
+    "complete_coa": true,
+    "scope_cn": "国际本科两学期12–18学分、双人间Silver餐计划，含寒假三周住宿",
+    "note_cn": "国际本科两学期12–18学分、双人间Silver餐计划，含寒假三周住宿。完整校方历史国际生I-20标准估计，含医疗及交通预算；页面仍标2025-26，不混用2026-27美国州外预算；暑期另计。完整仅指此标准预算场景，不等于个人实际账单。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://admissions.msu.edu/cost-aid",
+        "year": "2025-26"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428120+00:00"
+  },
+  "us_110671": {
+    "amount_usd": 85809,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "Fall 2026首次入学州外/国际本科新生、University Housing、标准专业",
+    "note_cn": "Fall 2026首次入学州外/国际本科新生、University Housing、标准专业。官方表列85809美元；首年迎新及文件费合计525美元是否已计入总额存在歧义，完整性待确认。含保险和交通估计；暑期另计。实际年度支出可能更高。",
+    "basis_cn": "官方分项按上述场景合计",
+    "sources": [
+      {
+        "url": "https://financialaid.ucr.edu/cost",
+        "year": "2026-27"
+      }
+    ],
+    "verified_at": "2026-10-15T19:43:44.428121+00:00"
   }
 });
