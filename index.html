@@ -81,7 +81,7 @@ async function compare(){
 }
 async function loadDirectory(){
  $('grid').innerHTML='<p role="status">正在获取大学目录…</p>'; $('dataNote').hidden=true;
- try {schools=await CollegeAPI.directory();filtered=schools;$('catalogTotal').textContent=`${schools.length}所高校最新官方数据 常青藤团队打造`;
+ try {schools=await CollegeAPI.directory();filtered=schools;$('catalogTotal').textContent=`${schools.length}所高校最新官方数据 · 常青藤团队打造`;
  let saved;try{saved=JSON.parse(localStorage.getItem('cc-discovery-prototype')||'[]')}catch(e){};
  selected=Array.isArray(saved)?[...new Set(saved)].filter(id=>schools.some(s=>s.school_id===id)).slice(0,2):[];
 
