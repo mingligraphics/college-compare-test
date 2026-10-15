@@ -28,7 +28,7 @@ function setRoute(view,ids=[]){
  if(routeBusy)return;if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
-const shareDescription='301所美国大学最新官方数据，找到最适合你的大学';
+const shareDescription='探索美国大学，比较排名、费用与代表专业';
 function shareTitle(rows){return rows.length?rows.map(s=>s.school_name_cn||s.school_name).join('、')+(rows.length===2?'对比':''):homeTitle}
 function updateTitle(view,ids){
  const rows=ids.map(id=>schools.find(s=>s.school_id===id)).filter(Boolean);
@@ -42,7 +42,7 @@ detail=async function(id){if(!schools.some(s=>s.school_id===id))return;setRoute(
 compare=async function(){if(selected.length!==2){notify('请先加入两所大学再比较');return}setRoute('compare',selected);countEvent('compare');await originalCompare()};
 showAbout=function(){setRoute('about');originalAbout();wireConsultation($('dialogContent'));$('dialog').setAttribute('aria-labelledby','aboutTitle')};
 const originalComparison=showComparison;showComparison=function(rows){originalComparison(rows);addReplacementActions(rows);addLinkActions(rows);wireConsultation($('dialogContent'))};
-function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>{const section=a.parentElement;section.querySelector('h3')?.remove();section.querySelector('small')?.remove();a.hidden=true;const b=document.createElement('button');b.textContent='预约明希团队一对一诊断';b.onclick=()=>{a.hidden=false;countEvent('consultation')};a.before(b)})}
+function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>{const section=a.parentElement;section.querySelector('h3')?.remove();section.querySelector('small')?.remove();a.hidden=true;const b=document.createElement('button');b.textContent='预约免费 20 分钟初谈';b.onclick=()=>{a.hidden=false;countEvent('consultation')};a.before(b)})}
 async function shareLink(rows=[]){
  const url=rows.length?CollegeShare.link(rows):(()=>{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');return u.href})(),title=shareTitle(rows);
  updateTitle(rows.length===2?'compare':rows.length?'detail':null,rows.map(s=>s.school_id));
@@ -97,3 +97,15 @@ function addReplacementActions(rows){
  $('cancelReplacement').onclick=()=>{picker.hidden=true;trigger?.focus()};
  picker.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();picker.hidden=true;trigger?.focus()}});
 }
+
+// Each mobile sheet uses the same underlying selects and saved URL/session state.
+document.querySelectorAll('.filter-menu').forEach((menu,index)=>{
+ const panel=menu.querySelector('.filter-panel'),summary=menu.querySelector('summary');
+ panel.id='filterSheet'+index;panel.tabIndex=-1;panel.setAttribute('role','region');panel.setAttribute('aria-label',summary.firstChild.textContent.trim()+'筛选');summary.setAttribute('aria-controls',panel.id);summary.setAttribute('aria-expanded','false');
+ const clear=document.createElement('button');clear.type='button';clear.className='filter-clear';clear.textContent='清除此项筛选';clear.onclick=()=>{const select=panel.querySelector('select');select.value='';select.dispatchEvent(new Event('change',{bubbles:true}));menu.open=false;summary.focus()};panel.append(clear);
+ menu.addEventListener('toggle',()=>{summary.setAttribute('aria-expanded',String(menu.open));if(menu.open){document.querySelector('.tray').hidden=true;panel.focus()}else{tray()}});
+});
+const v5Tray=tray;tray=function(){v5Tray();if(document.querySelector('.filter-menu[open]'))document.querySelector('.tray').hidden=true};
+// Keep keyboard focus in an open sheet; Escape and closing return to its trigger.
+document.addEventListener('keydown',event=>{const menu=document.querySelector('.filter-menu[open]');if(!menu||event.key!=='Tab')return;const focusable=[...menu.querySelector('.filter-panel').querySelectorAll('button:not(:disabled),a[href],input:not([hidden])')].filter(e=>e.getClientRects().length);const first=focusable[0],last=focusable.at(-1);if(event.shiftKey&&(document.activeElement===first||document.activeElement===menu.querySelector('.filter-panel'))){event.preventDefault();last?.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}});
+document.addEventListener('click',event=>{if(event.target.closest('.filter-close,.filter-shade'))event.target.closest('.filter-menu').querySelector('summary').focus()});
