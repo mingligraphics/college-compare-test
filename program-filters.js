@@ -18,11 +18,11 @@ const ProgramFilters=(()=>{
   el('programCategory').disabled=false;el('program').disabled=false;
   const params=new URLSearchParams(location.search);el('programCategory').value=params.get('programCategory')||'';options();if(params.has('program'))el('program').value=params.get('program');
   el('programCoverage').textContent='已录入 108 校 · 222 项本科优势 / 代表专业（2026-10-14快照）。选择后仅展示已有对应优势记录的学校，未录入不代表没有该专业。';
-  el('coverageShort').textContent=' 当前覆盖 108 校、222 项（2026-10-14）。';
- }catch{data=null;el('programCategory').replaceChildren(new Option('暂不可用',''));el('programCategory').disabled=true;el('program').disabled=true;el('programCoverage').textContent='专业索引暂时无法载入，请刷新重试；其他筛选仍可使用。';el('coverageShort').textContent=' 专业索引暂不可用。'} }
+  if(el('coverageShort'))el('coverageShort').textContent=' 当前覆盖 108 校、222 项（2026-10-14）。';
+ }catch{data=null;el('programCategory').replaceChildren(new Option('暂不可用',''));el('programCategory').disabled=true;el('program').disabled=true;el('programCoverage').textContent='专业索引暂时无法载入，请刷新重试；其他筛选仍可使用。';if(el('coverageShort'))el('coverageShort').textContent=' 专业索引暂不可用。'} }
  function cardHTML(id,esc){if(!data)return '';let ps=entries(id);const category=el('programCategory').value,program=el('program').value;
   if(category||program)ps=ps.filter(p=>(!category||data.mapping[p.name_cn]?.categories.includes(category))&&(!program||p.name_cn===program));
-  return ps.length?`<p class="program-preview">优势 / 代表：${ps.slice(0,2).map(p=>esc(p.name_cn)).join(' · ')}${ps.length>2?' 等':''}<span> · 依据及年份见详情</span></p>`:'<p class="program-preview"><span>优势专业尚未录入 · 不代表未开设</span></p>';
+  return ps.length?`<p class="program-preview">专业：${ps.slice(0,2).map(p=>esc(p.name_cn)).join(' · ')}${ps.length>2?' 等':''}<span> · 依据及年份见详情</span></p>`:'<p class="program-preview"><span>优势专业尚未录入 · 不代表未开设</span></p>';
  }
  return {load,options,matches,cardHTML};
 })();

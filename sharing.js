@@ -6,7 +6,7 @@ const CollegeShare=(()=>{
  function qrURL(url){return qrCanvas(url).toDataURL('image/png')}
  function fields(s){const c=CollegeDisplay.cost(s),ps=Array.isArray(s.signature_programs)?s.signature_programs:[];return [
  ['学校',s.school_name_cn||s.school_name],['英文名',s.school_name],['排名类别',ranking(s)],['地区 / 性质',[schoolLocation(s),control(s)].join(' · ')],
- ['年度总费用（美元）',CollegeDisplay.costText(s)],['费用口径',c.reference?[c.reference.note_cn,c.reference.scope_cn,c.reference.basis_cn].filter(Boolean).join('；'):'国际生额外费用未核验，实际支出可能更高。'],
+ ['年度总费用（美元）',CollegeDisplay.costText(s)],['费用口径',c.reference?[c.reference.note_cn,c.reference.scope_cn,c.reference.basis_cn].filter(Boolean).join('；'):'学校公布的年度预算，学年见上方。'],
  ['本科优势 / 代表专业',ps.length?ps.map(p=>p.name_cn||p.name_en).filter(Boolean).join('、'):'暂无已核实数据（未录入不代表没有该专业）']];}
  function poster(rows,url){const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=3600;const ctx=canvas.getContext('2d');ctx.fillStyle='#f6f7f2';ctx.fillRect(0,0,1200,3600);let y=64;
  function textLines(text,x,top,width,size,color,bold){ctx.font=`${bold?'600 ':''}${size}px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif`;ctx.fillStyle=color;let line='',yy=top;for(const ch of String(text||'暂无数据')){if(ch==='\n'||ctx.measureText(line+ch).width>width){ctx.fillText(line,x,yy);yy+=size*1.5;line=ch==='\n'?'':ch}else line+=ch}if(line)ctx.fillText(line,x,yy);return yy+size*1.5}
