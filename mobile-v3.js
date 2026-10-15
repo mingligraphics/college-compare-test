@@ -27,7 +27,15 @@ function setRoute(view,ids=[]){
  if(routeBusy)return;listScroll=scrollY;saveState();const u=new URL(location.href);u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
-function updateTitle(view,ids){document.title=ids.length?ids.map(id=>{const s=schools.find(s=>s.school_id===id);return s?.school_name_cn||s?.school_name||id}).join(' vs ')+'｜明希教育':homeTitle;document.querySelector('[property="og:title"]').content=document.title}
+const shareDescription='301所美国大学最新官方数据，找到最适合你的大学';
+function shareTitle(rows){return rows.length?rows.map(s=>s.school_name_cn||s.school_name).join('、')+(rows.length===2?'对比':''):homeTitle}
+function updateTitle(view,ids){
+ const rows=ids.map(id=>schools.find(s=>s.school_id===id)).filter(Boolean);
+ document.title=shareTitle(rows);
+ const metadata={'meta[name="description"]':shareDescription,'meta[property="og:title"]':document.title,'meta[property="og:description"]':shareDescription,'meta[property="og:url"]':rows.length?CollegeShare.link(rows):new URL('./',location.href).href,'meta[name="twitter:title"]':document.title,'meta[name="twitter:description"]':shareDescription};
+ for(const [selector,value] of Object.entries(metadata)){const tag=document.querySelector(selector);if(tag)tag.content=value}
+}
+
 const originalDetail=detail,originalCompare=compare,originalAbout=showAbout;
 detail=async function(id){if(!schools.some(s=>s.school_id===id))return;setRoute('detail',[id]);countEvent('detail');const work=originalDetail(id);addLinkActions([schools.find(s=>s.school_id===id)]);await work};
 compare=async function(){if(selected.length!==2){notify('请先加入两所大学再比较');return}setRoute('compare',selected);countEvent('compare');await originalCompare()};
@@ -35,9 +43,10 @@ showAbout=function(){setRoute('about');originalAbout();wireConsultation($('dialo
 const originalComparison=showComparison;showComparison=function(rows){originalComparison(rows);addLinkActions(rows);wireConsultation($('dialogContent'))};
 function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>a.onclick=()=>countEvent('consultation'))}
 async function shareLink(rows=[]){
- const url=rows.length?CollegeShare.link(rows):(()=>{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');return u.href})(),title=rows.length?rows.map(s=>s.school_name_cn||s.school_name).join(' vs ')+'｜明希教育':homeTitle;
+ const url=rows.length?CollegeShare.link(rows):(()=>{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');return u.href})(),title=shareTitle(rows);
+ updateTitle(rows.length===2?'compare':rows.length?'detail':null,rows.map(s=>s.school_id));
  if(/MicroMessenger/i.test(navigator.userAgent)){await copyLink(url);notify('链接已准备，请点击微信右上角「···」转发给朋友');return}
- if(navigator.share){try{await navigator.share({title,text:'探索美国大学，比较费用、地区与优势专业。',url});return}catch(e){if(e.name==='AbortError')return}}
+ if(navigator.share){try{await navigator.share({title,text:shareDescription,url});return}catch(e){if(e.name==='AbortError')return}}
  await copyLink(url);
 }
 async function copyLink(url){try{await navigator.clipboard.writeText(url);notify('链接已复制')}catch{prompt('请复制以下链接',url)}}
@@ -49,7 +58,7 @@ $('reset').addEventListener('click',()=>{listScroll=0;saveState();updateChips()}
 const originalAdd=add;add=function(id){originalAdd(id);saveState()};
 addEventListener('scroll',()=>{if(!$('dialog').open){listScroll=scrollY;saveState()}},{passive:true});
 $('dialog').addEventListener('close',()=>{detailRequest++;comparisonRequest++;if(routeBusy)return;if(history.state?.overlay){history.back()}else{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');history.replaceState({mobileV3:true},'',u);updateTitle(null,[]);requestAnimationFrame(()=>scrollTo(0,listScroll))}});
-addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2){selected=ids.filter(id=>schools.some(s=>s.school_id===id));compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}setTimeout(()=>routeBusy=false,0)});
+addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2){selected=ids.filter(id=>schools.some(s=>s.school_id===id));compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}updateTitle(p.get('view'),ids);setTimeout(()=>routeBusy=false,0)});
 
 
 $("compare").onclick=compare;$("compareNav").onclick=compare;$("aboutNav").onclick=showAbout;
