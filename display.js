@@ -24,7 +24,7 @@ const CollegeDisplay = (() => {
  }
  function costText(row){const c=cost(row);return `${money(c.amount)} · 学年：${c.year||'未核实'}`}
  function costHTML(row){const c=cost(row);return `<strong>${esc(money(c.amount))}</strong>${c.reference?`<small class="cost-note">${esc(c.reference.note_cn)}</small>`:''}<small class="cost-note">学年：${esc(c.year||'未核实')}${c.amount==null?'':` · 约${esc((c.amount*7/10000).toFixed(2))}万元人民币`}</small>${c.reference?`<small class="cost-note">${esc(c.reference.scope_cn)}；${esc(c.reference.basis_cn)}<br>${sources(c.reference.sources)}</small>`:''}`}
- function cardCostHTML(row){const amount=cost(row).amount;return `<strong>${typeof amount==='number'&&Number.isFinite(amount)&&amount>0?'¥'+Math.round(amount*7).toLocaleString('en-US'):'暂无数据'}</strong>`}
+ function cardCostHTML(row){const amount=cost(row).amount;return `<strong>${typeof amount==='number'&&Number.isFinite(amount)&&amount>0?'¥'+Math.round(amount*7/10000).toLocaleString('en-US')+'万元':'暂无数据'}</strong>`}
  function costBand(row){const n=cost(row).amount;if(typeof n!=='number'||!Number.isFinite(n)||n<=0)return null;const cny=n*7;return cny<300000?'low':cny<500000?'mid':cny<650000?'high':'top'}
 
  return {esc,money,policy,aid,aidHTML,programsHTML,policyHTML,costText,cost,costHTML,cardCostHTML,costBand};
