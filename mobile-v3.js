@@ -1,5 +1,5 @@
 /* Mobile navigation state and local preview behavior. */
-const stateFields=['search','region','state','tuition','size','international','programCategory','program','sort'];
+const stateFields=['search','region','tuition','size','international','programCategory','program','sort'];
 const homeTitle='美国大学选校指南';
 let routeBusy=false, listScroll=0, searchTimer, stateReady=false;
 let initialSavedState;try{initialSavedState=JSON.parse(sessionStorage.getItem('cc-mobile-v3')||'null')}catch{}
@@ -7,18 +7,18 @@ function saveState(){
  if(!stateReady)return;
  const state={values:Object.fromEntries(stateFields.map(id=>[id,$(id).value])),page,selected:[...selected],scroll:listScroll};
  try{sessionStorage.setItem('cc-mobile-v3',JSON.stringify(state))}catch{}
- const u=new URL(location.href);for(const id of stateFields){if($(id).value)u.searchParams.set(id,$(id).value);else u.searchParams.delete(id)}
+ const u=new URL(location.href);u.searchParams.delete('state');for(const id of stateFields){if($(id).value)u.searchParams.set(id,$(id).value);else u.searchParams.delete(id)}
  history.replaceState({...history.state,mobileV3:true},'',u);
 }
 function viewIsList(params){return !['compare','detail'].includes(params.get('view'))}
 function restoreInitial(){
  if(!schools.length){stateReady=true;return;}
  const params=new URLSearchParams(location.search);const saved=initialSavedState;
- if(saved){if(!stateFields.some(id=>params.has(id))){for(const id of stateFields.filter(id=>id!=='state'))$(id).value=saved.values?.[id]|| (id==='sort'?'rank':'');updateStateOptions(saved.values?.state);}
+ if(saved){if(!stateFields.some(id=>params.has(id))){for(const id of stateFields)$(id).value=saved.values?.[id]|| (id==='sort'?'rank':'');}
  apply();page=Math.max(1,Number(saved.page)||1);if(viewIsList(params)||(params.get('view')==='detail'&&saved.selected?.includes(params.get('school'))))selected=(saved.selected||[]).filter(id=>schools.some(s=>s.school_id===id)).slice(0,2);render();tray();listScroll=Number(saved.scroll)||0;if(!params.has('view'))requestAnimationFrame(()=>scrollTo(0,listScroll));}
  const requested=params.getAll('school'),view=params.get('view');
  if((view==='detail'&&(requested.length!==1||!schools.some(s=>s.school_id===requested[0])))||(view==='compare'&&(requested.length!==2||new Set(requested).size!==2||requested.some(id=>!schools.some(s=>s.school_id===id))))){modal('<h2>分享链接已失效或学校不存在</h2><p>请返回列表重新选择学校。</p><button id="close">返回列表</button>')}
- stateReady=true;updateChips();
+ stateReady=true;saveState();updateChips();
 }
 function updateChips(){
  $('activeFilters').replaceChildren();for(const id of stateFields.filter(id=>!['sort','program'].includes(id))){if(!$(id).value)continue;const b=document.createElement('button');b.textContent=(id==='search'?$('search').value:$(id).selectedOptions[0]?.textContent||$(id).value)+' ×';b.onclick=()=>{$(id).value='';if(id==='programCategory')$('program').value='';apply();saveState();updateChips();countEvent(id==='search'?'search':'filter')};$('activeFilters').append(b)}
@@ -59,7 +59,7 @@ $('reset').addEventListener('click',()=>{listScroll=0;saveState();updateChips()}
 const originalAdd=add;add=function(id){originalAdd(id);saveState()};
 addEventListener('scroll',()=>{if(!$('dialog').open){listScroll=scrollY;saveState()}},{passive:true});
 $('dialog').addEventListener('close',()=>{$('dialog').removeAttribute('aria-labelledby');detailRequest++;comparisonRequest++;if(routeBusy)return;if(history.state?.overlay){history.back()}else{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');history.replaceState({mobileV3:true},'',u);updateTitle(null,[]);requestAnimationFrame(()=>scrollTo(0,listScroll))}});
-addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');for(const id of stateFields.filter(id=>id!=='state'))$(id).value=p.get(id)||(id==='sort'?'rank':'');updateStateOptions(p.get('state'));apply();updateChips();if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2&&new Set(ids).size===2&&ids.every(id=>schools.some(s=>s.school_id===id))){selected=[...ids];persistSelection();compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}updateTitle(p.get('view'),ids);setTimeout(()=>routeBusy=false,0)});
+addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');for(const id of stateFields)$(id).value=p.get(id)||(id==='sort'?'rank':'');apply();updateChips();if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2&&new Set(ids).size===2&&ids.every(id=>schools.some(s=>s.school_id===id))){selected=[...ids];persistSelection();compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}updateTitle(p.get('view'),ids);setTimeout(()=>routeBusy=false,0)});
 
 
 $("compare").onclick=compare;$("compareNav").onclick=compare;$("aboutNav").onclick=e=>{e.preventDefault();showAbout()};
@@ -102,10 +102,12 @@ function addReplacementActions(rows){
 document.querySelectorAll('.filter-menu').forEach((menu,index)=>{
  const panel=menu.querySelector('.filter-panel'),summary=menu.querySelector('summary');
  panel.id='filterSheet'+index;panel.tabIndex=-1;panel.setAttribute('role','region');panel.setAttribute('aria-label',summary.firstChild.textContent.trim()+'筛选');summary.setAttribute('aria-controls',panel.id);summary.setAttribute('aria-expanded','false');
- const clear=document.createElement('button');clear.type='button';clear.className='filter-clear';clear.textContent='清除此项筛选';clear.onclick=()=>{const select=panel.querySelector('select');select.value='';if(select.id==='region')$('state').value='';select.dispatchEvent(new Event('change',{bubbles:true}));menu.open=false;summary.focus()};panel.append(clear);
+ const clear=document.createElement('button');clear.type='button';clear.className='filter-clear';clear.textContent='清除此项筛选';clear.onclick=()=>{const select=panel.querySelector('select');select.value='';select.dispatchEvent(new Event('change',{bubbles:true}));menu.open=false;summary.focus()};panel.append(clear);
  menu.addEventListener('toggle',()=>{summary.setAttribute('aria-expanded',String(menu.open));if(menu.open){document.querySelector('.tray').hidden=true;panel.focus()}else{tray()}});
 });
 const v5Tray=tray;tray=function(){v5Tray();if(document.querySelector('.filter-menu[open]'))document.querySelector('.tray').hidden=true};
-// Keep keyboard focus in an open sheet; Escape and closing return to its trigger.
-document.addEventListener('keydown',event=>{const menu=document.querySelector('.filter-menu[open]');if(!menu||event.key!=='Tab')return;const focusable=[...menu.querySelector('.filter-panel').querySelectorAll('button:not(:disabled),a[href],input:not([hidden]),select:not([hidden])')].filter(e=>e.getClientRects().length);const first=focusable[0],last=focusable.at(-1);if(event.shiftKey&&(document.activeElement===first||document.activeElement===menu.querySelector('.filter-panel'))){event.preventDefault();last?.focus()}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}});
 document.addEventListener('click',event=>{if(event.target.closest('.filter-close,.filter-shade'))event.target.closest('.filter-menu').querySelector('summary').focus()});
+
+// Keep anchored menus aligned when the page or visual viewport moves.
+addEventListener("scroll",()=>document.querySelectorAll(".filter-menu[open]").forEach(positionFilterMenu),true);
+visualViewport?.addEventListener("resize",()=>document.querySelectorAll(".filter-menu[open]").forEach(positionFilterMenu));
