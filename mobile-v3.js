@@ -41,7 +41,7 @@ detail=async function(id){if(!schools.some(s=>s.school_id===id))return;setRoute(
 compare=async function(){if(selected.length!==2){notify('请先加入两所大学再比较');return}setRoute('compare',selected);countEvent('compare');await originalCompare()};
 showAbout=function(){setRoute('about');originalAbout();wireConsultation($('dialogContent'))};
 const originalComparison=showComparison;showComparison=function(rows){originalComparison(rows);addLinkActions(rows);wireConsultation($('dialogContent'))};
-function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>a.onclick=()=>countEvent('consultation'))}
+function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>{const section=a.parentElement;section.querySelector('h3')?.remove();section.querySelector('small')?.remove();a.hidden=true;const b=document.createElement('button');b.textContent='预约明希团队一对一诊断';b.onclick=()=>{a.hidden=false;countEvent('consultation')};a.before(b)})}
 async function shareLink(rows=[]){
  const url=rows.length?CollegeShare.link(rows):(()=>{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');return u.href})(),title=shareTitle(rows);
  updateTitle(rows.length===2?'compare':rows.length?'detail':null,rows.map(s=>s.school_id));
@@ -50,7 +50,7 @@ async function shareLink(rows=[]){
  await copyLink(url);
 }
 async function copyLink(url){try{await navigator.clipboard.writeText(url);notify('链接已复制')}catch{prompt('请复制以下链接',url)}}
-function addLinkActions(rows){const box=document.createElement('div');box.className='share-link-actions';const share=document.createElement('button');share.textContent='分享给家人一起看';share.onclick=()=>shareLink(rows);box.append(share);$('dialogContent').append(box)}
+function addLinkActions(rows){const box=document.createElement('div');box.className='share-link-actions';const share=document.createElement('button');share.textContent='分享给家人一起看';share.onclick=()=>shareLink(rows);box.append(share);($('dialogContent').querySelector('.next-step .share-link-actions')||$('dialogContent')).append(box)}
 $('homeShare').onclick=()=>shareLink();
 $('homeConsult').onclick=()=>{$('homeQR').hidden=false;countEvent('consultation')};
 for(const id of stateFields)$(id).addEventListener(id==='search'?'input':'change',()=>{listScroll=0;scrollTo(0,0);saveState();updateChips();if(id==='search'){clearTimeout(searchTimer);searchTimer=setTimeout(()=>countEvent('search'),500)}else if(id!=='sort')countEvent('filter')});
@@ -63,3 +63,5 @@ addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(loca
 
 $("compare").onclick=compare;$("compareNav").onclick=compare;$("aboutNav").onclick=showAbout;
 Promise.all([ProgramFilters.load(),loadDirectory()]).then(restoreInitial);
+
+new MutationObserver(()=>tray()).observe($('dialog'),{attributes:true,attributeFilter:['open']});
