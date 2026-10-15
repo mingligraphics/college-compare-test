@@ -2,7 +2,7 @@
 const ProgramFilters=(()=>{
  let data=null;
  const el=id=>document.getElementById(id);
- function entries(id){return (data?.schools[id]||[]).filter(p=>['localhost','127.0.0.1','[::1]'].includes(location.hostname)||p.evidence_category!=='本科专业排名')}
+ function entries(id){return (data?.schools[id]||[])}
  function matches(id,category,program){return !category&&!program||entries(id).some(p=>(!category||data.mapping[p.name_cn]?.categories.includes(category))&&(!program||p.name_cn===program))}
  function options(){
   if(!data)return;
