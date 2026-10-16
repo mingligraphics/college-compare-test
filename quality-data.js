@@ -1134,11 +1134,11 @@ const QualityData = {
     },
     "rutgers": {
       "need": {
-        "text": "国际本科新生的校方 need-based 资格尚未确认；不能把其他校区项目或一般 FAFSA 说明当作本校区资格结论。",
+        "text": "不提供国际本科入学新生 need-based 资助（F-1／J-1 签证）；在读紧急援助不属于入学前首年资助。",
         "sources": [
           {
-            "url": "https://admissions.rutgers.edu/costs-and-aid/scholarships",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "url": "https://www.admissions.rutgers.edu/admitted-students",
+            "year": "官网现行资格；2027–28完整资助周期未单独认证"
           }
         ],
         "checked": "2026-10-16",
@@ -2334,15 +2334,15 @@ const QualityData = {
     },
     "rutgers_camden": {
       "need": {
-        "text": "本校区国际本科新生 need-based 资格尚未确认；不将 FAFSA／新泽西州项目套用于普通国际生。",
+        "text": "不提供国际本科入学新生 need-based 资助（F-1／J-1 签证）；此为 Camden 校区官方录取新生页说明。",
         "sources": [
           {
-            "url": "https://admissions.camden.rutgers.edu/costs-and-aid",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "url": "https://admissions.camden.rutgers.edu/admitted-students/camden",
+            "year": "官网现行资格；2027–28完整资助周期未单独认证"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": null
+        "expected_value": "no"
       },
       "merit": {
         "text": "持有效非移民签证的国际申请人可自动获奖学金考虑；须按本校区条件，校区之间不可直接移用奖额。",
@@ -3382,15 +3382,15 @@ const QualityData = {
     },
     "us_104151": {
       "need": {
-        "text": "国际生不适用联邦／州资助；校方及学院 need-based 国际新生资格尚未确认。",
+        "text": "可申请有限 need-based 资助，仅限符合 Barrett 荣誉学院及奖项条件的国际本科新生，须交校方预算表；2027–28申请窗口已公布，不代表全校普遍提供或保证获奖。",
         "sources": [
           {
-            "url": "https://admission.asu.edu/cost-aid/international",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "url": "https://students.barretthonors.asu.edu/funding/barrett-scholarships",
+            "year": "Barrett 2027–28申请窗口；完整资助周期未认证"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": null
+        "expected_value": "limited"
       },
       "merit": {
         "text": "F-1国际本科新生可竞争 New American University 学术奖；学院奖条件各异，不套用排除国际生的国内奖学金估算器。",
