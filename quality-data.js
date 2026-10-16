@@ -506,19 +506,15 @@ const QualityData = {
     },
     "ucsb": {
       "need": {
-        "text": "国际生资助机会非常有限，需准备自行承担就读费用；常规新生 need-based 资格尚未确认。",
+        "text": "国际本科新生 need-based 资格尚未确认；OISS困难奖用于在读期间，不能作为入学资助。",
         "sources": [
           {
-            "url": "https://admissions.ext-prod.sa.ucsb.edu/international",
-            "year": "现行政策；2027–28资助规则未单独确认"
-          },
-          {
             "url": "https://oiss.ucsb.edu/resources/financial-resources",
-            "year": "现行政策；2027–28资助规则未单独确认"
+            "year": "现行官网；2027–28新生资格未明确"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": "limited"
+        "expected_value": null
       },
       "merit": {
         "text": "国际新生 merit 资格尚未确认。Regents 奖有公民、永久居民或符合加州指定法案的身份限制，不能据此判断全校其他奖项。",
@@ -1020,30 +1016,26 @@ const QualityData = {
     },
     "michigan": {
       "need": {
-        "text": "临时签证国际生不适用常规财援，通常需承担完整费用；学院专项是否按经济需求向新生发放尚未确认。",
+        "text": "国际本科新生 need-based 资格尚未充分核实；学院专项及身份限制需逐项确认，不能据一般资助说明判断全校政策。",
         "sources": [
           {
-            "url": "https://admissions.umich.edu/costs-aid/financial-aid",
-            "year": "现行政策；2027–28资助周期未单独确认"
-          },
-          {
             "url": "https://finaid.umich.edu/apply-aid",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "year": "现行官网；2027–28新生资格未明确"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": "limited"
+        "expected_value": null
       },
       "merit": {
-        "text": "国际生校方奖学金机会很有限；具体学院、专业及新生 merit 资格仍须逐项确认。",
+        "text": "国际本科新生 merit 资格尚未充分核实；学院专项及身份限制需逐项确认，不能据一般资助说明判断全校政策。",
         "sources": [
           {
             "url": "https://finaid.umich.edu/apply-aid",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "year": "现行官网；2027–28新生资格未明确"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": "limited"
+        "expected_value": null
       }
     },
     "northeastern": {
@@ -1333,15 +1325,15 @@ const QualityData = {
         "expected_value": "no"
       },
       "merit": {
-        "text": "本科申请人自动获适用的 merit 奖考虑；国际新生须逐项核对奖项的专业、身份等限制。",
+        "text": "国际本科新生 merit 资格尚未取得直接适用证据；一般申请人自动评审说明不能替代具体奖项的身份、专业及新生条件。",
         "sources": [
           {
             "url": "https://www.admissions.illinois.edu/first-year-apply-faq/",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "year": "现行官网；2027–28新生资格未明确"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": "limited"
+        "expected_value": null
       }
     },
     "wake_forest": {
@@ -1394,22 +1386,22 @@ const QualityData = {
     },
     "wisconsin": {
       "need": {
-        "text": "有专项限制：King-Morgridge 面向指定地区中学背景、经济需求高的国际本科新生；须 Early Action 录取并另申奖，不面向所有国际生。",
+        "text": "King-Morgridge 是兼顾经济需求、学业及领导力的混合专项，不是两项独立奖；须有指定地区中学背景，中国大陆中学不在范围内。须 EA 录取并另申奖。",
         "sources": [
           {
             "url": "https://admissions.wisc.edu/international-scholarships/",
-            "year": "2027秋King-Morgridge首年申请；其余项目现行"
+            "year": "明确2027秋专项；完整2027–28未认证"
           }
         ],
         "checked": "2026-10-16",
         "expected_value": "limited"
       },
       "merit": {
-        "text": "有专项限制：King-Morgridge 综合学业、领导力及减贫承诺评选，可覆盖学费、食宿等；须符合指定地区教育背景并另行申请。",
+        "text": "King-Morgridge 与 need-based 栏为同一混合专项；指定地区不含中国大陆中学，不能理解为所有国际生可申请。其他奖须另核资格。",
         "sources": [
           {
             "url": "https://admissions.wisc.edu/international-scholarships/",
-            "year": "2027秋King-Morgridge首年申请；其余项目现行"
+            "year": "明确2027秋专项；完整2027–28未认证"
           }
         ],
         "checked": "2026-10-16",
@@ -1494,30 +1486,26 @@ const QualityData = {
     },
     "purdue": {
       "need": {
-        "text": "国际本科新生一般不适用常规 need-based 资助；应准备完整就读费用。",
+        "text": "国际本科新生 need-based 资格尚未充分核实；一般“不适用”说明不能推为全校无资助，在读小额奖也不能当作入学奖。",
         "sources": [
           {
             "url": "https://www.purdue.edu/gpp/iss/_documents/admission/InternationalAdmissionsGuide.pdf",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "year": "现行官网；2027–28新生资格未明确"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": "no"
+        "expected_value": null
       },
       "merit": {
-        "text": "国际新生一般不适用校级 merit 奖；官方指南另列在读期间的小额 merit 奖，不能写成全校均无。",
+        "text": "国际本科新生 merit 资格尚未充分核实；一般“不适用”说明不能推为全校无资助，在读小额奖也不能当作入学奖。",
         "sources": [
           {
             "url": "https://www.purdue.edu/gpp/iss/_documents/admission/InternationalAdmissionsGuide.pdf",
-            "year": "现行政策；2027–28资助周期未单独确认"
-          },
-          {
-            "url": "https://purdue.edu/parentandfamily/FAQs/International_Scholarship_Opportunities.html",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "year": "现行官网；2027–28新生资格未明确"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": "limited"
+        "expected_value": null
       }
     },
     "umass_amherst": {
@@ -3058,26 +3046,26 @@ const QualityData = {
     },
     "gatech": {
       "need": {
-        "text": "有在读专项：OIE可向遭遇意外经济困难的F-1在读本科生提供境外学费减免；不是国际新生入学资助保证。",
+        "text": "国际本科新生 need-based 资格尚未确认；OIE困难减免及应急资助面向在读生，不能作为入学资助。",
         "sources": [
           {
             "url": "https://isss.oie.gatech.edu/isss/financial-assistance-international-students",
-            "year": "现行政策；2027–28资助周期未单独确认"
-          }
-        ],
-        "checked": "2026-10-16",
-        "expected_value": "limited"
-      },
-      "merit": {
-        "text": "国际本科新生校方 merit 资格尚未确认；OSFA称国际生通常不获其管理的奖，不能据此判断全校均无。",
-        "sources": [
-          {
-            "url": "https://finaid.gatech.edu/apply/international",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "year": "现行官网；2027–28新生资格未明确"
           }
         ],
         "checked": "2026-10-16",
         "expected_value": null
+      },
+      "merit": {
+        "text": "Stamps 通常限美国公民或永久居民；国际新生仅在极少数特殊情况下、按 Early Action 申请后可能获考虑。不是面向普通国际申请人的普遍奖项。",
+        "sources": [
+          {
+            "url": "https://stampsps.gatech.edu/apply/frequently-asked-questions",
+            "year": "现行官网；2027–28新生资格未明确"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
       }
     },
     "us_173258": {
@@ -4186,6 +4174,78 @@ const QualityData = {
           {
             "url": "https://isss.uoregon.edu/icsp/application",
             "year": "申请页Fall2026；招生总页现行，2027未确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "ut_austin": {
+      "need": {
+        "text": "国际本科新生 need-based 资格尚未充分核实；ISSS多项奖有在读、地区或项目限制，2027–28申请窗口不代表普通国际新生符合资格。",
+        "sources": [
+          {
+            "url": "https://global.utexas.edu/isss/advising-services/scholarships",
+            "year": "现行官网；2027–28新生资格未明确"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "国际本科新生 merit 资格尚未充分核实；ISSS多项奖有在读、地区或项目限制，2027–28申请窗口不代表普通国际新生符合资格。",
+        "sources": [
+          {
+            "url": "https://global.utexas.edu/isss/advising-services/scholarships",
+            "year": "现行官网；2027–28新生资格未明确"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      }
+    },
+    "us_191241": {
+      "need": {
+        "text": "暂未确认：官网最低家庭贡献条件存在不一致，国际本科新生 need-based 结论暂缓；不能据此估算家庭应付费用。",
+        "sources": [
+          {
+            "url": "https://www.fordham.edu/student-financial-services/undergraduate-financial-aid/international-students/",
+            "year": "现行官网；2027–28新生资格未明确"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "国际新生可参加Merit，完整申请自动考虑；录取信通知。",
+        "sources": [
+          {
+            "url": "https://www.fordham.edu/undergraduate-admission/international-students/international-faqs/",
+            "year": "现行政策；2027–28未明确"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "us_212674": {
+      "merit": {
+        "text": "国际本科新生 merit 资格暂未确认；一般奖学金页的申请人范围不足以确认国际生适用，不视为保证可申。",
+        "sources": [
+          {
+            "url": "https://www.gettysburg.edu/admissions-aid/scholarships",
+            "year": "现行官网；2027–28新生资格未明确"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "need": {
+        "text": "国际新生Need以国际财务表及国际财援申请表评审，无CSS要求；随录取通知。",
+        "sources": [
+          {
+            "url": "https://www.gettysburg.edu/admissions-aid/admissions/international/accepted-steps/financial-aid",
+            "year": "现行政策；2027–28未明确"
           }
         ],
         "checked": "2026-10-16",
