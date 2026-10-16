@@ -918,6 +918,273 @@ const QualityData = {
           "url": "https://trinity.edu/admissions-and-aid/guides-and-resources/guide-international-applicants"
         }
       ]
+    },
+    "us_110556": {
+      "policy": "test_free",
+      "cycle": "2027年秋季入学",
+      "note": "常规录取不考虑；特殊录取及分班可能使用。在家教育课程须校方审核。",
+      "sources": [
+        {
+          "url": "https://studentaffairs.fresnostate.edu/are/multiple-measures.html"
+        },
+        {
+          "url": "https://www.calstate.edu/attend/student-services/Documents/csu-admission-handbook.pdf"
+        },
+        {
+          "url": "https://www.calstate.edu/apply/Pages/Frequently-Asked-Questions.aspx"
+        }
+      ]
+    },
+    "us_110565": {
+      "policy": "test_free",
+      "cycle": "2027年秋季入学",
+      "note": "常规录取不考虑；特殊录取及分班可能使用。在家教育课程须校方审核。",
+      "sources": [
+        {
+          "url": "https://admissions.fullerton.edu/newly-admitted-students/transcripts.html"
+        },
+        {
+          "url": "https://www.calstate.edu/attend/student-services/Documents/csu-admission-handbook.pdf"
+        },
+        {
+          "url": "https://www.calstate.edu/apply/Pages/Frequently-Asked-Questions.aspx"
+        }
+      ]
+    },
+    "us_110574": {
+      "policy": "test_free",
+      "cycle": "2027年秋季入学",
+      "note": "常规录取不考虑；特殊录取及分班可能使用。在家教育课程须校方审核。",
+      "sources": [
+        {
+          "url": "https://www.csueastbay.edu/iao/how-to-apply/first-time-freshman/admission-requirements.html"
+        },
+        {
+          "url": "https://www.calstate.edu/attend/student-services/Documents/csu-admission-handbook.pdf"
+        },
+        {
+          "url": "https://www.calstate.edu/apply/Pages/Frequently-Asked-Questions.aspx"
+        }
+      ]
+    },
+    "us_110583": {
+      "policy": "test_free",
+      "cycle": "2027年秋季入学",
+      "note": "常规录取不考虑；特殊录取及分班可能使用。在家教育课程须校方审核。",
+      "sources": [
+        {
+          "url": "https://www.csulb.edu/admissions/first-time-first-year-student-csulb-index"
+        },
+        {
+          "url": "https://www.calstate.edu/attend/student-services/Documents/csu-admission-handbook.pdf"
+        },
+        {
+          "url": "https://www.calstate.edu/apply/Pages/Frequently-Asked-Questions.aspx"
+        }
+      ]
+    },
+    "us_110608": {
+      "policy": "test_free",
+      "cycle": "2027年秋季入学",
+      "note": "常规录取不考虑；特殊录取及分班可能使用。在家教育课程须校方审核。",
+      "sources": [
+        {
+          "url": "https://catalog.csun.edu/policies/freshman-requirements/"
+        },
+        {
+          "url": "https://www.calstate.edu/attend/student-services/Documents/csu-admission-handbook.pdf"
+        },
+        {
+          "url": "https://www.calstate.edu/apply/Pages/Frequently-Asked-Questions.aspx"
+        }
+      ]
+    },
+    "us_409698": {
+      "policy": "test_free",
+      "cycle": "2027年秋季入学",
+      "note": "常规录取不考虑；特殊录取及分班可能使用。在家教育课程须校方审核。",
+      "sources": [
+        {
+          "url": "https://csumb.edu/admissions-aid/how-to-apply/first-year/"
+        },
+        {
+          "url": "https://www.calstate.edu/attend/student-services/Documents/csu-admission-handbook.pdf"
+        },
+        {
+          "url": "https://www.calstate.edu/apply/Pages/Frequently-Asked-Questions.aspx"
+        }
+      ]
+    },
+    "us_164748": {
+      "policy": "test_free",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "适用于伯克利音乐学院本科；试演、作品集及英语要求另行。",
+      "sources": [
+        {
+          "url": "https://college.berklee.edu/admissions/undergraduate/how-to-apply"
+        }
+      ]
+    },
+    "us_117946": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "适用于所有专业及国际生；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://admission.lmu.edu/learnmore/prospectivestudents/frequentlyaskedquestions/"
+        },
+        {
+          "url": "https://admission.lmu.edu/apply/"
+        }
+      ]
+    },
+    "us_217882": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生同样适用；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.clemson.edu/admissions/undergraduate-admissions/apply/first-year.html"
+        },
+        {
+          "url": "https://www.clemson.edu/admissions/undergraduate-admissions/apply/international.html"
+        }
+      ]
+    },
+    "us_145725": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及校内奖学金同样适用。",
+      "sources": [
+        {
+          "url": "https://www.iit.edu/admissions-aid/undergraduate-admission/first-year-students"
+        },
+        {
+          "url": "https://www.iit.edu/admissions-aid/undergraduate-admission/first-year-students/homeschooled-applicants"
+        },
+        {
+          "url": "https://www.iit.edu/admissions-aid/undergraduate-admission/first-year-students/illinois-tech-nrotc-preparatory-program"
+        },
+        {
+          "url": "https://www.iit.edu/admissions-aid/undergraduate-admission/first-year-students/recommended-admission-guidelines"
+        }
+      ]
+    },
+    "us_146719": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样适用；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.luc.edu/undergrad/admissions/first-yearstudents/"
+        },
+        {
+          "url": "https://www.luc.edu/undergrad/admissions/internationalstudents/"
+        }
+      ]
+    },
+    "us_189088": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样适用；音乐学院另需试演。",
+      "sources": [
+        {
+          "url": "https://www.bard.edu/admission/firstyear/"
+        },
+        {
+          "url": "https://www.bard.edu/admission/applying/homeschooled/"
+        },
+        {
+          "url": "https://www.bard.edu/admission/applying/international/"
+        },
+        {
+          "url": "https://www.bard.edu/admission/applying/conservatory/"
+        }
+      ]
+    },
+    "us_195304": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.sarahlawrence.edu/admission/apply/first-year.html"
+        },
+        {
+          "url": "https://www.sarahlawrence.edu/admission/apply/international/index.html"
+        }
+      ]
+    },
+    "us_126818": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "提交后须另行邮件申请，学校才会考虑成绩；不用于奖学金评定。",
+      "sources": [
+        {
+          "url": "https://admissions.colostate.edu/apply/submitting-documents/"
+        },
+        {
+          "url": "https://admissions.colostate.edu/apply/freshmen/"
+        }
+      ]
+    },
+    "us_232186": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "计算机与工程免交须四年数学，含高于代数Ⅱ课程，且各门B及以上。",
+      "sources": [
+        {
+          "url": "https://www.gmu.edu/freshman/requirements/score-optional"
+        },
+        {
+          "url": "https://www.gmu.edu/freshman/requirements/homeschool"
+        }
+      ]
+    },
+    "us_217484": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生申请奖学金及六年制药学建议提交；在家教育者可选交。",
+      "sources": [
+        {
+          "url": "https://web.uri.edu/admission/first-year/"
+        },
+        {
+          "url": "https://web.uri.edu/admission/admission-for-home-schooled-applicants/"
+        },
+        {
+          "url": "https://web.uri.edu/admission/international/"
+        }
+      ]
+    },
+    "us_183044": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样适用；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://admissions.unh.edu/apply/test-optional"
+        }
+      ]
+    },
+    "us_196088": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及奖学金同样适用；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.buffalo.edu/admissions/apply/first-year.html"
+        },
+        {
+          "url": "https://www.buffalo.edu/admissions/apply/first-year.standardized-tests.html"
+        },
+        {
+          "url": "https://www.buffalo.edu/admissions/apply/first-year.other-requirements.html"
+        },
+        {
+          "url": "https://www.buffalo.edu/admissions/apply/international/first-year.standardized-tests.html"
+        }
+      ]
     }
   },
   "rankings": {
