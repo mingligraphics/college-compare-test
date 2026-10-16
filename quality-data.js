@@ -876,6 +876,48 @@ const QualityData = {
           "url": "https://www.whitman.edu/admission-and-aid/applying-to-whitman/international-students/checklist"
         }
       ]
+    },
+    "us_165015": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生同样适用；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.brandeis.edu/admissions/apply/test-optional-policy.html"
+        },
+        {
+          "url": "https://www.brandeis.edu/admissions/apply/application-process/first-year.html"
+        }
+      ]
+    },
+    "us_212674": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生强烈建议提交；在家教育者建议提交。英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.gettysburg.edu/admissions-aid/admissions/undergraduate/gettysburg-ready"
+        },
+        {
+          "url": "https://gettysburg.edu/admissions-aid/admissions/international"
+        },
+        {
+          "url": "https://gettysburg.edu/academics/catalog/policies/home-schooled-student-application-process"
+        }
+      ]
+    },
+    "us_229267": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "国际生同样适用；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://admissions.trinity.edu/register/edearlyestimate"
+        },
+        {
+          "url": "https://trinity.edu/admissions-and-aid/guides-and-resources/guide-international-applicants"
+        }
+      ]
     }
   },
   "rankings": {
