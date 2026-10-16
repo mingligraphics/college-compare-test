@@ -1185,6 +1185,208 @@ const QualityData = {
           "url": "https://www.buffalo.edu/admissions/apply/international/first-year.standardized-tests.html"
         }
       ]
+    },
+    "us_104179": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "无需提交；成绩可用于课程能力认定及分班，荣誉学院与校内奖学金也不要求。",
+      "sources": [
+        {
+          "url": "https://www.arizona.edu/admissions/undergraduate/first-year"
+        },
+        {
+          "url": "https://www.arizona.edu/admissions/apply/high-school-competency"
+        },
+        {
+          "url": "https://www.arizona.edu/admissions/faq"
+        },
+        {
+          "url": "https://www.arizona.edu/admissions/undergraduate/international"
+        },
+        {
+          "url": "https://snre.arizona.edu/undergraduate/admissions"
+        }
+      ]
+    },
+    "us_153603": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.iastate.edu/admission-and-aid/admissions/first-year-students"
+        },
+        {
+          "url": "https://www.iastate.edu/admission-and-aid/admissions/international-admissions/international-first-year-requirements"
+        }
+      ]
+    },
+    "us_204024": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样适用；总统学者奖学金须交成绩。",
+      "sources": [
+        {
+          "url": "https://miamioh.edu/admission-aid/apply/first-year-students/college-entrance-testing.html"
+        },
+        {
+          "url": "https://miamioh.edu/admission-aid/apply/first-year-students/test-optional-faqs.html"
+        },
+        {
+          "url": "https://miamioh.edu/admission-aid/apply/first-year-students/home-school-curriculum.html"
+        }
+      ]
+    },
+    "us_133669": {
+      "policy": "test_flexible",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "须交SAT、ACT或CLT；指定佛州高中双学分副学士路径可免交，但无成绩不获招生办优秀奖学金。",
+      "sources": [
+        {
+          "url": "https://www.fau.edu/admissions/freshman/how-to-apply/admissions-requirements/"
+        },
+        {
+          "url": "https://www.fau.edu/admissions/international/"
+        }
+      ]
+    },
+    "us_225511": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "国际生亦可选交；部分专业有额外成绩或课程门槛，须核对直录条件。",
+      "sources": [
+        {
+          "url": "https://uh.edu/undergraduate-admissions/resources/test-optional-admissions/index.php"
+        },
+        {
+          "url": "https://www.uh.edu/undergraduate-admissions/apply/international/international-freshman/"
+        },
+        {
+          "url": "https://www.uh.edu/undergraduate-admissions/resources/undergraduate-faqs/index.php"
+        },
+        {
+          "url": "https://www.uh.edu/undergraduate-admissions/academics/_files/additional-requirements-freshman.pdf"
+        }
+      ]
+    },
+    "us_204501": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "文理学院及音乐学院可选交；音乐学院另需试演，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/testing-policy"
+        },
+        {
+          "url": "https://www.oberlin.edu/admissions-and-aid/arts-and-sciences/first-year-applicants"
+        },
+        {
+          "url": "https://www.oberlin.edu/admissions-and-aid/conservatory/academic-requirements-and-testing"
+        }
+      ]
+    },
+    "us_239017": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者建议交但非必交；音乐学院另需试演，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.lawrence.edu/admissions-aid/apply/"
+        },
+        {
+          "url": "https://www.lawrence.edu/admissions-aid/apply/homeschool/"
+        },
+        {
+          "url": "https://inside.lawrence.edu/admissions-aid/international-admissions/admission-requirements"
+        },
+        {
+          "url": "https://www.lawrence.edu/admissions-aid/apply/conservatory/"
+        }
+      ]
+    },
+    "us_238333": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.beloit.edu/admission/apply/home-schooled-applicants/"
+        },
+        {
+          "url": "https://www.beloit.edu/admission/apply/international-applicants/requirements/"
+        }
+      ]
+    },
+    "us_146427": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育或学校不提供成绩者须交；国际生英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.knox.edu/admission/apply-to-knox"
+        },
+        {
+          "url": "https://www.knox.edu/admission/apply-to-knox/homeschooled-applicants"
+        },
+        {
+          "url": "https://www.knox.edu/admission/apply-to-knox/international-applicants"
+        },
+        {
+          "url": "https://www.knox.edu/admission/apply-to-knox/test-scores"
+        }
+      ]
+    },
+    "us_230816": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "提交成绩仅在有利时考虑；国际生英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.bennington.edu/admissions/apply/application-requirements"
+        },
+        {
+          "url": "https://www.bennington.edu/admissions/apply/home-schooled-students"
+        },
+        {
+          "url": "https://www.bennington.edu/admissions/apply/applying-international-student"
+        }
+      ]
+    },
+    "us_191630": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "无传统成绩单者（含在家教育）可能被要求补交；国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www2.hws.edu/admissions/apply/testing-policy.aspx"
+        }
+      ]
+    },
+    "us_136950": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交；荣誉项目及奖学金亦适用。",
+      "sources": [
+        {
+          "url": "https://www.rollins.edu/apply/test-optional-admission/"
+        },
+        {
+          "url": "https://www.rollins.edu/apply/international/"
+        }
+      ]
+    },
+    "us_221519": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者可选交；田纳西州HOPE奖学金另有资格条件，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://new.sewanee.edu/admission-aid/application-process/application-review/first-year-applicants/frequently-asked-questions/"
+        },
+        {
+          "url": "https://new.sewanee.edu/admission-aid/application-process/application-review/homeschool-applicants/"
+        }
+      ]
     }
   },
   "rankings": {
