@@ -1,6 +1,8 @@
 /* Optional analytics must never be a dependency of the college UI. */
 (()=>{'use strict';
- const live=location.hostname==='mingligraphics.github.io' && /^\/college-compare-test\/(?:index\.html)?$/.test(location.pathname);
+ if(window.__mingxiAnalyticsInitialized)return;
+ window.__mingxiAnalyticsInitialized=true;
+ const live=location.hostname==='mingligraphics.github.io' && /^\/college-compare-test\/(?:index\.html|existing-comparison\.html)?$/.test(location.pathname);
  let timer,composing=false;
  const search=document.getElementById('search');
  function searched(){clearTimeout(timer);if(composing||!search.value.trim())return;timer=setTimeout(()=>{try{CollegeMetrics.increment('school_search')}catch{}},700)}
@@ -22,11 +24,13 @@
    seen.add(x.target);try{CollegeMetrics.increment('qr_display')}catch{}
   }},{threshold:[0,0.5,1]});
   const watch=()=>document.querySelectorAll('.consult-qr img').forEach(img=>io.observe(img));
-  new MutationObserver(watch).observe(document.getElementById('dialogContent'),{childList:true,subtree:true});watch();
+  const content=document.getElementById('dialogContent');
+  if(content)new MutationObserver(watch).observe(content,{childList:true,subtree:true});watch();
  }
  function start(){try{
   const token=window.MingxiAnalyticsConfig?.cloudflareToken;
   if(!live||navigator.doNotTrack==='1'||! /^[a-f0-9]{32}$/i.test(token||''))return;
+  if(document.querySelector('script[src*="static.cloudflareinsights.com/beacon.min.js"]'))return;
   const s=document.createElement('script');s.async=true;s.type='module';
   s.src='https://static.cloudflareinsights.com/beacon.min.js';
   s.dataset.cfBeacon=JSON.stringify({token,spa:false});s.onerror=()=>{};
