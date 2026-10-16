@@ -804,6 +804,35 @@ const QualityData = {
           "url": "https://www.macalester.edu/admissions/us-admissions/faq/testing-policy/"
         }
       ]
+    },
+    "us_166939": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生同样适用；完全自学或仅上网课的在家教育申请人须交SAT/ACT，完成AP考试或大学课程者可个别申请豁免。英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/standardized-testing-policies"
+        },
+        {
+          "url": "https://www.mtholyoke.edu/admission/apply-undergraduate-first-year/application-process/international-admission"
+        }
+      ]
+    },
+    "us_209922": {
+      "policy": "test_free",
+      "cycle": "Fall 2027",
+      "note": "国际生英语能力材料另行；官网将SAT/ACT列为可用英语证明之一，与学术录取不考虑SAT/ACT的政策分开。",
+      "sources": [
+        {
+          "url": "https://www.reed.edu/ir/cds/cds2526/CDS_secC_202526.pdf"
+        },
+        {
+          "url": "https://www.reed.edu/admission-aid/how-to-apply/"
+        },
+        {
+          "url": "https://www.reed.edu/admission-aid/how-to-apply/international.html"
+        }
+      ]
     }
   },
   "rankings": {
