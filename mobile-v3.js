@@ -92,7 +92,7 @@ function addReplacementActions(rows){
    history.replaceState({...history.state},'',u);updateTitle('compare',selected);compare();
   });
  }
- rows.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.textContent='⇄';b.className='replace-school';b.title='更换学校';b.setAttribute('aria-label','更换'+(s.school_name_cn||s.school_name));b.onclick=()=>{slot=i;trigger=b;picker.hidden=false;$('pickerTitle').textContent='更换'+(s.school_name_cn||s.school_name);$('replacementSearch').value='';results();$('replacementSearch').focus()};$('compareSchool'+i).append(b)});
+ rows.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.textContent='⇄ 更换';b.className='replace-school';b.title='更换学校';b.setAttribute('aria-label','更换'+(s.school_name_cn||s.school_name));b.onclick=()=>{slot=i;trigger=b;picker.hidden=false;$('pickerTitle').textContent='更换'+(s.school_name_cn||s.school_name);$('replacementSearch').value='';results();$('replacementSearch').focus()};$('compareSchool'+i).append(b)});
  $('replacementSearch').oninput=results;
  $('cancelReplacement').onclick=()=>{picker.hidden=true;trigger?.focus()};
  picker.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();picker.hidden=true;trigger?.focus()}});
