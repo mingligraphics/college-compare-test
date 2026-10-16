@@ -19,7 +19,7 @@ const V67=(()=>{
  else ranked.push(p.application_note?'<details><summary>'+esc(title)+'</summary><p>'+esc(clean(p.application_note))+'</p>'+links(p.sources)+'</details>':'<span class="program-tag">'+esc(title)+'</span>');
  }return '<div class="program-compact">'+ranked.join('')+'</div>';
  }
- function policy(s){const f=QualityData.tests[s.school_id];if(f)return '<strong>'+esc(CollegeDisplay.policy(f.policy))+'</strong><small>'+esc(CollegeDisplay.applicationCycle(f.cycle))+'</small>'+(f.note?'<p>'+esc(f.note)+'</p>':'')+links(f.sources);
+ function policy(s){const f=QualityData.tests[s.school_id];if(f)return '<strong>'+esc(CollegeDisplay.policy(f.policy))+'</strong><small>'+esc(CollegeDisplay.applicationCycle(f.cycle))+'</small>'+(f.note?'<p>'+esc(f.note)+'</p>':'')+links(f.sources)+(f.checked?'<small>资料核查：'+esc(f.checked)+'</small>':'');
  // Existing dated records are explicitly historical/current as recorded, never relabelled as 2027.
  const cy=String(s.test_policy_cycle||''),label=CollegeDisplay.applicationCycle(cy),entry=label.match(/(20\d{2})年秋季/);if(!cy||!['required','test_optional','test_free','test_flexible'].includes(s.test_policy))return '';
  return '<strong>'+esc(CollegeDisplay.policy(s.test_policy))+'</strong><small>'+esc(/through|ongoing|permanent|indefinite/i.test(cy)?'适用范围（原资料）：'+cy:!entry?'适用范围（原资料）：'+cy:/onward/i.test(cy)?cy.replace(/Fall (20\d{2}) entry onward/,'$1年秋季入学起持续适用'):label)+(entry&&!/onward|through|ongoing|permanent|indefinite/i.test(cy)&&entry[1]!=='2027'?' · 历史申请季政策':' · 现有资料记录')+'</small>';

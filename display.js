@@ -2,7 +2,7 @@
 const CollegeDisplay = (() => {
  const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const money = value => typeof value === 'number' && Number.isFinite(value) ? '$'+value.toLocaleString('en-US') : '暂无数据';
- const policy = value => ({required:'必须提交 SAT / ACT',test_optional:'可选择提交 SAT / ACT',test_free:'不考虑 SAT / ACT',test_flexible:'灵活考试政策：允许校方指定的替代考试；不等于可不提交考试，请核对专业及个人适用要求。'})[value] || '未核实';
+ const policy = value => ({required:'必须提交 SAT / ACT',test_by_program:'按学院／项目执行不同考试政策',test_conditional:'按GPA等条件决定是否须交 SAT / ACT',test_optional:'可选择提交 SAT / ACT',test_free:'不考虑 SAT / ACT',test_flexible:'灵活考试政策：允许校方指定的替代考试；不等于可不提交考试，请核对专业及个人适用要求。'})[value] || '未核实';
  const aid = value => ({yes:'可申请',no:'无',limited:'有，但有限制'})[value] || '未核实';
  function safeURL(value){try{const url=new URL(value);return /^https?:$/.test(url.protocol)?esc(url.href):''}catch{return ''}}
  function sources(items){return (Array.isArray(items)?items:[]).map((s,i)=>{const url=safeURL(s.url);return url?`<a href="${url}" target="_blank" rel="noopener noreferrer">来源 ${i+1}</a>${s.year?` · ${esc(s.year)}`:''}`:''}).filter(Boolean).join('<br>')}

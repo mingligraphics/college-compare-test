@@ -631,6 +631,126 @@ const QualityData = {
         }
       ],
       "checked": "2026-10-16"
+    },
+    "cmu": {
+      "policy": "test_by_program",
+      "cycle": "2026–27申请季／2027秋入学",
+      "note": "按学院／项目：计算机科学学院要求 SAT 或 ACT；工程、Dietrich人文社科、Heinz信息系统、Mellon理学院、Tepper商学院为 test-flexible，仍须交考试，可选 SAT、ACT、AP、IB、Cambridge A-Level 或 French Baccalaureate；IB、A-Level及法国会考可用预测或实际成绩，录取并入学者须补实际成绩。美术学院为 test-optional，另须作品集或试演。非英语母语申请人的英语能力考试另行要求，不能据此免除学术考试。2026–27本科目录明确涵盖2027秋新生；考试细则页未单独标年度。",
+      "sources": [
+        {
+          "url": "https://coursecatalog.web.cmu.edu/aboutcmu/undergraduateadmission/",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        },
+        {
+          "url": "https://www.cmu.edu/admission/admission/standardized-testing",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    "unc": {
+      "policy": "test_conditional",
+      "cycle": "2026–27申请季／2027秋入学",
+      "note": "按GPA条件：自2026–27学年起，加权GPA（4.0制）≥2.8可不交；低于2.8须交ACT≥17或SAT≥930。未提供4.0制加权GPA但课程成绩高于B+者，校方说明无需SAT/ACT；Cambridge等学制的国际生以A-Level／外部考试成绩评估此GPA条件。以上最低考试分数不代表录取保证；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://admissions.unc.edu/faqs/how-does-unc-look-at-act-or-sat-test-scores/",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    "us_100751": {
+      "policy": "test_conditional",
+      "cycle": "2026–27申请季／2027秋入学",
+      "note": "2027入学：高中累计GPA低于3.0须交SAT或ACT；达到3.0者可不交。国际新生页面同样明确这项2027规则；自动奖学金评选仍须考试成绩，英语能力要求另行。2028入学起所有申请人须交，不能提前套用到2027。",
+      "sources": [
+        {
+          "url": "https://admissions.ua.edu/testing-requirements/",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        },
+        {
+          "url": "https://admissions.ua.edu/international/freshman/",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    "rutgers_camden": {
+      "policy": "test_by_program",
+      "cycle": "2026–27申请季／2027秋入学",
+      "note": "普通本科为 test-optional，不交SAT/ACT仍获完整审核；BS/DO联合项目例外，必须交SAT或ACT。官网明确政策持续至2027。国际生英语能力证明另行，SAT/ACT可用于满足部分英语要求，不等于普通本科一律必交。",
+      "sources": [
+        {
+          "url": "https://admissions.rutgers.edu/apply/first-year-applicants",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        },
+        {
+          "url": "https://admissions.rutgers.edu/apply/international-applicants",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    "us_186399": {
+      "policy": "test_by_program",
+      "cycle": "2026–27申请季／2027秋入学",
+      "note": "除7年制BA/MD联合项目外，本科为 test-blind／test-free，不考虑SAT/ACT；BA/MD项目必须交SAT或ACT。官网明确政策持续至2027。国际生英语能力证明及入学分班用途另行，不能将其误作一般录取考试要求。",
+      "sources": [
+        {
+          "url": "https://admissions.rutgers.edu/apply/first-year-applicants",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        },
+        {
+          "url": "https://admissions.rutgers.edu/apply/international-applicants",
+          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    "umass_amherst": {
+      "policy": "test_optional",
+      "cycle": "官网现行政策；未明标目标入学年度",
+      "note": "官网现行新生政策：所有专业均可选择提交SAT/ACT，不提交仍可获merit奖学金及特殊项目考虑。国际生英语能力证明另行。政策页未明确2026–27申请季／2027秋入学，故仅记录现行政策，不视为已确认2027年度；申请前须复核。",
+      "sources": [
+        {
+          "url": "https://www.umass.edu/admissions/test-optional-policy",
+          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    "us_161004": {
+      "policy": "test_optional",
+      "cycle": "官网现行政策；未明标目标入学年度",
+      "note": "官网现行政策允许自主选择是否提交SAT/ACT，提交者纳入审核；国际生英语能力考试亦为可选，学校仍要求具备大学学习所需英语能力。页面记载自1969年采用可选政策，但未明确2026–27申请季／2027秋入学，不能据历史延续推定2027已确认。",
+      "sources": [
+        {
+          "url": "https://www.bowdoin.edu/admissions/apply/test-optional-policy/index.html",
+          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+        },
+        {
+          "url": "https://www.bowdoin.edu/admissions/apply/",
+          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
+    },
+    "us_216287": {
+      "policy": "test_optional",
+      "cycle": "官网现行政策；未明标目标入学年度",
+      "note": "官网现行政策：SAT/ACT可选，不提交不受惩罚；IB Diploma毕业生仍须提供官方IB成绩。美国境外就读申请人（不论国籍）须在Swarthmore Video Response、英语能力考试结果、InitialView视频中提交一项。上述额外材料不是SAT/ACT必交要求。考试页及申请材料页未明标2026–27申请季／2027秋入学，2027适用性尚未明确。",
+      "sources": [
+        {
+          "url": "https://www.swarthmore.edu/admissions-aid/standardized-testing-policy",
+          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+        },
+        {
+          "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
+          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+        }
+      ],
+      "checked": "2026-10-16"
     }
   },
   "rankings": {
