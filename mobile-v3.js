@@ -25,7 +25,7 @@ function updateChips(){
  if($('activeFilters').children.length){const b=document.createElement('button');b.textContent='全部清除';b.onclick=()=>$('reset').click();$('activeFilters').append(b)}
 }
 function setRoute(view,ids=[]){
- if(routeBusy)return;if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.hash='';u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
+ if(routeBusy)return;const currentRoute=new URLSearchParams(location.search);if(currentRoute.get('view')===view&&currentRoute.getAll('school').join('|')===ids.join('|')){updateTitle(view,ids);return}if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.hash='';u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
 const shareDescription='300所美国大学最新数据，比较费用、优势专业和申请要求';
@@ -92,7 +92,7 @@ function addReplacementActions(rows){
    history.replaceState({...history.state},'',u);updateTitle('compare',selected);compare();
   });
  }
- rows.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.textContent='⇄ 更换';b.className='replace-school';b.title='更换学校';b.setAttribute('aria-label','更换'+(s.school_name_cn||s.school_name));b.onclick=()=>{slot=i;trigger=b;picker.hidden=false;$('pickerTitle').textContent='更换'+(s.school_name_cn||s.school_name);$('replacementSearch').value='';results();$('replacementSearch').focus()};$('compareSchool'+i).append(b)});
+ rows.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.textContent='⇄';b.className='replace-school';b.title='更换学校';b.setAttribute('aria-label','更换'+(s.school_name_cn||s.school_name));b.onclick=()=>{slot=i;trigger=b;picker.hidden=false;$('pickerTitle').textContent='更换'+(s.school_name_cn||s.school_name);$('replacementSearch').value='';results();$('replacementSearch').focus()};$('compareSchool'+i).append(b)});
  $('replacementSearch').oninput=results;
  $('cancelReplacement').onclick=()=>{picker.hidden=true;trigger?.focus()};
  picker.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();picker.hidden=true;trigger?.focus()}});
