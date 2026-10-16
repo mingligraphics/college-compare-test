@@ -1749,6 +1749,287 @@ const QualityData = {
           "url": "https://admissions.charlotte.edu/apply/international-students/first-year-admission/"
         }
       ]
+    },
+    "us_168005": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "美国本土申请者可选交；在家教育者须交。国际生按语言背景可用英语考试或其他认可考试替代，另有豁免规则。",
+      "sources": [
+        {
+          "url": "https://www.suffolk.edu/undergraduate-admission/information-for/freshman"
+        },
+        {
+          "url": "https://www.suffolk.edu/admission/international-students/attending-suffolk/apply"
+        }
+      ]
+    },
+    "us_169983": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交；国际生英语证明另行。",
+      "sources": [
+        {
+          "url": "https://catalog.kettering.edu/undergrad/admissions/"
+        },
+        {
+          "url": "https://www.kettering.edu/admissions-aid/international-students"
+        }
+      ]
+    },
+    "us_172699": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "录取及招生办公室奖学金可选交；国际生英语要求另行，成绩亦可用于数学分班及荣誉学院邀请。",
+      "sources": [
+        {
+          "url": "https://wmich.edu/admissions/first-year-apply/criteria"
+        },
+        {
+          "url": "https://wmich.edu/international"
+        }
+      ]
+    },
+    "us_174233": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者建议提交；国际生须满足英语要求，入学后成绩可用于分班。",
+      "sources": [
+        {
+          "url": "https://admissions.d.umn.edu/apply/test-optional"
+        },
+        {
+          "url": "https://admissions.d.umn.edu/apply/international"
+        }
+      ]
+    },
+    "us_178411": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "2027秋季可选交；在家教育及GED/HiSET申请者须交。不交须完成短文并接受综合审核，奖学金及荣誉机会可能受限。",
+      "sources": [
+        {
+          "url": "https://futurestudents.mst.edu/admissions/counselors-teachers-advisors/admissions-requirements/"
+        }
+      ]
+    },
+    "us_179566": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "一般申请者GPA≥3.0可免交，低于3.0须交；在家教育按新生标准审核。国际生免交，但成绩可帮助申请奖学金。",
+      "sources": [
+        {
+          "url": "https://www.missouristate.edu/Admissions/act-sat-common-questions.htm"
+        },
+        {
+          "url": "https://www.missouristate.edu/admissions/homeschooled.htm"
+        },
+        {
+          "url": "https://www.missouristate.edu/Policy/Chapter5/Op5_01_6_AdmissionPolicyforHomeschooledStudents.htm"
+        },
+        {
+          "url": "https://www.missouristate.edu/InternationalServices/intlfreshapp.htm"
+        }
+      ]
+    },
+    "us_182281": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "满足核心课程GPA等免考录取路径可不交；国际生同样不强制，成绩可用于其他录取路径及分班。",
+      "sources": [
+        {
+          "url": "https://www.unlv.edu/admissions/undergraduate/first-year"
+        },
+        {
+          "url": "https://www.unlv.edu/admissions/international/undergraduate"
+        }
+      ]
+    },
+    "us_182290": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "录取可选交；多数本土新生奖学金须交，国际生录取及奖学金不强制，英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.unr.edu/admissions/freshman"
+        },
+        {
+          "url": "https://www.unr.edu/admissions/international/undergraduate"
+        }
+      ]
+    },
+    "us_187985": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育及非认证高中可凭正式成绩单审核；成绩可能有帮助，国际生学历及英语要求另行。",
+      "sources": [
+        {
+          "url": "https://admissions.unm.edu/future-students/freshmen/admission-requirements.html"
+        },
+        {
+          "url": "https://international.unm.edu/misc/application-timeline-and-steps.html"
+        },
+        {
+          "url": "https://international.unm.edu/undergraduate/admissions-requirements-by-home-country.html"
+        }
+      ]
+    },
+    "us_188030": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "可按GPA或其他合格路径免交，在家教育按常规标准审核；国际生GPA门槛另定，成绩有助奖学金及分班。",
+      "sources": [
+        {
+          "url": "https://admissions.nmsu.edu/how-to-apply/first-time-freshmen/"
+        },
+        {
+          "url": "https://admissions.nmsu.edu/how-to-apply/international/index.html"
+        }
+      ]
+    },
+    "us_198695": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交，学术奖学金不强制；英语证明及招募运动员的额外材料另行。",
+      "sources": [
+        {
+          "url": "https://www.highpoint.edu/admissions/test-optional/"
+        },
+        {
+          "url": "https://www.highpoint.edu/admissions/homeschooled-students/"
+        },
+        {
+          "url": "https://www.highpoint.edu/admissions/international-admissions/"
+        }
+      ]
+    },
+    "us_200800": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "非特许高中及Williams荣誉学院须交；高中毕业超过两年者不要求也不考虑。国际生英语及入学分班要求另行。",
+      "sources": [
+        {
+          "url": "https://www.uakron.edu/test-optional"
+        },
+        {
+          "url": "https://www.uakron.edu/international/apply/"
+        }
+      ]
+    },
+    "us_201441": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "一般申请者可选交，荣誉学院也接受免交申请；在家教育等替代中学路径须交，部分院系奖学金及国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.bgsu.edu/content/bgsu/en/admissions/test-optional.html"
+        },
+        {
+          "url": "https://www.bgsu.edu/admissions/apply-now/freshmen"
+        },
+        {
+          "url": "https://www.bgsu.edu/admissions/international/undergraduate/admission-requirements.html"
+        }
+      ]
+    },
+    "us_209807": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "一般申请者可选交；在家教育及非标准高中须走SAT/ACT、高中同等学历考试或转学路径，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.pdx.edu/admissions/first-year"
+        },
+        {
+          "url": "https://www.pdx.edu/admissions/international/first-year"
+        }
+      ]
+    },
+    "us_218973": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "本土申请者录取及择优奖学金可选交；英语国家国际生须交SAT/ACT，非英语母语者另须英语证明，校内奖学金面试须交。",
+      "sources": [
+        {
+          "url": "https://www.wofford.edu/admission/apply/test-optional-information"
+        },
+        {
+          "url": "https://www.wofford.edu/admission/apply/international-applicants"
+        }
+      ]
+    },
+    "us_219471": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "可按GPA、排名等路径免交；在家教育可凭认可课程成绩审核。国际生GPA≥2.6或达考试标准，并须满足英语要求。",
+      "sources": [
+        {
+          "url": "https://www.usd.edu/Admissions-and-Aid/Undergraduate-Admissions/How-to-Apply"
+        },
+        {
+          "url": "https://usd.edu/Admissions-and-Aid/International-Admissions/Applying-for-International-Undergraduate-Admission"
+        }
+      ]
+    },
+    "us_224323": {
+      "policy": "test_flexible",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "须提交SAT、ACT或CLT之一，国际生及在家教育者同样适用；国际生另须满足英语要求。",
+      "sources": [
+        {
+          "url": "https://udallas.edu/admissions-aid/undergraduate/admission-requirements.php"
+        },
+        {
+          "url": "https://udallas.edu/admissions-aid/undergraduate/international-students/"
+        }
+      ]
+    },
+    "us_227368": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "2026–27申请季可选交；工程及生物医学项目、Tuition Advantage和奖学金须交，ACT考生须含科学部分；国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.utrgv.edu/admissions/freshman/index.htm"
+        },
+        {
+          "url": "https://www.utrgv.edu/admissions/international/undergraduate-international-admissions/index.htm"
+        }
+      ]
+    },
+    "us_240453": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "2027秋季可选交；国际生成绩亦可用于分班及奖学金，英语证明另行；在家教育的保证录取另有门槛。",
+      "sources": [
+        {
+          "url": "https://international.uwyo.edu/student-resources/"
+        },
+        {
+          "url": "https://international.uwyo.edu/before-you-start/"
+        },
+        {
+          "url": "https://www.wisconsin.edu/undergraduate-admission-resources/"
+        }
+      ]
+    },
+    "us_240727": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "2027秋季可选交，官网政策延续至2029春季；成绩有助提高资助。在家教育按新生标准审核，未满21岁的GED等替代学历申请者须交。",
+      "sources": [
+        {
+          "url": "https://www.uwyo.edu/admissions/freshman/index.html"
+        },
+        {
+          "url": "https://www.uwyo.edu/admissions/apply.html"
+        },
+        {
+          "url": "https://www.uwyo.edu/admissions/freshman/admission-with-support.html"
+        },
+        {
+          "url": "https://www.uwyo.edu/registrar/_files/docs/catalog/2526.pdf"
+        }
+      ]
     }
   },
   "rankings": {
