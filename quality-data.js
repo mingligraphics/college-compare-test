@@ -765,6 +765,45 @@ const QualityData = {
           "url": "https://www.vassar.edu/news/vassar-makes-test-optional-policy-permanent-applicants"
         }
       ]
+    },
+    "us_130697": {
+      "policy": "test_optional",
+      "cycle": "现行政策；2027年秋季适用性尚未明确",
+      "note": "国际生同样适用；非考试制国际学制建议提交SAT/ACT。IB、A-Level等考试制学制仍须提交预估或实际成绩。非英语母语者建议提交英语能力证明，学校可能另行要求。",
+      "sources": [
+        {
+          "url": "https://www.wesleyan.edu/admission/undergraduate-admission/international/"
+        },
+        {
+          "url": "https://www.wesleyan.edu/admission/admission-faq.html"
+        }
+      ]
+    },
+    "us_161086": {
+      "policy": "test_optional",
+      "cycle": "现行政策；2027年秋季适用性尚未明确",
+      "note": "国际生同样适用；英语既非母语、也非当前授课语言者须交英语能力考试。",
+      "sources": [
+        {
+          "url": "https://afa.colby.edu/apply/requirements/"
+        }
+      ]
+    },
+    "us_173902": {
+      "policy": "test_optional",
+      "cycle": "Fall 2027",
+      "note": "国际生同样适用；不提交不影响录取及择优奖学金评选。IB、A-Level等学制成绩仍须按要求提交；英语能力证明可选，学校可能另行要求。",
+      "sources": [
+        {
+          "url": "https://www.macalester.edu/admissions/us-admissions/first-year/"
+        },
+        {
+          "url": "https://www.macalester.edu/admissions/international/first-year/"
+        },
+        {
+          "url": "https://www.macalester.edu/admissions/us-admissions/faq/testing-policy/"
+        }
+      ]
     }
   },
   "rankings": {
