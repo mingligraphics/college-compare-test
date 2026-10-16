@@ -3999,6 +3999,126 @@ const QualityData = {
         "checked": "2026-10-16",
         "expected_value": "limited"
       }
+    },
+    "us_164748": {
+      "need": {
+        "text": "不提供国际本科入学新生 need-based 资助；新生仅可申请 merit 奖。在读学生的 Thrive 另有条件，不能用于新生。",
+        "sources": [
+          {
+            "url": "https://www.berklee.edu/student-financial-services/financial-aid",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生可参与 merit 奖评审；以录取及奖学金通知为准，不保证获奖或覆盖全部费用。",
+        "sources": [
+          {
+            "url": "https://www.berklee.edu/student-financial-services/financial-aid",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_111081": {
+      "need": {
+        "text": "国际本科新生不提供 need-based 资助；校方该类资助限美国公民或符合资格的非公民，普通 F-1 国际生不在其内。",
+        "sources": [
+          {
+            "url": "https://www.cca.edu/admissions/financial-aid/",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生可凭作品集与学业表现申请 merit 奖；按录取优先期限提交申请后自动考虑。",
+        "sources": [
+          {
+            "url": "https://www.cca.edu/admissions/financial-aid/",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_168005": {
+      "need": {
+        "text": "Need-based 资助要求美国公民或符合资格的非公民身份，普通 F-1 国际本科新生不符合该条件。",
+        "sources": [
+          {
+            "url": "https://www.suffolk.edu/student-financial-services/eligibility",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生在录取时自动考虑 merit 奖，以学业表现评审；须遵守申请期限，获奖并不保证。",
+        "sources": [
+          {
+            "url": "https://www.suffolk.edu/student-financial-services/eligibility",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_209825": {
+      "need": {
+        "text": "国际本科新生的 need-based 资格尚未核实；财力证明及 merit 资格不代表可申请 need-based 资助。",
+        "sources": [
+          {
+            "url": "https://www.up.edu/iss/prospective-students/index.html",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "国际本科新生可获与本土学生相同的 merit 奖评审机会；实际金额及条件以校方通知为准。",
+        "sources": [
+          {
+            "url": "https://www.up.edu/iss/prospective-students/index.html",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_206589": {
+      "need": {
+        "text": "国际本科新生可申请 Wooster International Scholarship，按经济需求与学业表现共同评审；须随入学申请提交财力材料，招生考虑支付能力。",
+        "sources": [
+          {
+            "url": "https://wooster.edu/admissions/financial-aid/international-students",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "Wooster International Scholarship 为 need 与 merit 共同评审的混合奖，不等于无需经济需求条件的纯学术奖；不保证覆盖全部费用。",
+        "sources": [
+          {
+            "url": "https://wooster.edu/admissions/financial-aid/international-students",
+            "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
     }
   },
   "tests": {
