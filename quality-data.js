@@ -3975,6 +3975,30 @@ const QualityData = {
         "checked": "2026-10-16",
         "expected_value": "yes"
       }
+    },
+    "us_189088": {
+      "need": {
+        "text": "国际本科新生可申请 need-based 资助，须随入学申请提交 BISFAA。不同申请轮次的满足需求承诺不同；通常需家庭承担部分费用，UWC 另有政策。已列2027–28表单，不代表完整学年条款已认证。",
+        "sources": [
+          {
+            "url": "https://www.bard.edu/sfs/prospective/international/",
+            "year": "2027–28国际申请表；资格按官网现行条款"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "Global Citizen 为按经济需求及学业表现共同评审的混合奖，面向非美国公民；不等于无需求要求的纯学术 merit 奖。须提交财援材料，Merit 的2027–28周期未单独确认。",
+        "sources": [
+          {
+            "url": "https://www.bard.edu/sfs/prospective/international/",
+            "year": "现行混合奖资格；Merit的2027–28周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
     }
   },
   "tests": {
