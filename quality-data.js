@@ -1568,6 +1568,187 @@ const QualityData = {
           "url": "https://www.ucf.edu/admissions/undergraduate/question/who-can-apply-to-ucf-using-the-common-application/"
         }
       ]
+    },
+    "us_131283": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交，荣誉项目及奖学金亦适用；入学后仍须交分数用于学业评估，英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.catholic.edu/admission-aid/undergraduate-admission/first-year-students/application-process"
+        }
+      ]
+    },
+    "us_140951": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "不交成绩不影响录取或奖学金评审；在家教育可用学术作品档案补充，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.scad.edu/admission/admission-information/frequently-asked-questions"
+        },
+        {
+          "url": "https://www.scad.edu/admission/admission-information/freshman/home-school-applicants"
+        },
+        {
+          "url": "https://www.scad.edu/admission/admission-information/international"
+        }
+      ]
+    },
+    "us_163976": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者建议交SAT、ACT或CLT，也可改用面试；国际生SAT/ACT可选，英语证明或面试要求另行。",
+      "sources": [
+        {
+          "url": "https://www.sjc.edu/admissions-and-aid/undergraduate/apply/homeschooled-applicants"
+        },
+        {
+          "url": "https://www.sjc.edu/admissions-and-aid/undergraduate/apply/international-students"
+        }
+      ]
+    },
+    "us_245652": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者建议交SAT、ACT或CLT，也可改用面试；国际生SAT/ACT可选，英语证明或面试要求另行。",
+      "sources": [
+        {
+          "url": "https://www.sjc.edu/admissions-and-aid/undergraduate/apply/homeschooled-applicants"
+        },
+        {
+          "url": "https://www.sjc.edu/admissions-and-aid/undergraduate/apply/international-students"
+        }
+      ]
+    },
+    "us_155399": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "GPA≥3.25可免交达直接录取标准，未达者可个案审核；在家教育通常须交，也接受GED/HiSET审核；部分专业及奖学金另有要求。",
+      "sources": [
+        {
+          "url": "https://www.k-state.edu/admissions/undergrad/manhattan/apply/incoming-freshmen/requirements.html"
+        },
+        {
+          "url": "https://www.k-state.edu/admissions/undergrad/manhattan/apply/international/requirements.html"
+        },
+        {
+          "url": "https://apdesign.k-state.edu/academics/admissions/"
+        }
+      ]
+    },
+    "us_142285": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "GPA≥3.0通常免交；2.60–2.99须交或选择Gateway路径，在家教育及GED申请须交；国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.uidaho.edu/admissions-apply/first-year-students"
+        },
+        {
+          "url": "https://www.uidaho.edu/international/admissions"
+        }
+      ]
+    },
+    "us_141574": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "不利成绩不纳入评审；无认可学历的在家教育者须交SAT/ACT或高中同等学历考试，部分专业及国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://manoa.hawaii.edu/admissions/freshman/"
+        },
+        {
+          "url": "https://manoa.hawaii.edu/admissions/international/"
+        },
+        {
+          "url": "https://shidler.hawaii.edu/freshman-dap"
+        }
+      ]
+    },
+    "us_176017": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "州外GPA≥3.2可免交，低于3.2强烈建议交；在家教育及非认证高中须交，州内按GPA等路径录取；国际学历与英语要求另行。",
+      "sources": [
+        {
+          "url": "https://olemiss.edu/admissions/undergraduate-admissions/"
+        },
+        {
+          "url": "https://olemiss.edu/admissions/undergraduate-admissions/application-process/international-students/"
+        }
+      ]
+    },
+    "us_176080": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者须交；国际生GPA低于3.0或申请奖学金须交，英语要求另行；无成绩者需综合审核或分班测评。",
+      "sources": [
+        {
+          "url": "https://www.admissions.msstate.edu/apply/admission-process/freshman-admissions"
+        },
+        {
+          "url": "https://www.admissions.msstate.edu/apply/admission-process/international"
+        }
+      ]
+    },
+    "us_228459": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "班级排名前75%可免交，后25%须达必需分数；在家教育及GED由学校赋予排名，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.admissions.txst.edu/future-students/freshman/admission-requirements.html"
+        },
+        {
+          "url": "https://www.admissions.txst.edu/contact/faq.html"
+        },
+        {
+          "url": "https://www.admissions.txst.edu/future-students/international/admissions-requirements.html"
+        }
+      ]
+    },
+    "us_190372": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "艺术及建筑学院可选交，工程学院须交；国际生同样适用，特殊困难可申请豁免，获批不保证。",
+      "sources": [
+        {
+          "url": "https://cooper.edu/admissions/standardized-test-requirements"
+        },
+        {
+          "url": "https://cooper.edu/admissions/applying-to-cu/high-school-graduation-requirements/homeschool-appl"
+        }
+      ]
+    },
+    "us_211893": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "音乐学士SAT可选；申请阶段不要求SAT/ACT，录取后可用于分班；国际生英语及学位资格要求另行。",
+      "sources": [
+        {
+          "url": "https://www.curtis.edu/apply/faq/"
+        },
+        {
+          "url": "https://www.curtis.edu/apply/applying/"
+        },
+        {
+          "url": "https://www.curtis.edu/learn/degrees-diplomas/"
+        }
+      ]
+    },
+    "us_199139": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "2027秋季：加权GPA高于2.8可免交，≤2.8须交SAT/ACT，CLT不能替代必交要求；国际生英语及专业补充材料另行。",
+      "sources": [
+        {
+          "url": "https://admissions.charlotte.edu/apply/first-year-students/application-requirements/"
+        },
+        {
+          "url": "https://admissions.charlotte.edu/apply/international-students/first-year-admission/"
+        }
+      ]
     }
   },
   "rankings": {
