@@ -66,118 +66,142 @@ const QualityData = {
     },
     "princeton": {
       "need": {
-        "text": "可申请；满足所有录取国际生经认定的经济需求。",
+        "text": "国际本科生可申请；满足学校认定全部需求，申请资助不影响录取。",
         "sources": [
           {
-            "url": "https://admission.princeton.edu/apply/international-students"
+            "url": "https://admission.princeton.edu/apply/international-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       },
       "review": {
-        "text": "Need-blind：申请助学金不会影响录取。",
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
         "sources": [
           {
-            "url": "https://admission.princeton.edu/apply/international-students"
+            "url": "https://admission.princeton.edu/apply/international-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16"
       },
       "merit": {
         "text": "不提供学术或体育 merit 奖学金。",
         "sources": [
           {
-            "url": "https://admission.princeton.edu/apply/international-students"
+            "url": "https://admission.princeton.edu/apply/international-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "no"
       }
     },
     "mit": {
       "need": {
-        "text": "可申请；满足经认定的全部经济需求，需提交 CSS Profile 与家庭收入材料。",
+        "text": "国际本科生可申请；学校满足认定全部需求，需提交 CSS Profile 及家庭收入证明。",
         "sources": [
           {
-            "url": "https://sfs.mit.edu/undergraduate-students/apply-for-aid/international/"
+            "url": "https://sfs.mit.edu/undergraduate-students/apply-for-aid/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/making-mit-affordable/",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       },
       "review": {
-        "text": "Need-blind：包括国际本科申请人，支付能力不影响录取。",
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
         "sources": [
           {
-            "url": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/making-mit-affordable/"
+            "url": "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/making-mit-affordable/",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16"
       },
       "merit": {
-        "text": "不提供校方 merit 奖学金；MIT 资助仅按经济需求发放。",
+        "text": "不按学术、体育、艺术或其他 merit 标准发奖；MIT Scholarship 是 need-based。",
         "sources": [
           {
-            "url": "https://sfs.mit.edu/undergraduate-students/types-of-aid/outside-scholarships-grants/"
+            "url": "https://mitadmissions.org/help/faq/scholarships/",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "no"
       }
     },
     "harvard": {
       "need": {
-        "text": "国际本科新生可申请；满足录取学生经认定的全部经济需求。",
+        "text": "国际生与美国学生享有相同 need-based 资格；满足学校认定全部需求，家庭贡献按校方评估。",
         "sources": [
           {
-            "url": "https://college.harvard.edu/financial-aid/how-aid-works"
+            "url": "https://college.harvard.edu/financial-aid/how-aid-works",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       },
       "review": {
-        "text": "Need-blind：国际本科新生的支付能力不影响录取。",
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
         "sources": [
           {
-            "url": "https://college.harvard.edu/financial-aid/how-aid-works"
+            "url": "https://college.harvard.edu/financial-aid/how-aid-works",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16"
       },
       "merit": {
-        "text": "不提供校方 merit-based 奖学金；资助以经济需求为依据。",
+        "text": "校方资助只按经济需求评定，不提供 merit 奖学金。",
         "sources": [
           {
-            "url": "https://college.harvard.edu/resources/faq/are-there-any-merit-based-financial-aid-awards-harvard"
+            "url": "https://college.harvard.edu/financial-aid/how-aid-works",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "no"
       }
     },
     "yale": {
       "need": {
-        "text": "国际本科新生可申请；满足录取学生经认定的全部经济需求。",
+        "text": "不论国籍均可申请 need-based 资助；满足学校认定全部需求，国际生费用评估含食宿及规定旅费。",
         "sources": [
           {
-            "url": "https://admissions.yale.edu/international"
+            "url": "https://admissions.yale.edu/international",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       },
       "review": {
-        "text": "Need-blind：国际本科新生的支付能力不影响录取。",
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
         "sources": [
           {
-            "url": "https://admissions.yale.edu/international"
+            "url": "https://admissions.yale.edu/international",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16"
       },
       "merit": {
-        "text": "不提供校方 merit-based 奖学金；外部机构奖学金另行申请。",
+        "text": "Yale College 不提供 merit 或体育奖学金。",
         "sources": [
           {
-            "url": "https://finaid.yale.edu/outsideresources"
+            "url": "https://finaid.yale.edu/faq",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "no"
       }
     },
     "brown": {
@@ -216,31 +240,36 @@ const QualityData = {
     },
     "dartmouth": {
       "need": {
-        "text": "国际本科新生可申请；满足录取学生经认定的全部经济需求。",
+        "text": "国际本科生可申请；满足学校认定的全部经济需求，资助方案含校内工作安排。",
         "sources": [
           {
-            "url": "https://admissions.dartmouth.edu/affordability-dartmouth"
+            "url": "https://financialaid.dartmouth.edu/apply-aid/international-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       },
       "review": {
-        "text": "Need-blind：国际本科新生的支付能力不影响录取。",
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
         "sources": [
           {
-            "url": "https://admissions.dartmouth.edu/affordability-dartmouth"
+            "url": "https://financialaid.dartmouth.edu/apply-aid/international-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16"
       },
       "merit": {
-        "text": "不提供校方 merit-based 奖学金；资助以经济需求为依据。",
+        "text": "不按学术、艺术或体育表现发放 merit 奖学金。",
         "sources": [
           {
-            "url": "https://admissions.dartmouth.edu/estimate-your-cost/types-financial-aid"
+            "url": "https://admissions.dartmouth.edu/estimate-your-cost/types-financial-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "no"
       }
     },
     "stanford": {
@@ -1385,6 +1414,1254 @@ const QualityData = {
         ],
         "checked": "2026-10-16",
         "expected_value": "limited"
+      }
+    },
+    "elon": {
+      "need": {
+        "text": "目前不向非美国公民提供 need-based 资助。",
+        "sources": [
+          {
+            "url": "https://www.elon.edu/u/admissions/undergraduate/international-admissions/admissions-requirements/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生随入学申请获 Presidential、Engagement、International Scholar 奖考虑；Fellows／Scholars 另需申请及面试。",
+        "sources": [
+          {
+            "url": "https://www.elon.edu/u/admissions/undergraduate/international-admissions/admissions-requirements/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "georgetown": {
+      "need": {
+        "text": "国际新生资助名额极少；须申请入学时申报并交 CSS Profile，首年未获资助者以后不能首次获奖。",
+        "sources": [
+          {
+            "url": "https://finaid.georgetown.edu/undergrad/international-students/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "merit": {
+        "text": "不提供一般学术 merit 奖；另有体育 grants-in-aid，但本轮未确认其国际新生适用范围。",
+        "sources": [
+          {
+            "url": "https://uadmissions.georgetown.edu/financial-aid/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://finaid.georgetown.edu/financial-resources/undergrad-scholarships/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      }
+    },
+    "penn_state": {
+      "need": {
+        "text": "University Park 国际本科新生校方 need-based 资格尚未确认；联邦资助排除不能推为全部校方无资助。",
+        "sources": [
+          {
+            "url": "https://www.psu.edu/costs-aid/apply-for-aid/current-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "University Park 国际新生具体 merit 资格尚未确认；不套用 World Campus 或其他校区奖项。",
+        "sources": [
+          {
+            "url": "https://www.psu.edu/costs-aid/types-of-aid/scholarships",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      }
+    },
+    "purdue": {
+      "need": {
+        "text": "国际本科新生一般不适用常规 need-based 资助；应准备完整就读费用。",
+        "sources": [
+          {
+            "url": "https://www.purdue.edu/gpp/iss/_documents/admission/InternationalAdmissionsGuide.pdf",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生一般不适用校级 merit 奖；官方指南另列在读期间的小额 merit 奖，不能写成全校均无。",
+        "sources": [
+          {
+            "url": "https://www.purdue.edu/gpp/iss/_documents/admission/InternationalAdmissionsGuide.pdf",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://purdue.edu/parentandfamily/FAQs/International_Scholarship_Opportunities.html",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "umass_amherst": {
+      "need": {
+        "text": "国际本科生不适用常规 need-based 财援；须准备就读费用。",
+        "sources": [
+          {
+            "url": "https://www.umass.edu/admissions/undergraduate-admissions/apply/international-students/financial-and-visa-information",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生自动获有限学术奖考虑，无需另申；奖项不保证覆盖全部费用。",
+        "sources": [
+          {
+            "url": "https://www.umass.edu/admissions/undergraduate-admissions/apply/international-students/financial-and-visa-information",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "review": {
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
+        "sources": [
+          {
+            "url": "https://www.umass.edu/admissions/undergraduate-admissions/apply/international-students/financial-and-visa-information",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_110714": {
+      "need": {
+        "text": "F／J 等临时签证国际生通常不适用联邦、州或校方 need-based 财援；特殊移民身份另核。",
+        "sources": [
+          {
+            "url": "https://financialaid.ucsc.edu/apply-for-aid/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际生可获 Dean’s Award／Regents 奖考虑；新生根据 UC 入学申请评定，获奖不保证。",
+        "sources": [
+          {
+            "url": "https://financialaid.ucsc.edu/apply-for-aid/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://catalog.ucsc.edu/current/general-catalog/undergraduate-information/undergraduate-expenses/financial-aid/scholarships/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_117946": {
+      "need": {
+        "text": "不向国际本科生提供 need-based 财援。",
+        "sources": [
+          {
+            "url": "https://international.lmu.edu/faq/first-year/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生自动获校方学术奖考虑；金额及续领按录取奖函。",
+        "sources": [
+          {
+            "url": "https://financialaid.lmu.edu/international/undergraduateinternationalstudents/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_121150": {
+      "need": {
+        "text": "Seaver 本科目录规定校方 need-based 资助须美国公民或永久居民；2027–28规则尚未确认。",
+        "sources": [
+          {
+            "url": "https://seaver.pepperdine.edu/academics/content/2025-seaver-catalog.pdf",
+            "year": "need身份规则依据2025 Seaver目录；merit为现行国际本科页"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生可竞争 Regents 等学术奖；获奖按学业及入学申请综合评定，不保证。",
+        "sources": [
+          {
+            "url": "https://www.pepperdine.edu/international-students/future-students/cost-of-attendance.htm",
+            "year": "need身份规则依据2025 Seaver目录；merit为现行国际本科页"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_121345": {
+      "need": {
+        "text": "国际本科新生可申请；满足学校认定全部需求，须与入学同时申请，不能录取后首次补申。",
+        "sources": [
+          {
+            "url": "https://www.pomona.edu/financial-aid/applying-for-aid/international-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "不提供 merit 或体育奖学金；资助按经济需求评定。",
+        "sources": [
+          {
+            "url": "https://www.pomona.edu/admissions/apply/international-applicants",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.pomona.edu/financial-aid/applying-for-aid/international-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_122436": {
+      "need": {
+        "text": "F／J 等所列非移民签证不适用 USD need-based 财援；T／U 等特殊身份按官网另行办理。",
+        "sources": [
+          {
+            "url": "https://www.sandiego.edu/torero-hub/financial-aid/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生及转学生随入学申请自动获 merit 奖考虑，无需另申；获奖不保证。",
+        "sources": [
+          {
+            "url": "https://www.sandiego.edu/admission-and-aid/undergraduate/apply/decision-faq.php",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_122612": {
+      "need": {
+        "text": "国际生不适用 need-based 财援。",
+        "sources": [
+          {
+            "url": "https://www.usfca.edu/admission/undergraduate/international-cost-scholarship",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科生可获部分 merit 奖；不提供国际生全学费奖，护理／AEM／Fresh Start 等另有评定规则。",
+        "sources": [
+          {
+            "url": "https://www.usfca.edu/admission/undergraduate/international-cost-scholarship",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_122755": {
+      "need": {
+        "text": "有专项限制：Global Spartan 综合经济需求、学业及领导力评选，2026–27轮包括国际新生和在读生；2027–28尚未确认。",
+        "sources": [
+          {
+            "url": "https://www.sjsu.edu/isss/resources/scholarships/global-spartan-scholarship.php",
+            "year": "Global Spartan明确2026–27；2027–28未公布"
+          },
+          {
+            "url": "https://sjsu.edu/faso/types-of-aid/scholarships/index.php",
+            "year": "Global Spartan明确2026–27；2027–28未公布"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "merit": {
+        "text": "国际生可竞争 merit 奖；Global Spartan 新生与在读申请分开，须另申并符合各自学业及身份条件。",
+        "sources": [
+          {
+            "url": "https://www.sjsu.edu/isss/resources/scholarships/index.php",
+            "year": "Global Spartan明确2026–27；2027–28未公布"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_122931": {
+      "need": {
+        "text": "2025–26本科目录明确国际生不适用 need-based 财援；现行财援页只确认联邦／州排除，未来周期须复核。",
+        "sources": [
+          {
+            "url": "https://www-archive.scu.edu/bulletin/undergraduate/2025-2026/chapter-7-admission-of-undergraduate-students/index.html",
+            "year": "need依据2025–26目录；merit现行政策"
+          },
+          {
+            "url": "https://www.scu.edu/financialaid/international/",
+            "year": "need依据2025–26目录；merit现行政策"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生可获部分 merit 奖考虑；Johnson Scholars 明确排除国际生，不能泛称全额奖都适用。",
+        "sources": [
+          {
+            "url": "https://www.scu.edu/financialaid/types-of-aid/scholarships-and-grants/merit-scholarships/",
+            "year": "need依据2025–26目录；merit现行政策"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_127060": {
+      "need": {
+        "text": "不向国际本科生提供 need-based 资助；普通本科全需求宣传不能外推国际生。",
+        "sources": [
+          {
+            "url": "https://www.du.edu/admission-aid/undergraduate/international-applicants/tuition",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生随申请自动获 merit 奖考虑；通常不覆盖全部费用。",
+        "sources": [
+          {
+            "url": "https://www.du.edu/admission-aid/undergraduate/international-applicants/tuition",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.du.edu/admission-aid/undergraduate/international-applicants/tuition",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_129020": {
+      "need": {
+        "text": "国际本科新生的校方 need-based 资格尚未确认；I-20资金证明不等同财援资格结论。",
+        "sources": [
+          {
+            "url": "https://admissions.uconn.edu/apply/international/financial-visa/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "国际申请人可竞争 Global Excellence／Distinction／Leader 等 merit 奖，按成绩与领导力评选；续领有条件。",
+        "sources": [
+          {
+            "url": "https://admissions.uconn.edu/cost-aid/scholarship/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_130943": {
+      "need": {
+        "text": "不向国际生提供 need-based 财援。",
+        "sources": [
+          {
+            "url": "https://www.udel.edu/apply/undergraduate-admissions/financing-your-degree/international-students/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生随入学申请自动获 merit 奖考虑；可竞争 Distinguished Scholars，获奖及续领另有条件。",
+        "sources": [
+          {
+            "url": "https://www.udel.edu/apply/undergraduate-admissions/financing-your-degree/international-students/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_131283": {
+      "need": {
+        "text": "不向国际本科生提供校方 need-based 或联邦资助。",
+        "sources": [
+          {
+            "url": "https://financial-aid.catholic.edu/undergraduate/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科申请人可获校方 merit 奖考虑；金额和条件按录取通知，不能当作全费用保证。",
+        "sources": [
+          {
+            "url": "https://www.catholic.edu/admission-aid/international-admission/undergraduate-international-admission",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_131469": {
+      "need": {
+        "text": "国际新生不适用 need-based 或美国政府资助；在读30学分后的资助咨询渠道不等于新生资格。",
+        "sources": [
+          {
+            "url": "https://undergraduate.admissions.gwu.edu/financial-aid/international-student-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://financialaid.gwu.edu/revolutionary-promise",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生随申请自动获 merit 奖考虑；You Are Welcome Here 需另申，续领按奖函规定。",
+        "sources": [
+          {
+            "url": "https://undergraduate.admissions.gwu.edu/financial-aid/international-student-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_137847": {
+      "need": {
+        "text": "不向非美国公民／非永久居民提供 need-based 资助。",
+        "sources": [
+          {
+            "url": "https://www.ut.edu/admissions/financial-aid/how-to-apply",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生自动获多数 merit 奖考虑；院系奖可能需另申，通常为部分学费减免。",
+        "sources": [
+          {
+            "url": "https://www.ut.edu/admissions/financial-aid/scholarships-and-grants",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_139959": {
+      "need": {
+        "text": "国际本科新生常规 need-based 资格尚未确认；不能由 FAFSA 条件推导所有学院项目均无。",
+        "sources": [
+          {
+            "url": "https://osfa.uga.edu/types-of-aid/undergraduate/scholarships/academic-scholarships/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://gafamilies.uga.edu/ssac/scholarships-undergraduate",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "F-1国际新生可竞争多项学术奖，包括指定非居民奖；各奖续领有 GPA／全日制要求。",
+        "sources": [
+          {
+            "url": "https://osfa.uga.edu/types-of-aid/undergraduate/scholarships/academic-scholarships/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_146427": {
+      "need": {
+        "text": "国际申请人不适用 need-based 资助。",
+        "sources": [
+          {
+            "url": "https://www.knox.edu/admission/apply-to-knox/international-applicants/international-frequently-asked-questions",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际申请人自动获部分 merit 奖考虑；支付能力会影响录取，需提交财务支持证明。",
+        "sources": [
+          {
+            "url": "https://www.knox.edu/admission/apply-to-knox/international-applicants/financial-aid-and-visa-information",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.knox.edu/admission/apply-to-knox/international-applicants/financial-aid-and-visa-information",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_153658": {
+      "need": {
+        "text": "国际生不适用常规 grants／loans／need-based 财援；ISSS在读紧急短贷有需求及还款条件，不属于新生赠款。",
+        "sources": [
+          {
+            "url": "https://admissions.uiowa.edu/resources-international-students-and-other-nationalities",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://international.uiowa.edu/isss/current-students/financial-aid-international-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生可竞争学术奖；官网国际首年页仍列奖学金需 SAT／ACT，须核对申请当年各奖要求。",
+        "sources": [
+          {
+            "url": "https://admissions.uiowa.edu/international-first-year-admission-requirements",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_160977": {
+      "need": {
+        "text": "国际新生可申请；满足学校认定全部需求，须录取前申报并按要求提交 BISAFA；方案可含校内工作。",
+        "sources": [
+          {
+            "url": "https://www.bates.edu/financial-services/financial-aid/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "不提供国际生 merit 或体育奖学金。",
+        "sources": [
+          {
+            "url": "https://www.bates.edu/admission/apply/international-students/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.bates.edu/financial-services/financial-aid/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_161004": {
+      "need": {
+        "text": "国际生可申请；满足学校认定全部需求，以奖助金及校内工作安排组成，不强制贷款。",
+        "sources": [
+          {
+            "url": "https://www.bowdoin.edu/admissions/apply/international-students/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "校方资助均按经济需求评定，不提供 merit 奖。",
+        "sources": [
+          {
+            "url": "https://www.bowdoin.edu/student-aid/types-of-aid/index.html",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "review": {
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
+        "sources": [
+          {
+            "url": "https://www.bowdoin.edu/admissions/apply/international-students/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_161086": {
+      "need": {
+        "text": "国际生可申请；满足学校认定全部需求，需 CSS Profile，困难者可询问费用豁免。",
+        "sources": [
+          {
+            "url": "https://afa.colby.edu/apply/requirements/international-applicants/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "不提供学术、体育或其他才艺 merit 奖。",
+        "sources": [
+          {
+            "url": "https://afa.colby.edu/apply/faq/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      }
+    },
+    "us_163268": {
+      "need": {
+        "text": "国际生不适用校方 need-based 或联邦资助。",
+        "sources": [
+          {
+            "url": "https://scholarships.umbc.edu/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生自动获一般 merit 奖考虑，也可另申 Scholar Programs；各项目条件不同。",
+        "sources": [
+          {
+            "url": "https://scholarships.umbc.edu/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_164739": {
+      "need": {
+        "text": "非美国公民或永久居民不适用 need-based 资助。",
+        "sources": [
+          {
+            "url": "https://www.bentley.edu/offices/financial-assistance/frequently-asked-questions",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生可竞争有限学术奖，通过入学申请评定；在读未获入学奖者不能首次补获。",
+        "sources": [
+          {
+            "url": "https://www.bentley.edu/offices/financial-assistance/frequently-asked-questions",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_168218": {
+      "need": {
+        "text": "国际新生可申请有限名额资助；满足录取且入学时申请者认定全部需求，国际生费用预算不含旅费。",
+        "sources": [
+          {
+            "url": "https://www.wellesley.edu/admission-aid/student-financial-services/understanding-financial-aid/apply-for-aid/international-students",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://www.wellesley.edu/admission-aid/faqs",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "仅提供按经济需求评定的 grant，不提供 merit 奖。",
+        "sources": [
+          {
+            "url": "https://www.wellesley.edu/admission-aid/student-financial-services/policies-faqs-stats-more",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.wellesley.edu/admission-aid/faqs",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_168342": {
+      "need": {
+        "text": "国际申请人如入学期间可能需要资助，须在入学申请时申报；学校满足录取者认定需求，具体国际录取政策尚待确认。",
+        "sources": [
+          {
+            "url": "https://www.williams.edu/admission-aid/tuition-aid/requirements-and-deadlines/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://www.williams.edu/admission-aid/how-to-apply/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "只提供 need-based 资助，不提供 merit 奖学金。",
+        "sources": [
+          {
+            "url": "https://www.williams.edu/admission-aid/how-to-apply/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      }
+    },
+    "us_171100": {
+      "need": {
+        "text": "国际新生不适用常规 need-based 财援；OISS另有在读紧急困难援助，通常排除首学期，不属于入学资金保证。",
+        "sources": [
+          {
+            "url": "https://reg.msu.edu/academicPrograms/Print.aspx?Section=219",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://oiss.isp.msu.edu/grants/grants-and-scholarships-overview/oiss-funding/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "merit": {
+        "text": "国际本科新生自动获学术 merit 奖考虑；续领须保持国际学费身份、学分及良好学业状态。",
+        "sources": [
+          {
+            "url": "https://admissions.msu.edu/cost-aid/scholarships/international",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_171128": {
+      "need": {
+        "text": "国际生不适用 need-based 财援。",
+        "sources": [
+          {
+            "url": "https://www.mtu.edu/admissions/apply/faqs/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生及转学生可自动获 International Ambassador 奖考虑；加拿大、校友、商学院等奖各有条件。",
+        "sources": [
+          {
+            "url": "https://www.mtu.edu/finaid/students/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_179159": {
+      "need": {
+        "text": "国际本科生不适用 need-based 资助，包括 grants。",
+        "sources": [
+          {
+            "url": "https://www.slu.edu/financial-aid/types-of-aid/index.php",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "圣路易斯校区国际新生随申请自动获 merit 奖考虑；MLK及Presidential需另申，非马德里校区政策。",
+        "sources": [
+          {
+            "url": "https://www.slu.edu/admission/international/frequently-asked-questions.php",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "review": {
+        "text": "Need-blind：国际申请人的支付能力不影响录取。",
+        "sources": [
+          {
+            "url": "https://www.slu.edu/admission/international/frequently-asked-questions.php",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_181002": {
+      "need": {
+        "text": "不向国际生提供 need-based 资助。",
+        "sources": [
+          {
+            "url": "https://www.creighton.edu/admissions/admissions-requirements/international",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生可获 merit 奖；不提供 full-ride，仍需证明可承担其余费用。",
+        "sources": [
+          {
+            "url": "https://www.creighton.edu/admissions/admissions-requirements/international",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "rutgers_camden": {
+      "need": {
+        "text": "本校区国际本科新生 need-based 资格尚未确认；不将 FAFSA／新泽西州项目套用于普通国际生。",
+        "sources": [
+          {
+            "url": "https://admissions.camden.rutgers.edu/costs-and-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "持有效非移民签证的国际申请人可自动获奖学金考虑；须按本校区条件，校区之间不可直接移用奖额。",
+        "sources": [
+          {
+            "url": "https://admissions.camden.rutgers.edu/costs-and-aid/scholarships",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "us_186399": {
+      "need": {
+        "text": "本校区国际本科新生 need-based 资格尚未确认；不将 FAFSA／新泽西州项目套用于普通国际生。",
+        "sources": [
+          {
+            "url": "https://admissions.newark.rutgers.edu/costs-and-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "持有效非移民签证的国际申请人可自动获奖学金考虑；须按本校区条件，校区之间不可直接移用奖额。",
+        "sources": [
+          {
+            "url": "https://admissions.newark.rutgers.edu/costs-and-aid/scholarships",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_189097": {
+      "need": {
+        "text": "国际申请人可申请；满足学校认定全部需求，国际生采用 need-aware 录取。",
+        "sources": [
+          {
+            "url": "https://barnard.edu/admissions/internationalstudents",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "不提供仅按 merit 评选的校方奖学金。",
+        "sources": [
+          {
+            "url": "https://catalogue.barnard.edu/barnard-college/admissions/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://barnard.edu/admissions/internationalstudents",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_190099": {
+      "need": {
+        "text": "国际新生可申请；须在入学申请时申报并提交 CSS，满足学校认定全部需求；资助可含工作和贷款。",
+        "sources": [
+          {
+            "url": "https://www.colgate.edu/admission-aid/apply/international-applicants",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "无一般学术 merit 奖；部分体育校队奖明确不限国籍，由教练决定人选及金额。",
+        "sources": [
+          {
+            "url": "https://www.colgate.edu/admission-aid/financial-aid/types-aid",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.colgate.edu/admission-aid/apply/international-applicants",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_191515": {
+      "need": {
+        "text": "国际新生可申请；须入学时申报并证明需求，学校满足认定全部需求，方案可含工作及校方贷款。",
+        "sources": [
+          {
+            "url": "https://www.hamilton.edu/admission/finaid/international",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "已停止发放 merit 奖；资助重点为经济需求。",
+        "sources": [
+          {
+            "url": "https://www.hamilton.edu/admission/finaid/faq",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.hamilton.edu/admission/finaid/international",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_191649": {
+      "need": {
+        "text": "不向国际生提供 need-based 资助。",
+        "sources": [
+          {
+            "url": "https://www.hofstra.edu/admission/scholarship-opportunities.html",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生可获部分 merit 奖，随入学申请评定、无需另申；不提供 full-ride。",
+        "sources": [
+          {
+            "url": "https://www.hofstra.edu/admission/scholarship-opportunities.html",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_194578": {
+      "need": {
+        "text": "国际生不适用 need-based 资助，不应提交 FAFSA 申请此类资助。",
+        "sources": [
+          {
+            "url": "https://www.pratt.edu/admissions/undergraduate-admissions/finance-your-education/how-to-apply-for-financial-aid/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际本科新生录取时自动获 merit 奖考虑；按成绩及作品集等评定，无需另申。",
+        "sources": [
+          {
+            "url": "https://www.pratt.edu/admissions/undergraduate-admissions/finance-your-education/financial-aid-options/scholarships/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_197133": {
+      "need": {
+        "text": "国际新生采用 need-aware 录取；须与入学同时申请资助，满足录取者认定全部需求，首年未获者不能以后首次申请。",
+        "sources": [
+          {
+            "url": "https://www.vassar.edu/admission/apply/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "资助只按经济需求评定，不提供校方 merit 奖。",
+        "sources": [
+          {
+            "url": "https://www.vassar.edu/admission/financial-aid/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的支付能力或资助需求会纳入录取考虑。",
+        "sources": [
+          {
+            "url": "https://www.vassar.edu/admission/apply/international/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      }
+    },
+    "us_199193": {
+      "need": {
+        "text": "国际申请人不适用常规 financial aid；不把普通本科 need 项目套用于国际生。",
+        "sources": [
+          {
+            "url": "https://admissions.ncsu.edu/apply/international/first-year/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "国际新生可竞争有限 merit 奖；录取后须经 PACKASSIST 申请，Park 等另有身份／美国高中背景限制。",
+        "sources": [
+          {
+            "url": "https://admissions.ncsu.edu/apply/international/first-year/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          },
+          {
+            "url": "https://admissions.ncsu.edu/afford/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_217882": {
+      "need": {
+        "text": "国际本科新生校方 need-based 资格尚未确认；联邦／州限制或资金证明不能推出全校无资助。",
+        "sources": [
+          {
+            "url": "https://www.clemson.edu/financial-aid/how-aid-works/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "National Scholars 明确接受国际新生；须按期申请本科及 Honors，并经决选活动，名额极少。",
+        "sources": [
+          {
+            "url": "https://www.clemson.edu/academics/programs/national-scholars/scholar-selection/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "uw": {
+      "need": {
+        "text": "西雅图本科国际生招生页明确不提供校方 financial aid；应准备全部费用。",
+        "sources": [
+          {
+            "url": "https://admit.washington.edu/costs/coa/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "西雅图本科国际生招生页明确不提供校方奖学金；不外推至其他校区或研究生。",
+        "sources": [
+          {
+            "url": "https://admit.washington.edu/costs/coa/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      }
+    },
+    "william_mary": {
+      "need": {
+        "text": "普通国际本科生一般需自行承担完整费用；国际招生页称通常无奖／贷款资金，不能由此否认专项 merit 例外。",
+        "sources": [
+          {
+            "url": "https://www.wm.edu/admission/undergraduateadmission/how-to-apply/international-applicants/expensesaid/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "1693 Scholars 明确接受国际新生；有独立遴选流程，不代表所有国际生可获全费用资助。",
+        "sources": [
+          {
+            "url": "https://www.wm.edu/as/1693scholars/selectioninfo/",
+            "year": "现行政策；2027–28资助周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       }
     }
   },
