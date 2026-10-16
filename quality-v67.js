@@ -10,7 +10,7 @@ const V67=(()=>{
  }
  function aidDetail(s){return Object.keys(labels).map(k=>{const v=aid(s,k);return v?detailField(labels[k],v):''}).join('')}
  function aidRows(ss){return Object.keys(labels).map(k=>{const vs=ss.map(s=>aid(s,k));if(!vs.some(Boolean))return '';return '<div class="aid-label">'+labels[k]+'</div>'+vs.map((v,i)=>'<div class="compare-value" aria-label="'+esc(ss[i].school_name_cn||ss[i].school_name)+'">'+v+'</div>').join('')}).join('')}
- function programs(s){const known=QualityData.rankings[s.school_id]||[];const ps=Array.isArray(s.signature_programs)?s.signature_programs:[];
+ function programs(s){const known=QualityData.rankings[s.school_id]||[];const ps=(Array.isArray(s.signature_programs)?s.signature_programs:[]).map(p=>{const f=QualityData.programs?.[s.school_id]?.[p.program_key];return f&&links(f.sources)?{...p,application_note:f.text,sources:f.sources}:p});
  const ranked=known.map(p=>'<details><summary>'+esc(p.name_cn)+' · 第'+p.rank+'名<small>'+esc(p.system+' · '+p.year)+'</small></summary>'+ps.filter(x=>x.name_cn===p.name_cn||p.name_cn.includes(x.name_cn)||s.school_id==='penn'&&/商|business|finance/i.test(x.name_cn+' '+x.name_en)).map(x=>x.application_note?'<p>'+esc(clean(x.application_note))+'</p>':'').join('')+links(p.sources)+'</details>');
  for(const p of ps){if(known.some(k=>k.name_cn.includes(p.name_cn)||p.name_cn?.includes(k.name_cn)||s.school_id==='penn'&&/商|business|finance/i.test(p.name_cn+' '+p.name_en)))continue;
  const title=p.name_cn||p.name_en;if(!title)continue;
