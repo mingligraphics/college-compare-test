@@ -6,28 +6,33 @@ const QualityData = {
         "text": "可申请；须在申请入学时同时申请资助，录取后满足经认定的经济需求。",
         "sources": [
           {
-            "url": "https://admissions.upenn.edu/affording-penn/international-aid"
+            "url": "https://admissions.upenn.edu/affording-penn/international-aid",
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "limited"
       },
       "review": {
         "text": "Need-aware：家庭支付能力会影响录取；美国、加拿大、墨西哥公民及永久居民适用不同政策。",
         "sources": [
           {
-            "url": "https://admissions.upenn.edu/affording-penn/international-aid"
+            "url": "https://admissions.upenn.edu/affording-penn/international-aid",
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16"
       },
       "merit": {
         "text": "不提供校方 merit-based 奖学金；Penn 本科资助按经济需求发放。",
         "sources": [
           {
-            "url": "https://admissions.upenn.edu/affording-penn/financial-aid"
+            "url": "https://admissions.upenn.edu/affording-penn/financial-aid",
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "no"
       }
     },
     "jhu": {
@@ -180,28 +185,33 @@ const QualityData = {
         "text": "国际本科新生可申请；满足录取学生经认定的全部经济需求。须在入学申请时申请资助。",
         "sources": [
           {
-            "url": "https://admission.brown.edu/international/financial-aid"
+            "url": "https://admission.brown.edu/international/financial-aid",
+            "year": "Class of 2029起国际新生need-blind；其余年度规则未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       },
       "review": {
         "text": "Need-blind：国际本科新生的支付能力不影响录取。从2025年秋季入学的Class of 2029起适用；转学生政策不同。",
         "sources": [
           {
-            "url": "https://admission.brown.edu/international/financial-aid"
+            "url": "https://admission.brown.edu/international/financial-aid",
+            "year": "Class of 2029起国际新生need-blind；其余年度规则未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16"
       },
       "merit": {
         "text": "不提供校方 merit-based 奖学金；资助以经济需求为依据。",
         "sources": [
           {
-            "url": "https://finaid.brown.edu/aid-types/grants-scholarships"
+            "url": "https://finaid.brown.edu/aid-types/grants-scholarships",
+            "year": "Class of 2029起国际新生need-blind；其余年度规则未单独确认"
           }
         ],
-        "checked": "2026-10-15"
+        "checked": "2026-10-16",
+        "expected_value": "no"
       }
     },
     "dartmouth": {
@@ -239,25 +249,26 @@ const QualityData = {
         "sources": [
           {
             "url": "https://admission.stanford.edu/apply/international/",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           },
           {
             "url": "https://financialaid.stanford.edu/undergrad/apply/requirements/rea_international.html",
-            "year": "2027–28资助学年／2027秋入学；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           },
           {
             "url": "https://financialaid.stanford.edu/undergrad/apply/requirements/rd_international.html",
-            "year": "2027–28资助学年／2027秋入学；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
-        "checked": "2026-10-16"
+        "checked": "2026-10-16",
+        "expected_value": "limited"
       },
       "review": {
         "text": "Need-aware：国际公民申请资助会影响录取评估。美国公民、永久居民、无证学生及符合资格的非公民适用校方另列政策。",
         "sources": [
           {
             "url": "https://admission.stanford.edu/apply/international/",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
         "checked": "2026-10-16"
@@ -267,10 +278,11 @@ const QualityData = {
         "sources": [
           {
             "url": "https://admission.stanford.edu/apply/international/",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
-        "checked": "2026-10-16"
+        "checked": "2026-10-16",
+        "expected_value": "limited"
       }
     },
     "duke": {
@@ -311,42 +323,40 @@ const QualityData = {
     },
     "northwestern": {
       "need": {
-        "text": "国际新生可申请有限名额的 need-based aid；须在申请入学时表明需要资助，并在首年申请且获得资助，之后每年重新申请。获资助者满足经认定的全部需求；国际转学生不适用。",
+        "text": "可申请；须在入学申请时申报并于首年获资助。少量国际新生获满足学校认定全部需求的资助；国际转学生不适用。",
         "sources": [
           {
             "url": "https://undergradaid.northwestern.edu/help-support/international-students/",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
-        "checked": "2026-10-16"
+        "checked": "2026-10-16",
+        "expected_value": "limited"
       },
       "review": {
-        "text": "Need-aware：申请资助及所需金额均可能影响国际生录取决定。",
+        "text": "Need-aware：申请资助及所需金额可能影响国际生录取。",
         "sources": [
           {
             "url": "https://undergradaid.northwestern.edu/help-support/international-students/",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
         "checked": "2026-10-16"
       },
       "merit": {
-        "text": "一般学术 merit 奖学金不提供；Bienen 音乐学院 Bachelor of Music 申请人可凭优秀试演／面试竞争音乐 merit 奖学金，无额外奖学金申请；国际申请人的 merit 评选流程相同。不是面向全校专业的普遍奖项。",
+        "text": "有专业限制：Bienen 音乐学院 Bachelor of Music 申请人可凭试演／面试竞争音乐奖学金，国际生同样适用；无需额外奖学金申请。",
         "sources": [
           {
-            "url": "https://undergradaid.northwestern.edu/faqs/eligibility-aid-applications/",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
-          },
-          {
             "url": "https://www.music.northwestern.edu/admission/undergraduate/financial-aid",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+            "year": "现行政策；2027–28资助规则未单独确认"
           },
           {
-            "url": "https://www.music.northwestern.edu/admission/undergraduate/faq",
-            "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+            "url": "https://www.music.northwestern.edu/admission/international",
+            "year": "现行政策；2027–28资助规则未单独确认"
           }
         ],
-        "checked": "2026-10-16"
+        "checked": "2026-10-16",
+        "expected_value": "limited"
       }
     },
     "vanderbilt": {
@@ -383,6 +393,444 @@ const QualityData = {
           }
         ],
         "checked": "2026-10-16"
+      }
+    },
+    "us_131159": {
+      "need": {
+        "text": "尚未确认：学校两个国际生页面对 need-based 资格的说明不一致，申请前请向校方确认。",
+        "sources": [
+          {
+            "url": "https://www.american.edu/financialaid/prospective-international.cfm",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          },
+          {
+            "url": "https://www.american.edu/admissions/international/first-year-merit.cfm",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "可申请；秋季国际新生按期申请即可竞争部分 merit 奖，录取时评定并须满足续领条件。EGL 全额奖覆盖账单费用，保险、书本、机票等仍需自付。",
+        "sources": [
+          {
+            "url": "https://www.american.edu/admissions/international/first-year-merit.cfm",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "nyu": {
+      "need": {
+        "text": "国际本科新生可申请；纽约校区按学校认定需求评定资助。家庭年收入低于10万美元且资产符合要求者可免学费，须按期申请；免学费不等于全部就读费用免费。",
+        "sources": [
+          {
+            "url": "https://bulletins.nyu.edu/undergraduate/social-work/cost-attendance/financial-aid/",
+            "year": "2026–27本科目录；NYU Promise自2024–25起"
+          },
+          {
+            "url": "https://bulletins.nyu.edu/undergraduate/liberal-studies/cost-attendance/",
+            "year": "2026–27本科目录；NYU Promise自2024–25起"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "merit": {
+        "text": "国际本科新生的独立 merit 奖资格尚未确认；学院在读奖项不能视为全校新生入学奖。",
+        "sources": [
+          {
+            "url": "https://bulletins.nyu.edu/undergraduate/social-work/cost-attendance/financial-aid/",
+            "year": "2026–27本科目录；NYU Promise自2024–25起"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      }
+    },
+    "ohio_state": {
+      "need": {
+        "text": "新生常规 need-based 资格尚未确认。International Student Grant 面向符合条件的在读国际生，首学年不能申请，不可作为入学资助。",
+        "sources": [
+          {
+            "url": "https://oia.osu.edu/grants-and-scholarships/international-student-grant",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "学校一般新生 merit 奖不向国际生开放；其他校内专项的新生资格尚未确认。",
+        "sources": [
+          {
+            "url": "https://undergrad.osu.edu/cost-and-aid/merit-based-Scholarships",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      }
+    },
+    "ucsb": {
+      "need": {
+        "text": "国际生资助机会非常有限，需准备自行承担就读费用；常规新生 need-based 资格尚未确认。",
+        "sources": [
+          {
+            "url": "https://admissions.ext-prod.sa.ucsb.edu/international",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          },
+          {
+            "url": "https://oiss.ucsb.edu/resources/financial-resources",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "merit": {
+        "text": "国际新生 merit 资格尚未确认。Regents 奖有公民、永久居民或符合加州指定法案的身份限制，不能据此判断全校其他奖项。",
+        "sources": [
+          {
+            "url": "https://www.finaid.ucsb.edu/types-aid/scholarship-awards/regents-scholarship",
+            "year": "Regents 2026–27；2027–28未确认"
+          },
+          {
+            "url": "https://oiss.ucsb.edu/resources/financial-resources",
+            "year": "Regents 2026–27；2027–28未确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      }
+    },
+    "us_145600": {
+      "merit": {
+        "text": "已核实的 Laurette Kirstein 奖仅限在读国际生：须已完成至少一学期、全日制且 UIC GPA≥3.5；不属于入学前新生资助。2026轮已截止，2027规则未公布。",
+        "sources": [
+          {
+            "url": "https://ois.uic.edu/programs/scholarships-and-awards/",
+            "year": "2026轮；2027申请未公布"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "need": {
+        "text": "不向国际生提供联邦、州或校方 need-based 资助；符合美国 eligible noncitizen 身份者适用其他规则。",
+        "sources": [
+          {
+            "url": "https://financialaid.uic.edu/aid-process/eligibility/",
+            "year": "2026轮；2027申请未公布"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      }
+    },
+    "us_174066": {
+      "need": {
+        "text": "尚未确认：招生总页称国际本科生无 financial aid，ISSS 另列新生 need-based 专项；当前申请资格及周期仍需校方确认。",
+        "sources": [
+          {
+            "url": "https://admissions.tc.umn.edu/cost-aid/financial-aid",
+            "year": "招生现行；ISSS专项页2021-06-04更新"
+          },
+          {
+            "url": "https://isss.umn.edu/students/support-services/funding-basic-page",
+            "year": "招生现行；ISSS专项页2021-06-04更新"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "可申请 Global Excellence Scholarship；国际本科新生按期完成入学申请及财务证明后自动获考虑，竞争录取且须满足续领条件。",
+        "sources": [
+          {
+            "url": "https://admissions.tc.umn.edu/global-excellence-scholarships",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "uva": {
+      "need": {
+        "text": "通常不向国际本科申请人提供资助；就读 United World College（UWC）且获录取者可获 need-based 奖学金支持。",
+        "sources": [
+          {
+            "url": "https://admission.virginia.edu/i-am/international",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "merit": {
+        "text": "已核实的 Lorna Sundberg 奖仅限预计2028年5月毕业的国际本科在读生，须全日制、F-1 且 GPA≥3.0；不属于新生入学奖。",
+        "sources": [
+          {
+            "url": "https://internationalcenter.virginia.edu/lorna-sundberg-international-scholarship",
+            "year": "2027–28在读奖；2027-03-12截止"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "us_100858": {
+      "need": {
+        "text": "国际本科新生资格尚未确认；招生说明与合作项目奖项线索的适用范围未厘清，暂不据此作资金规划。",
+        "sources": [
+          {
+            "url": "https://www.auburn.edu/admissions/faq.php?accid=row47",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          },
+          {
+            "url": "https://auburn.edu/admissions/prospective-students/international/index.php",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "国际本科新生资格尚未确认；招生说明与合作项目奖项线索的适用范围未厘清，暂不据此作资金规划。",
+        "sources": [
+          {
+            "url": "https://www.auburn.edu/admissions/faq.php?accid=row47",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          },
+          {
+            "url": "https://auburn.edu/admissions/prospective-students/international/index.php",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      }
+    },
+    "us_186867": {
+      "need": {
+        "text": "国际本科新生 need-based 资格尚未确认；不能把联邦资助不适用或转学生规则当作全校新生否定结论。",
+        "sources": [
+          {
+            "url": "https://www.stevens.edu/page-basic/undergraduate-international-student-resources",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          },
+          {
+            "url": "https://www.stevens.edu/page-right-nav/applying-for-financial-aid",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "可申请少量校方 merit 奖学金；国际申请人须按学校要求提交 CSS Profile，代码2819。",
+        "sources": [
+          {
+            "url": "https://www.stevens.edu/page-chapter/international-students",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "bc": {
+      "need": {
+        "text": "不向非美国公民或永久居民的国际申请人提供常规 need-based 资助；须准备承担就读费用。",
+        "sources": [
+          {
+            "url": "https://www.bc.edu/content/bc-web/admission/apply/international.html",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "可申请 Gabelli Presidential Scholarship：国际本科新生须在11月1日前完成申请；覆盖全学费，不适用转学生。",
+        "sources": [
+          {
+            "url": "https://www.bc.edu/content/bc-web/academics/sites/gabelli-presidential-scholars-program/about/faq.html",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "bu": {
+      "merit": {
+        "text": "国际本科新生可竞争 Presidential Scholarship；须12月1日前完成入学申请。2026年秋季入学起奖额为半额学费，不是全部就读费用。",
+        "sources": [
+          {
+            "url": "https://www.bu.edu/admissions/tuition-aid/scholarships-financial-aid/first-year-merit/",
+            "year": "2026秋入学起（Presidential奖额）；年度申请须复核"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      },
+      "need": {
+        "text": "有项目限制：通常不提供国际生 need-based 资助；Davis UWC 合作项目录取者可获满足学校认定全部需求的支持，不能推广为所有国际生资格。",
+        "sources": [
+          {
+            "url": "https://www.bu.edu/finaid/undergraduate-students/international/",
+            "year": "2026秋首届Davis UWC；现行合作政策，2027–28申请细则未确认"
+          },
+          {
+            "url": "https://www.bu.edu/admissions/why-bu/diversity/access-at-bu/",
+            "year": "2026秋首届Davis UWC；现行合作政策，2027–28申请细则未确认"
+          },
+          {
+            "url": "https://www.bu.edu/articles/2026/inaugural-class-of-davis-united-world-college-scholars/",
+            "year": "2026秋首届Davis UWC；现行合作政策，2027–28申请细则未确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "cmu": {
+      "need": {
+        "text": "不向国际本科生提供校方资助（need-based 或 merit）；美国公民及符合条件的非公民适用其他规则。",
+        "sources": [
+          {
+            "url": "https://coursecatalog.web.cmu.edu/aboutcmu/universitypolicies/financial-aid/",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "不向国际本科生提供校方资助（need-based 或 merit）；美国公民及符合条件的非公民适用其他规则。",
+        "sources": [
+          {
+            "url": "https://coursecatalog.web.cmu.edu/aboutcmu/universitypolicies/financial-aid/",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      }
+    },
+    "usc": {
+      "need": {
+        "text": "不向国际申请人提供 need-based 资助；申请时须提交至少首年完整就读费用的资金证明。",
+        "sources": [
+          {
+            "url": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      },
+      "merit": {
+        "text": "可申请；在相应截止日期前提交申请的国际生可竞争 USC Merit Scholarships。奖学金竞争激烈，均不覆盖完整就读费用。",
+        "sources": [
+          {
+            "url": "https://admission.usc.edu/prospective-students/how-to-apply/international-students/",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "caltech": {
+      "need": {
+        "text": "可申请；须在申请入学时申报并于首年获得资助，录取且符合资格者满足学校认定全部需求。加拿大、墨西哥可能有例外；国际转学及3/2项目不适用。",
+        "sources": [
+          {
+            "url": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          },
+          {
+            "url": "https://www.finaid.caltech.edu/applying/international-students",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "review": {
+        "text": "Need-aware：国际申请人的经济需求可能影响录取；满足认定需求不等于录取不考虑经济状况。",
+        "sources": [
+          {
+            "url": "https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16"
+      },
+      "merit": {
+        "text": "不提供校方 merit 奖学金；本科奖助金按经济需求评定。",
+        "sources": [
+          {
+            "url": "https://www.finaid.caltech.edu/TypesofAid/grants",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "no"
+      }
+    },
+    "pitt": {
+      "need": {
+        "text": "常规 need-based 资格尚未确认；国际招生页泛称无 financial aid，同时明确设有学术奖，不能把两类资助混为一谈。",
+        "sources": [
+          {
+            "url": "https://admissions.pitt.edu/international/",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "可申请；匹兹堡校区秋季国际新生须2月1日前完成申请及材料，并提交 essay／个人陈述，自动获学术奖考虑；续领须达到学校要求。",
+        "sources": [
+          {
+            "url": "https://admissions.pitt.edu/international/",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_151351": {
+      "need": {
+        "text": "有专项限制：ILLO 面向中国、香港、台湾及指定专业的学生，须证明经济需求；新生入学前能否申请尚未确认，不可作为通用入学资助。",
+        "sources": [
+          {
+            "url": "https://bloomington.iu.edu/cost-aid/scholarships/international/illo-scholarship.html",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "merit": {
+        "text": "国际本科新生可申请学术 merit 及部分国籍专项奖学金；各项目有独立资格，须核对适用国籍、专业和申请要求。",
+        "sources": [
+          {
+            "url": "https://bloomington.iu.edu/cost-aid/scholarships/international/",
+            "year": "现行政策；2027–28资助规则未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
       }
     }
   },

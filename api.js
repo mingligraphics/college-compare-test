@@ -2,6 +2,15 @@ const CollegeAPI = (() => {
  const base='https://hmnoqybdcfwqbjhorwzd.supabase.co/functions/v1/';
  const fields=['school_id','school_name','school_name_cn','short_name','city','city_cn','state','state_cn','region','school_type','undergrad_enrollment','undergrad_enrollment_year','acceptance_rate','admissions_year','coa','coa_year','tuition_fees','tuition_fees_year','international_pct','international_pct_year','international_pct_scope','institution_control','ranking_usnews','ranking_category'];
  let snapshotPromise;
+ function reviewed(rows){return rows.map(row=>{
+  const facts=typeof QualityData==='undefined'?null:QualityData.aid[row.school_id];
+  const result={...row};
+  for(const [key,field] of [['need','international_need_aid'],['merit','international_merit_aid']]){
+   const fact=facts?.[key];
+   if(fact&&Object.prototype.hasOwnProperty.call(fact,'expected_value')&&[null,'yes','no','limited'].includes(fact.expected_value))result[field]=fact.expected_value;
+  }
+  return result;
+ })}
  async function fetchJSON(url, options={}, timeout=12000){
   const controller=new AbortController();
   const timer=setTimeout(()=>controller.abort(),timeout);
@@ -26,9 +35,9 @@ const CollegeAPI = (() => {
   }
  },async pair(a,b){
   if(a===b)throw Error('Two distinct schools required');
-  try{const {details}=await snapshot();if(!details.has(a)||!details.has(b))throw Error('Unknown school');return [details.get(a),details.get(b)]}catch{
+   try{const {details}=await snapshot();if(!details.has(a)||!details.has(b))throw Error('Unknown school');return reviewed([details.get(a),details.get(b)])}catch{
    const rows=await request('compare-schools-basic-v2',{schoolA:a,schoolB:b});
-   if(!Array.isArray(rows)||rows.length!==2||rows[0]?.school_id!==a||rows[1]?.school_id!==b)throw Error('Invalid comparison');return rows;
+   if(!Array.isArray(rows)||rows.length!==2||rows[0]?.school_id!==a||rows[1]?.school_id!==b)throw Error('Invalid comparison');return reviewed(rows);
   }
  }};
 })();

@@ -6,7 +6,7 @@ const V67=(()=>{
  function aid(s,key){const f=QualityData.aid[s.school_id]?.[key];if(f&&links(f.sources))return '<strong>'+esc(f.text)+'</strong><p>'+links(f.sources)+'</p>';
   const field={need:'international_need_aid',merit:'international_merit_aid'}[key],n=CollegeAidNotes[s.school_id]?.[field];
   if(!n||n.expected_value!==s[field]||!n.official_urls?.length)return '';
-  return '<strong>有条件可申请：'+esc(n.project_name)+'</strong><p>'+esc(clean(n.restriction_cn))+'</p>'+(clean(n.period)?'<p>'+esc(clean(n.period))+'</p>':'')+'<p>'+links(n.official_urls.map(url=>({url})))+'</p>';
+  return '<strong>有条件可申请：'+esc(n.project_name)+'</strong><p>'+esc(n.restriction_cn)+'</p>'+(n.period?'<p>'+esc(n.period)+'</p>':'')+'<p>'+links(n.official_urls.map(url=>({url})))+'</p>';
  }
  function aidDetail(s){return Object.keys(labels).map(k=>{const v=aid(s,k);return v?detailField(labels[k],v):''}).join('')}
  function aidRows(ss){return Object.keys(labels).map(k=>{const vs=ss.map(s=>aid(s,k));if(!vs.some(Boolean))return '';return '<div class="aid-label">'+labels[k]+'</div>'+vs.map((v,i)=>'<div class="compare-value" aria-label="'+esc(ss[i].school_name_cn||ss[i].school_name)+'">'+v+'</div>').join('')}).join('')}

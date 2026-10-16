@@ -7,6 +7,8 @@ const CollegeDisplay = (() => {
  function safeURL(value){try{const url=new URL(value);return /^https?:$/.test(url.protocol)?esc(url.href):''}catch{return ''}}
  function sources(items){return (Array.isArray(items)?items:[]).map((s,i)=>{const url=safeURL(s.url);return url?`<a href="${url}" target="_blank" rel="noopener noreferrer">来源 ${i+1}</a>${s.year?` · ${esc(s.year)}`:''}`:''}).filter(Boolean).join('<br>')}
  function aidHTML(row,field){
+  const fact=typeof QualityData==='undefined'?null:QualityData.aid[row.school_id]?.[field==='international_need_aid'?'need':'merit'];
+  if(fact&&sources(fact.sources))return `<strong>${esc(fact.text)}</strong><p>${sources(fact.sources)}</p>`;
   const status=row[field], note=CollegeAidNotes[row.school_id]?.[field];
   const matched=!!note&&note.expected_value===status;
   return `<strong>${esc(status==='limited'&&!matched?'具体限制待核实':aid(status))}</strong>${matched?`<p>已核实项目：${esc(note.project_name)}（不代表该校全部资助项目）</p><p>${esc(note.restriction_cn)}</p><p>适用说明：${esc(note.period)}</p><p>资料核查：${esc(note.checked_date)}；申请前请复核校方最新要求。</p><p>${sources(note.official_urls.map(url=>({url})))}</p>`:status==='limited'?'<p>具体资格、适用人群及年度待核实；官方政策链接待核实。</p>':''}`;

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 const root=path.resolve(import.meta.dirname,'..'),out=path.join(root,'dist');
+execFileSync(process.execPath,[path.join(root,'scripts/sync-aid.mjs')],{stdio:'inherit'});
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const markup=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,m=>m.slice(0,m.indexOf('>')+1));
 const assets=[...markup.matchAll(/(?:src|href)="([^"?#]+)(?:\?[^"#]*)?"/g)].map(x=>x[1]).filter(x=>!x.includes(':')&&!x.startsWith('#')&&!x.startsWith('?'));
