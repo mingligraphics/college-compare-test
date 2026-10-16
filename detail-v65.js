@@ -1,6 +1,6 @@
 /* Detail-only source labels; raw source records are retained unchanged. */
 const V65={
- policy(row){return row.test_policy==='test_flexible'?`<strong>灵活考试政策</strong><p>允许校方指定的替代考试；请核对专业及个人适用要求。</p><small>申请周期：${esc(row.test_policy_cycle||'未核实')}</small>`:CollegeDisplay.policyHTML(row)},
+ policy(row){return row.test_policy==='test_flexible'?`<strong>灵活考试政策</strong><p>允许校方指定的替代考试；请核对专业及个人适用要求。</p><small>${esc(CollegeDisplay.applicationCycle(row.test_policy_cycle))}</small>`:CollegeDisplay.policyHTML(row)},
  money(value,year){const cny=tuitionRmb(value);return `<strong>${cny===null?'暂无数据':esc('$'+Number(value).toLocaleString('en-US')+'（约'+detailCostWan(value)+'）')}</strong><small>${esc(year||'学年未核实')}</small>`},
  cost(row){const c=CollegeDisplay.cost(row),m=CollegeDisplay.costContext(row);const scope=m?.scope_cn||'';
  // Only these existing scoped records explicitly include books/personal costs and exclude travel/insurance alone.
@@ -14,3 +14,9 @@ const V65={
  if(!value||/^(?:[-—–]+|n\/?a|none|null|unknown|tbd|not available)$/i.test(value)||/暂无|未核实|待核实|待更新|未知|请查阅学校官网|unverified|not verified/i.test(value))return '';
  return detailField('申请截止日期',`<strong>${esc(value)}</strong>`);
 },programs(row){const host=document.createElement('div');host.innerHTML=V64.programs(row);host.querySelectorAll('details').forEach((detail,i)=>{const sources=row.signature_programs[i].sources||[];const links=sources.map(source=>{let u;try{u=new URL(source.url)}catch{return ''}if(!/^https?:$/.test(u.protocol))return '';const date=String(source.year||'').match(/20\d{2}-\d{2}-\d{2}/)?.[0];return `<a href="${esc(u.href)}" target="_blank" rel="noopener noreferrer">学校官网${date?' · '+date+'核查':''}</a>`}).join('<br>');detail.querySelectorAll('a').forEach(a=>a.remove());const summary=detail.querySelector('summary'),program=row.signature_programs[i];const text=[program.reason,...sources.map(x=>x.year)].join(' ');const rankYear=text.match(/U\.S\. News\s*(20\d{2})/i)?.[1];const hint=program.evidence_category==='本科专业排名'&&rankYear&&/本科/.test(text)?`U.S. News ${rankYear} 本科排名，点击查看依据`:`${program.evidence_category||'专业资料'}，点击查看依据`;summary.insertAdjacentHTML('beforeend',`<small class="program-hint">${esc(hint)}</small>`);const ps=[...detail.querySelectorAll('p')];detail.replaceChildren(summary,...ps);detail.insertAdjacentHTML('beforeend',links||'<small>来源待核实</small>')});return host.innerHTML}};
+
+// School-specific official English policy pages; no invented fallback URL.
+V65.englishURLs={mit:'https://mitadmissions.org/apply/firstyear/international/',caltech:'https://www.admissions.caltech.edu/apply/first-year-applicants/international-applicants',princeton:'https://admission.princeton.edu/apply/international-students'};
+V65.english=row=>`<p class="detail-explanation">${esc(V64.english(row))}</p><p>豁免条件请以学校官网为准${V65.englishURLs[row.school_id]?' · '+CollegeDisplay.sources([{url:V65.englishURLs[row.school_id]}]):'（官方政策链接待核实）'}</p>`;
+// Native summary handles Enter/Space; reflect the native state for explicit ARIA consumers.
+new MutationObserver(()=>document.querySelectorAll('#dialogContent details').forEach(d=>{const s=d.querySelector('summary');if(!s||s.dataset.ariaBound)return;s.dataset.ariaBound='true';const sync=()=>s.setAttribute('aria-expanded',String(d.open));d.addEventListener('toggle',sync);sync()})).observe(document.getElementById('dialogContent'),{childList:true,subtree:true});

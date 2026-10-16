@@ -9,13 +9,14 @@ const CollegeDisplay = (() => {
  function aidHTML(row,field){
   const status=row[field], note=CollegeAidNotes[row.school_id]?.[field];
   const matched=!!note&&note.expected_value===status;
-  return `<strong>${esc(aid(status))}</strong>${matched?`<p>已核实项目：${esc(note.project_name)}（不代表该校全部资助项目）</p><p>${esc(note.restriction_cn)}</p><p>适用说明：${esc(note.period)}</p><p>资料核查：${esc(note.checked_date)}；申请前请复核校方最新要求。</p><p>${sources(note.official_urls.map(url=>({url})))}</p>`:status==='limited'?'<p>具体资格、适用人群及年度待核实；请勿据此假定所有国际本科新生均符合。</p>':''}`;
+  return `<strong>${esc(status==='limited'&&!matched?'具体限制待核实':aid(status))}</strong>${matched?`<p>已核实项目：${esc(note.project_name)}（不代表该校全部资助项目）</p><p>${esc(note.restriction_cn)}</p><p>适用说明：${esc(note.period)}</p><p>资料核查：${esc(note.checked_date)}；申请前请复核校方最新要求。</p><p>${sources(note.official_urls.map(url=>({url})))}</p>`:status==='limited'?'<p>具体资格、适用人群及年度待核实；官方政策链接待核实。</p>':''}`;
  }
  function programsHTML(row){
   const programs=(Array.isArray(row.signature_programs)?row.signature_programs:[]);
   return programs.length?`<ul class="program-list">${programs.map(p=>`<li><strong>${esc(p.name_cn||p.name_en||'未命名专业')}</strong>${p.name_en?`<p>${esc(p.name_en)}</p>`:''}<p>${esc(p.evidence_category||'依据类型未标明')}</p><p>${esc(p.reason||'具体依据待核实')}</p><p>${sources(p.sources)||'来源待核实'}</p></li>`).join('')}</ul>`:'<p>本科优势 / 代表专业：暂无已核实数据</p>';
  }
- function policyHTML(row){return `<strong>${esc(policy(row.test_policy))}</strong><p>申请周期：${esc(row.test_policy_cycle||'未核实')}</p>`}
+ function applicationCycle(value){const raw=String(value||'').trim();const entry=raw.match(/Fall\s*(20\d{2})/i)||raw.match(/(20\d{2})年秋季/);const season=raw.match(/(20\d{2})[-–](\d{2}|20\d{2})/);const y=entry?Number(entry[1]):season?Number(season[1])+1:null;if(!y)return raw||'申请周期待核实';return `${y}年秋季入学（${y-1}–${String(y).slice(-2)}申请季）`;}
+ function policyHTML(row){return `<strong>${esc(policy(row.test_policy))}</strong><p>${esc(applicationCycle(row.test_policy_cycle))}</p>`}
  function cost(row){
   // Prefer a scoped official budget when present; keep the original API row unchanged.
   const complete=typeof row.coa==='number'&&Number.isFinite(row.coa)&&row.coa>0;
@@ -29,5 +30,5 @@ const CollegeDisplay = (() => {
  function cardCostHTML(row){const amount=cost(row).amount;return `<strong>${typeof amount==='number'&&Number.isFinite(amount)&&amount>0?'¥'+Math.round(amount*7/10000).toLocaleString('en-US')+'万元':'暂无数据'}</strong>`}
  function costBand(row){const n=cost(row).amount;if(typeof n!=='number'||!Number.isFinite(n)||n<=0)return null;const cny=n*7;return cny<300000?'low':cny<500000?'mid':cny<650000?'high':'top'}
 
- return {sources,costContext,esc,money,policy,aid,aidHTML,programsHTML,policyHTML,costText,cost,costHTML,cardCostHTML,costBand};
+ return {applicationCycle,sources,costContext,esc,money,policy,aid,aidHTML,programsHTML,policyHTML,costText,cost,costHTML,cardCostHTML,costBand};
 })();

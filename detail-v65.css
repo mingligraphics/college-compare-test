@@ -14,3 +14,12 @@ dialog.school-detail{padding:0!important;overflow:hidden;width:min(780px,calc(10
 .qr-save{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:10px 16px;min-height:44px;box-sizing:border-box;background:white;color:var(--green)}
 .consult-card figcaption small{display:block;font-size:12px;font-weight:400;margin-top:6px}
 @media(max-width:560px){.school-detail #dialogContent{height:100dvh}}
+
+/* V6.5.3: two-line labels and one native disclosure treatment. */
+.school-detail .program-hint{display:block;margin-top:6px;line-height:1.6;text-wrap:pretty;word-break:normal;overflow-wrap:normal}
+.school-detail summary,.comparison .compare-value summary{list-style:none;position:relative;padding:12px 28px 12px 0;min-height:44px;box-sizing:border-box}
+.school-detail summary::-webkit-details-marker,.comparison .compare-value summary::-webkit-details-marker{display:none}
+.school-detail summary::after,.comparison .compare-value summary::after{content:'⌄';position:absolute;right:2px;top:10px;font-size:22px;color:var(--green);transition:transform .15s}
+.school-detail details[open]>summary::after,.school-detail details[open]>.program-summary::after,.comparison .compare-value details[open]>summary::after{content:'⌄';transform:rotate(180deg)}
+.school-detail .detail-scroll{padding-bottom:calc(var(--detail-bar-height,calc(73px + env(safe-area-inset-bottom))) + 48px);scroll-padding-bottom:24px}
+@media(prefers-reduced-motion:reduce){.school-detail summary::after,.comparison summary::after{transition:none}}

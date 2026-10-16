@@ -76,3 +76,5 @@ const CollegeAidNotes = {
     }
   }
 };
+
+CollegeAidNotes.caltech={international_need_aid:{expected_value:'limited',project_name:'国际本科新生按需资助',restriction_cn:'须在申请入学时声明并申请资助；若首年未申请或不符合资助资格，之后本科年度不能再申请。',period:'现行官网政策；申请前复核最新要求',checked_date:'2026-10-15',official_urls:['https://www.finaid.caltech.edu/applying/international-students']}};
