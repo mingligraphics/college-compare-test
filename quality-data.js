@@ -2358,15 +2358,15 @@ const QualityData = {
     },
     "us_186399": {
       "need": {
-        "text": "本校区国际本科新生 need-based 资格尚未确认；不将 FAFSA／新泽西州项目套用于普通国际生。",
+        "text": "不向持 F-1／J-1 签证的国际本科入学新生提供 need-based 资助；Rutgers 官方录取新生总页涵盖 Newark 校区。",
         "sources": [
           {
-            "url": "https://admissions.newark.rutgers.edu/costs-and-aid",
-            "year": "现行政策；2027–28资助周期未单独确认"
+            "url": "https://www.admissions.rutgers.edu/admitted-students",
+            "year": "现行资格；2027–28完整周期未认证"
           }
         ],
         "checked": "2026-10-16",
-        "expected_value": null
+        "expected_value": "no"
       },
       "merit": {
         "text": "持有效非移民签证的国际申请人可自动获奖学金考虑；须按本校区条件，校区之间不可直接移用奖额。",
@@ -4114,6 +4114,78 @@ const QualityData = {
           {
             "url": "https://wooster.edu/admissions/financial-aid/international-students",
             "year": "官网现行资格；2027–28完整周期未单独确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      }
+    },
+    "us_172644": {
+      "need": {
+        "text": "国际本科新生 need-based 资格尚未取得充分官网证据。",
+        "sources": [
+          {
+            "url": "https://wayne.edu/scholarships/international",
+            "year": "现行页；Need未知"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "可获 Warrior、Gold、Green 等新生学术奖评审；国际新生按入学申请自动考虑，须满足具体条件，不保证获奖。",
+        "sources": [
+          {
+            "url": "https://wayne.edu/scholarships/international",
+            "year": "现行资格；2027–28完整周期未认证"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_176080": {
+      "need": {
+        "text": "国际本科新生 need-based 资格尚未取得充分官网证据。",
+        "sources": [
+          {
+            "url": "https://www.sfa.msstate.edu/scholarships/international-scholarships",
+            "year": "现行页；Need未知"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": null
+      },
+      "merit": {
+        "text": "可按学术标准获国际新生奖学金评审；官网已列 2027年秋季／2028年春季。持有效招生代理合同者不符合奖学金资格，须核对校方具体规则。",
+        "sources": [
+          {
+            "url": "https://www.sfa.msstate.edu/scholarships/international-scholarships",
+            "year": "明确Fall2027／Spring2028；完整2027–28资助认证未完成"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "yes"
+      }
+    },
+    "us_209551": {
+      "need": {
+        "text": "可申请 ICSP 混合专项：同时考虑经济需求、学术表现及文化展示能力，主要减免部分学费；不是两项独立奖。具体申请页仍为 2026年秋季，2027周期尚未确认。",
+        "sources": [
+          {
+            "url": "https://isss.uoregon.edu/icsp/application",
+            "year": "申请页Fall2026；招生总页现行，2027未确认"
+          }
+        ],
+        "checked": "2026-10-16",
+        "expected_value": "limited"
+      },
+      "merit": {
+        "text": "可申请 ICSP 混合专项：同时考虑经济需求、学术表现及文化展示能力，主要减免部分学费；不是两项独立奖。具体申请页仍为 2026年秋季，2027周期尚未确认。",
+        "sources": [
+          {
+            "url": "https://isss.uoregon.edu/icsp/application",
+            "year": "申请页Fall2026；招生总页现行，2027未确认"
           }
         ],
         "checked": "2026-10-16",
