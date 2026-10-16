@@ -1,4 +1,4 @@
-/* Field-specific reviewed test-site facts. Omitted fields are unknown. */
+/* Public test-site facts; evidence and review records are retained privately. */
 const QualityData = {
   "aid": {
     "penn": {
@@ -395,8 +395,7 @@ const QualityData = {
         {
           "url": "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing"
         }
-      ],
-      "checked": "2026-10-15"
+      ]
     },
     "jhu": {
       "policy": "required",
@@ -406,8 +405,7 @@ const QualityData = {
         {
           "url": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/"
         }
-      ],
-      "checked": "2026-10-15"
+      ]
     },
     "princeton": {
       "policy": "test_optional",
@@ -417,8 +415,7 @@ const QualityData = {
         {
           "url": "https://admission.princeton.edu/apply/counselors"
         }
-      ],
-      "checked": "2026-10-15"
+      ]
     },
     "mit": {
       "policy": "required",
@@ -428,8 +425,7 @@ const QualityData = {
         {
           "url": "https://mitadmissions.org/apply/firstyear/tests-scores/"
         }
-      ],
-      "checked": "2026-10-15"
+      ]
     },
     "bc": {
       "policy": "test_optional",
@@ -442,9 +438,7 @@ const QualityData = {
         {
           "url": "https://www.bc.edu/content/bc-web/admission/apply/test-optional.html"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "rice": {
       "policy": "test_optional",
@@ -454,9 +448,7 @@ const QualityData = {
         {
           "url": "https://admission.rice.edu/apply/first-year-international-applicants"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "ucla": {
       "policy": "test_free",
@@ -469,9 +461,7 @@ const QualityData = {
         {
           "url": "https://www.universityofcalifornia.edu/news/press-releases-and-statements/academic-senate-review-admissions"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "ucdavis": {
       "policy": "test_free",
@@ -484,9 +474,7 @@ const QualityData = {
         {
           "url": "https://www.universityofcalifornia.edu/news/press-releases-and-statements/academic-senate-review-admissions"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "uci": {
       "policy": "test_free",
@@ -499,9 +487,7 @@ const QualityData = {
         {
           "url": "https://www.universityofcalifornia.edu/news/press-releases-and-statements/academic-senate-review-admissions"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "ucsd": {
       "policy": "test_free",
@@ -514,9 +500,7 @@ const QualityData = {
         {
           "url": "https://www.universityofcalifornia.edu/news/press-releases-and-statements/academic-senate-review-admissions"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "uchicago": {
       "policy": "test_optional",
@@ -529,9 +513,7 @@ const QualityData = {
         {
           "url": "https://collegeadmissions.uchicago.edu/apply/application/required-materials/"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "us_126775": {
       "policy": "test_optional",
@@ -544,9 +526,7 @@ const QualityData = {
         {
           "url": "https://undergraduate-admissions.mines.edu/apply/"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "us_151351": {
       "policy": "test_optional",
@@ -562,9 +542,7 @@ const QualityData = {
         {
           "url": "https://www.iu.edu/admissions/how-to-apply/index.html"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "us_196079": {
       "policy": "test_optional",
@@ -580,9 +558,7 @@ const QualityData = {
         {
           "url": "https://www.binghamton.edu/admissions/undergraduate/info/test-policy.html"
         }
-      ],
-      "checked": "2026-10-14",
-      "review_origin": "retained official research 2026-10-14"
+      ]
     },
     "stanford": {
       "policy": "required",
@@ -590,11 +566,9 @@ const QualityData = {
       "note": "须提交 SAT 或 ACT；官网现行新生要求，2026-07-31更新，未单独标2027入学年度。英语能力考试不能替代 SAT/ACT。",
       "sources": [
         {
-          "url": "https://admission.stanford.edu/apply/first-year/testing.html",
-          "year": "官网现行政策（未单独标注2027–28学年）；2026-10-16核查"
+          "url": "https://admission.stanford.edu/apply/first-year/testing.html"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "duke": {
       "policy": "test_optional",
@@ -602,11 +576,9 @@ const QualityData = {
       "note": "官网明确2026–27申请季；国际生及 merit 奖学金申请人同样适用。ROTC奖学金另有要求。",
       "sources": [
         {
-          "url": "https://admissions.duke.edu/resources/",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.duke.edu/resources/"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "northwestern": {
       "policy": "test_optional",
@@ -614,11 +586,9 @@ const QualityData = {
       "note": "官网现行新生政策，页面列明2026-11-01 ED及2027-01-04 RD截止；部分专业另有申请与考试要求，英语能力证明另行。",
       "sources": [
         {
-          "url": "https://admissions.northwestern.edu/faqs/standardized-testing-policy/",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.northwestern.edu/faqs/standardized-testing-policy/"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "vanderbilt": {
       "policy": "test_optional",
@@ -626,27 +596,22 @@ const QualityData = {
       "note": "官网明确2027及2028秋入学可不交，2029秋起要求提交。国际生英语能力证明另行；不交SAT/ACT仍可申请merit奖学金。",
       "sources": [
         {
-          "url": "https://admissions.vanderbilt.edu/apply/testing-policies/",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.vanderbilt.edu/apply/testing-policies/"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "cmu": {
       "policy": "test_by_program",
       "cycle": "2026–27申请季／2027秋入学",
-      "note": "按学院／项目：计算机科学学院要求 SAT 或 ACT；工程、Dietrich人文社科、Heinz信息系统、Mellon理学院、Tepper商学院为 test-flexible，仍须交考试，可选 SAT、ACT、AP、IB、Cambridge A-Level 或 French Baccalaureate；IB、A-Level及法国会考可用预测或实际成绩，录取并入学者须补实际成绩。美术学院为 test-optional，另须作品集或试演。非英语母语申请人的英语能力考试另行要求，不能据此免除学术考试。2026–27本科目录明确涵盖2027秋新生；考试细则页未单独标年度。",
+      "note": "计算机科学学院须交SAT或ACT；工程、人文社科、信息系统、理学院、商学院须交SAT、ACT或指定的AP、IB、A-Level、法国会考成绩。IB、A-Level及法国会考可先交预测成绩，入学须补实际成绩。美术学院可不交SAT/ACT，另须作品集或试演。英语能力要求另行。",
       "sources": [
         {
-          "url": "https://coursecatalog.web.cmu.edu/aboutcmu/undergraduateadmission/",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://coursecatalog.web.cmu.edu/aboutcmu/undergraduateadmission/"
         },
         {
-          "url": "https://www.cmu.edu/admission/admission/standardized-testing",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://www.cmu.edu/admission/admission/standardized-testing"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "unc": {
       "policy": "test_conditional",
@@ -654,103 +619,152 @@ const QualityData = {
       "note": "按GPA条件：自2026–27学年起，加权GPA（4.0制）≥2.8可不交；低于2.8须交ACT≥17或SAT≥930。未提供4.0制加权GPA但课程成绩高于B+者，校方说明无需SAT/ACT；Cambridge等学制的国际生以A-Level／外部考试成绩评估此GPA条件。以上最低考试分数不代表录取保证；英语能力要求另行。",
       "sources": [
         {
-          "url": "https://admissions.unc.edu/faqs/how-does-unc-look-at-act-or-sat-test-scores/",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.unc.edu/faqs/how-does-unc-look-at-act-or-sat-test-scores/"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "us_100751": {
       "policy": "test_conditional",
       "cycle": "2026–27申请季／2027秋入学",
-      "note": "2027入学：高中累计GPA低于3.0须交SAT或ACT；达到3.0者可不交。国际新生页面同样明确这项2027规则；自动奖学金评选仍须考试成绩，英语能力要求另行。2028入学起所有申请人须交，不能提前套用到2027。",
+      "note": "高中累计GPA低于3.0须交SAT或ACT；自动奖学金仍须考试成绩。国际生同样适用，英语能力要求另行。2028入学起所有申请人须交。",
       "sources": [
         {
-          "url": "https://admissions.ua.edu/testing-requirements/",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.ua.edu/testing-requirements/"
         },
         {
-          "url": "https://admissions.ua.edu/international/freshman/",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.ua.edu/international/freshman/"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "rutgers_camden": {
       "policy": "test_by_program",
       "cycle": "2026–27申请季／2027秋入学",
-      "note": "普通本科为 test-optional，不交SAT/ACT仍获完整审核；BS/DO联合项目例外，必须交SAT或ACT。官网明确政策持续至2027。国际生英语能力证明另行，SAT/ACT可用于满足部分英语要求，不等于普通本科一律必交。",
+      "note": "普通本科可不交；BS/DO联合项目必须提交SAT或ACT。国际生英语能力要求另行。",
       "sources": [
         {
-          "url": "https://admissions.rutgers.edu/apply/first-year-applicants",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.rutgers.edu/apply/first-year-applicants"
         },
         {
-          "url": "https://admissions.rutgers.edu/apply/international-applicants",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.rutgers.edu/apply/international-applicants"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "us_186399": {
       "policy": "test_by_program",
       "cycle": "2026–27申请季／2027秋入学",
-      "note": "除7年制BA/MD联合项目外，本科为 test-blind／test-free，不考虑SAT/ACT；BA/MD项目必须交SAT或ACT。官网明确政策持续至2027。国际生英语能力证明及入学分班用途另行，不能将其误作一般录取考试要求。",
+      "note": "普通本科不考虑SAT/ACT；7年制BA/MD联合项目必须提交。国际生英语能力要求另行。",
       "sources": [
         {
-          "url": "https://admissions.rutgers.edu/apply/first-year-applicants",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.rutgers.edu/apply/first-year-applicants"
         },
         {
-          "url": "https://admissions.rutgers.edu/apply/international-applicants",
-          "year": "2026–27申请季／2027秋入学；2026-10-16核查"
+          "url": "https://admissions.rutgers.edu/apply/international-applicants"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "umass_amherst": {
       "policy": "test_optional",
       "cycle": "官网现行政策；未明标目标入学年度",
-      "note": "官网现行新生政策：所有专业均可选择提交SAT/ACT，不提交仍可获merit奖学金及特殊项目考虑。国际生英语能力证明另行。政策页未明确2026–27申请季／2027秋入学，故仅记录现行政策，不视为已确认2027年度；申请前须复核。",
+      "note": "所有专业均适用；不提交仍可参与择优奖学金及特殊项目评选。国际生英语能力要求另行。",
       "sources": [
         {
-          "url": "https://www.umass.edu/admissions/test-optional-policy",
-          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+          "url": "https://www.umass.edu/admissions/test-optional-policy"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "us_161004": {
       "policy": "test_optional",
       "cycle": "官网现行政策；未明标目标入学年度",
-      "note": "官网现行政策允许自主选择是否提交SAT/ACT，提交者纳入审核；国际生英语能力考试亦为可选，学校仍要求具备大学学习所需英语能力。页面记载自1969年采用可选政策，但未明确2026–27申请季／2027秋入学，不能据历史延续推定2027已确认。",
+      "note": "国际生英语能力考试也可选择提交。",
       "sources": [
         {
-          "url": "https://www.bowdoin.edu/admissions/apply/test-optional-policy/index.html",
-          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+          "url": "https://www.bowdoin.edu/admissions/apply/test-optional-policy/index.html"
         },
         {
-          "url": "https://www.bowdoin.edu/admissions/apply/",
-          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+          "url": "https://www.bowdoin.edu/admissions/apply/"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
     },
     "us_216287": {
       "policy": "test_optional",
       "cycle": "官网现行政策；未明标目标入学年度",
-      "note": "官网现行政策：SAT/ACT可选，不提交不受惩罚；IB Diploma毕业生仍须提供官方IB成绩。美国境外就读申请人（不论国籍）须在Swarthmore Video Response、英语能力考试结果、InitialView视频中提交一项。上述额外材料不是SAT/ACT必交要求。考试页及申请材料页未明标2026–27申请季／2027秋入学，2027适用性尚未明确。",
+      "note": "IB文凭毕业生仍须交官方IB成绩；美国境外就读者另须提交学校视频回答、英语考试或InitialView视频之一。",
       "sources": [
         {
-          "url": "https://www.swarthmore.edu/admissions-aid/standardized-testing-policy",
-          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+          "url": "https://www.swarthmore.edu/admissions-aid/standardized-testing-policy"
         },
         {
-          "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines",
-          "year": "现行政策，未明示2027秋适用性；2026-10-16核查"
+          "url": "https://www.swarthmore.edu/admissions-aid/application-materials-deadlines"
         }
-      ],
-      "checked": "2026-10-16"
+      ]
+    },
+    "us_168342": {
+      "policy": "test_optional",
+      "cycle": "Fall 2027",
+      "note": "国际生同样适用；英语能力考试为鼓励提交。",
+      "sources": [
+        {
+          "url": "https://hub.williams.edu/institutional-research/files/2026/04/Williams-CDS-2025-2026-V2.pdf"
+        },
+        {
+          "url": "https://www.williams.edu/admission-aid/how-to-apply/"
+        },
+        {
+          "url": "https://www.williams.edu/admission-aid/how-to-apply/additional-applicant-information/international/"
+        }
+      ]
+    },
+    "us_164465": {
+      "policy": "test_optional",
+      "cycle": "现行政策；2027年秋季适用性尚未明确",
+      "note": "国际生同样适用；英语能力证明另有要求。",
+      "sources": [
+        {
+          "url": "https://www.amherst.edu/admission/apply/firstyear/testing"
+        }
+      ]
+    },
+    "us_164580": {
+      "policy": "test_optional",
+      "cycle": "现行政策；2027年秋季适用性尚未明确",
+      "note": "不提交成绩仍可参与择优奖学金评选；非英语母语国际生另须英语能力证明。",
+      "sources": [
+        {
+          "url": "https://www.babson.edu/undergraduate/how-to-apply/"
+        },
+        {
+          "url": "https://babson.edu/undergraduate/how-to-apply/evaluation-criteria/"
+        }
+      ]
+    },
+    "us_212911": {
+      "policy": "test_optional",
+      "cycle": "现行政策；2027年秋季适用性尚未明确",
+      "note": "不提交成绩不影响申请；非英语母语且未在英语授课中学就读者另须英语能力考试。",
+      "sources": [
+        {
+          "url": "https://www.haverford.edu/admission/applying/application-instructions"
+        },
+        {
+          "url": "https://www.haverford.edu/college-communications/news/haverford-college-s-test-optional-pilot-now-official-policy"
+        }
+      ]
+    },
+    "us_197133": {
+      "policy": "test_optional",
+      "cycle": "现行政策；2027年秋季适用性尚未明确",
+      "note": "近三年中学非英语授课者另须英语能力考试；毕业会考材料仍按学制提交。",
+      "sources": [
+        {
+          "url": "https://www.vassar.edu/admission/apply/how-to-apply/"
+        },
+        {
+          "url": "https://www.vassar.edu/admission/apply/international/"
+        },
+        {
+          "url": "https://www.vassar.edu/news/vassar-makes-test-optional-policy-permanent-applicants"
+        }
+      ]
     }
   },
   "rankings": {
