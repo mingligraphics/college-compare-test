@@ -1387,6 +1387,187 @@ const QualityData = {
           "url": "https://new.sewanee.edu/admission-aid/application-process/application-review/homeschool-applicants/"
         }
       ]
+    },
+    "us_100663": {
+      "policy": "test_optional",
+      "cycle": "2027年秋季入学",
+      "note": "2027高中毕业生及2026毕业后未入大学者，加权GPA≥3.5可免交；低于3.5须交。医、牙、视光提前录取须交，荣誉及提前升研项目另有要求。",
+      "sources": [
+        {
+          "url": "https://www.uab.edu/admissions/apply/test-optional"
+        },
+        {
+          "url": "https://www.uab.edu/admissions/apply/freshman/how-to-apply"
+        }
+      ]
+    },
+    "us_163268": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交；各专业、荣誉学院及奖学金亦适用，英语要求另行。",
+      "sources": [
+        {
+          "url": "https://umbc.edu/admissions/undergraduate/support-and-contact-information/"
+        },
+        {
+          "url": "https://umbc.edu/admissions/undergraduate/international/first-year-international/"
+        }
+      ]
+    },
+    "us_166638": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生亦可选交；所有本科专业、荣誉学院及奖学金均可无成绩申请，英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.umb.edu/admissions/first-year-students/apply/test-optional-admission/"
+        }
+      ]
+    },
+    "us_207500": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者按同一标准审核；部分奖学金须交，无成绩入学前需分班测评，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.ou.edu/admissions/apply/freshman/requirements-factors/ou-is-test-optional"
+        },
+        {
+          "url": "https://www.ou.edu/admissions/apply/freshman/homeschool"
+        },
+        {
+          "url": "https://www.ou.edu/admissions/apply/international/undergraduate-admission"
+        }
+      ]
+    },
+    "us_202480": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "奖学金评审亦可免交；已参加考试者确认入学后需交作记录，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://udayton.edu/apply/undergraduate/resources/test-optional.php"
+        },
+        {
+          "url": "https://catalog.udayton.edu/undergraduate/generalinformation/admission/applicationforadmission/"
+        }
+      ]
+    },
+    "us_206622": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生亦可选交；在家教育须提供AP、大学课程或SAT/ACT之一；LECOM提前录取须交。",
+      "sources": [
+        {
+          "url": "https://www.xavier.edu/undergraduate-admission/admission-process/test-optional"
+        },
+        {
+          "url": "https://www.xavier.edu/undergraduate-admission/admission-process/home-school-students"
+        },
+        {
+          "url": "https://www.xavier.edu/international-admission/applications-and-requirements/freshman"
+        }
+      ]
+    },
+    "us_194310": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者可选交，荣誉学院亦适用；表演艺术另需试演或面试，英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.pace.edu/admission-and-aid/undergraduate-admission/how-apply/test-optional-policy"
+        },
+        {
+          "url": "https://www.pace.edu/admission-and-aid/undergraduate-admission/how-apply/homeschool-applicants"
+        },
+        {
+          "url": "https://www.pace.edu/admission-and-aid/undergraduate-admission/how-apply/direct"
+        },
+        {
+          "url": "https://www.pace.edu/admission-and-aid/undergraduate-admission/how-apply/program-specific-requirements"
+        }
+      ]
+    },
+    "us_170301": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生英语要求另行；录取后成绩可用于奖学金评审，仅在有利时采用。",
+      "sources": [
+        {
+          "url": "https://hope.edu/admissions/apply.html"
+        }
+      ]
+    },
+    "us_170532": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交；英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://admission.kzoo.edu/how-to-apply-2/test-optional/"
+        }
+      ]
+    },
+    "us_168281": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生及在家教育者同样可选交；奖学金及助学金评审亦不要求，英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.wheatoncollege.edu/admission/apply/homeschooled-students/"
+        },
+        {
+          "url": "https://www.wheatoncollege.edu/admission/international-students/international-faq/"
+        }
+      ]
+    },
+    "us_161253": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "所有专业均可选交；国际生英语要求另行，SAT/ACT可作为部分英语豁免依据。",
+      "sources": [
+        {
+          "url": "https://umaine.edu/admissions/apply/apply-info/"
+        },
+        {
+          "url": "https://umaine.edu/admissions/apply/international-undergraduate-admissions/"
+        },
+        {
+          "url": "https://umaine.edu/international/frequently-asked-questions-for-h1b-applicants/"
+        }
+      ]
+    },
+    "us_238032": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "在家教育者可选交；部分专业及奖学金仍须成绩，国际生英语要求另行。",
+      "sources": [
+        {
+          "url": "https://www.wvu.edu/admissions/undergraduate/how-to-apply/first-time-freshmen/admission-requirements/"
+        },
+        {
+          "url": "https://catalog.wvu.edu/undergraduate/admission/"
+        }
+      ]
+    },
+    "us_132903": {
+      "policy": "test_flexible",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "本科直录须交SAT、ACT或CLT；指定国际衔接项目可先申请、到校考ACT；佛州高中同步AA另有录取路径。",
+      "sources": [
+        {
+          "url": "https://www.ucf.edu/admissions/undergraduate/question/does-ucf-require-standardized-tests-2/"
+        },
+        {
+          "url": "https://global.ucf.edu/programs/"
+        },
+        {
+          "url": "https://www.ucf.edu/admissions/undergraduate/resources/ftic-decisions/"
+        },
+        {
+          "url": "https://www.ucf.edu/admissions/undergraduate/question/who-can-apply-to-ucf-using-the-common-application/"
+        }
+      ]
     }
   },
   "rankings": {
