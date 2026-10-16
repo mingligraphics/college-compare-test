@@ -38,8 +38,8 @@ function updateTitle(view,ids){
 }
 
 const originalDetail=detail,originalCompare=compare,originalAbout=showAbout;
-detail=async function(id){if(!schools.some(s=>s.school_id===id))return;setRoute('detail',[id]);countEvent('detail');const work=originalDetail(id);addLinkActions([schools.find(s=>s.school_id===id)]);await work};
-compare=async function(){if(selected.length!==2){notify('请先加入两所大学再比较');return}setRoute('compare',selected);countEvent('compare');await originalCompare()};
+detail=async function(id){if(!schools.some(s=>s.school_id===id))return;setRoute('detail',[id]);CollegeMetrics.consume('school_detail_view');const work=originalDetail(id);addLinkActions([schools.find(s=>s.school_id===id)]);await work};
+compare=async function(){if(selected.length!==2){notify('请先加入两所大学再比较');return}setRoute('compare',selected);CollegeMetrics.consume('school_compare');await originalCompare()};
 showAbout=function(){const consultAnchor=location.hash==='#aboutConsult';setRoute('about');originalAbout();wireConsultation($('dialogContent'));$('dialog').setAttribute('aria-labelledby','aboutTitle');if(consultAnchor)requestAnimationFrame(()=>$('aboutConsult')?.scrollIntoView({block:'start'}))};
 const originalComparison=showComparison;showComparison=function(rows){originalComparison(rows);addReplacementActions(rows);addLinkActions(rows);wireConsultation($('dialogContent'))};
 function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>{const section=a.parentElement;section.querySelector('h3')?.remove();section.querySelector('small')?.remove();a.hidden=true;const b=document.createElement('button');b.textContent='预约免费 20 分钟初谈';b.onclick=()=>{a.hidden=false;countEvent('consultation')};a.before(b)})}
