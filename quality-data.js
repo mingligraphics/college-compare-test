@@ -833,6 +833,49 @@ const QualityData = {
           "url": "https://www.reed.edu/admission-aid/how-to-apply/international.html"
         }
       ]
+    },
+    "us_120254": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生同样适用；全程在家教育者强烈建议提交SAT/ACT或AP、IB等外部评估。英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.oxy.edu/admission-aid/apply/test-optional-admission-policy"
+        }
+      ]
+    },
+    "us_123165": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生同样适用；英语能力证明及豁免另行。",
+      "sources": [
+        {
+          "url": "https://www.scrippscollege.edu/admission/apply/first-year-applicants"
+        }
+      ]
+    },
+    "us_203535": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生同样适用；非英语授课学校的国际生仍须提供英语能力证明。",
+      "sources": [
+        {
+          "url": "https://www.kenyon.edu/admissions-aid/apply-to-kenyon/standardized-testing-policy/"
+        }
+      ]
+    },
+    "us_237057": {
+      "policy": "test_optional",
+      "cycle": "现行政策（未标入学年度）",
+      "note": "国际生、在家教育及学校仅提供文字评价而无成绩者，强烈建议提交SAT/ACT。英语能力要求另行。",
+      "sources": [
+        {
+          "url": "https://www.whitman.edu/admission-and-aid/applying-to-whitman/testing-policy"
+        },
+        {
+          "url": "https://www.whitman.edu/admission-and-aid/applying-to-whitman/international-students/checklist"
+        }
+      ]
     }
   },
   "rankings": {
