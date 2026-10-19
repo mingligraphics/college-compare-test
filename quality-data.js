@@ -5947,6 +5947,136 @@ const QualityData = {
           "url": "https://upenn.app.box.com/s/woo7d85yxpol6j9e2o121aucjc6dc1k5"
         }
       ]
+    },
+    "bu": {
+      "sat_25": 1420,
+      "sat_75": 1510,
+      "act_25": 33,
+      "act_75": 34,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://www.bu.edu/asir/files/2026/07/CDS-2025-2026-updated.pdf"
+        }
+      ]
+    },
+    "yale": {
+      "sat_25": 1480,
+      "sat_75": 1560,
+      "act_25": 33,
+      "act_75": 35,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://oir.yale.edu/sites/default/files/yale_cds_2025-26_md_20260616.pdf"
+        }
+      ]
+    },
+    "columbia": {
+      "sat_25": 1510,
+      "sat_75": 1560,
+      "act_25": 34,
+      "act_75": 35,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://opir.columbia.edu/sites/opir.columbia.edu/files/content/Common%20Data%20Set/2025-26_Columbia_College_and_Columbia_Enginnering_CDS.pdf"
+        }
+      ]
+    },
+    "william_mary": {
+      "sat_25": 1390,
+      "sat_75": 1520,
+      "act_25": 32,
+      "act_75": 34,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://www.wm.edu/offices/ir/university_data/cds/cds_2025-26_c.pdf"
+        }
+      ]
+    },
+    "uw": {
+      "sat_25": 1320,
+      "sat_75": 1502,
+      "act_25": 30,
+      "act_75": 34,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://cdn.uw.edu/wp-content/uploads/sites/162/2026/02/27111247/CDS_2025-2026_Seattle.pdf"
+        }
+      ]
+    },
+    "us_213543": {
+      "sat_25": 1380,
+      "sat_75": 1480,
+      "act_25": 31,
+      "act_75": 34,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://data.lehigh.edu/sites/data.lehigh.edu/files/1302026-CDS-2025-2026-FINAL.pdf"
+        }
+      ]
+    },
+    "us_122931": {
+      "sat_25": 1330,
+      "sat_75": 1470,
+      "act_25": 29,
+      "act_75": 33,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://www.scu.edu/media/offices/institutional-research/ff/common-data-set/rba13-Common_Data_Set_2025-2026.pdf"
+        }
+      ]
+    },
+    "rochester": {
+      "sat_25": 1400,
+      "sat_75": 1510,
+      "act_25": 31,
+      "act_75": 34,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://www.rochester.edu/provost/wp-content/uploads/2026/06/CDS-2025-26-completed-for-web.pdf"
+        }
+      ]
+    },
+    "us_121150": {
+      "sat_25": 1240,
+      "sat_75": 1410,
+      "act_25": 28,
+      "act_75": 32,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://drive.google.com/file/d/1I8RahoDnYryjUHb0vGnjSUqx9dG5hM_W/view"
+        }
+      ]
+    },
+    "us_161004": {
+      "sat_25": 1470,
+      "sat_75": 1540,
+      "act_25": 33,
+      "act_75": 35,
+      "year": "2025年秋季入学新生（CDS 2025–26）",
+      "note": "已入学本科新生中提交该项成绩者的25–75百分位；不是全体申请人或录取者，也不是最低要求。",
+      "sources": [
+        {
+          "url": "https://www.bowdoin.edu/ir/pdf/bowdoin-cds_2025-2026.pdf"
+        }
+      ]
     }
   },
   "programs": {

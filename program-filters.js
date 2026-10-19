@@ -1,4 +1,4 @@
-/* Display-only index. Original program facts and provenance are in program-index.json?v=60131ec8333042be. */
+/* Display-only index. Original program facts and provenance are in program-index.json?v=60131ec8333042be */
 const ProgramFilters=(()=>{
  let data=null;
  const el=id=>document.getElementById(id);

@@ -7,6 +7,14 @@ const CollegeAPI = (() => {
  function reviewed(rows){return rows.map(row=>{
   const facts=typeof QualityData==='undefined'?null:QualityData.aid[row.school_id];
   const result={...row};
+  const admission=typeof VerifiedAdmissions==='undefined'?null:VerifiedAdmissions[row.school_id];
+  const cohort=value=>Number(String(value||'').match(/20\d{2}/)?.[0]||0);
+  // Apply independently dated official facts to both static and API fallback records.
+  if(admission?.detail_fields&&cohort(row.admissions_year)<=cohort(admission.year))Object.assign(result,admission.detail_fields);
+  if(admission?.international_fields){const facts=admission.international_fields;
+   if(cohort(row.international_pct_year)<=cohort(facts.international_pct_year))for(const key of ['international_pct','international_pct_year','international_pct_scope'])result[key]=facts[key];
+   if(cohort(row.undergrad_enrollment_year)<=cohort(facts.undergrad_enrollment_year))for(const key of ['undergrad_enrollment','undergrad_enrollment_year'])result[key]=facts[key];
+  }
   if(!row.signature_programs?.length&&programAdditions[row.school_id])result.signature_programs=programAdditions[row.school_id];
   if(programReviews[row.school_id])result.signature_programs=programReviews[row.school_id];
   const cost=typeof CollegeReferenceBudgets==='undefined'?null:CollegeReferenceBudgets[row.school_id];
@@ -38,8 +46,8 @@ const CollegeAPI = (() => {
  }
  async function request(endpoint,body){return fetchJSON(base+endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),cache:'no-store'},8000)}
  return {fields,async directory(){
-  try{return (await snapshot()).directory}catch{
-   const rows=await request('discover-schools-test',{});if(!validDirectory(rows))throw Error('Invalid directory');return rows;
+  try{return reviewed((await snapshot()).directory)}catch{
+   const rows=await request('discover-schools-test',{});if(!validDirectory(rows))throw Error('Invalid directory');return reviewed(rows);
   }
  },async pair(a,b){
   if(a===b)throw Error('Two distinct schools required');
