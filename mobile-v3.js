@@ -31,7 +31,7 @@ function setRoute(view,ids=[]){
  if(ids.length){const shared=new URL(CollegeShare.link(ids.map(school_id=>({school_id}))));u.searchParams.set('cc',shared.searchParams.get('cc'));u.hash=shared.hash;}
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
-const shareDescription='301所美国大学，比较费用、优势专业和申请要求；各项数据请见标注年份';
+const shareDescription='301所高校官方数据，按照预算、专业和录取要求，选择最适合你的大学';
 function shareTitle(rows){return rows.length?rows.map(s=>s.school_name_cn||s.school_name).join('、')+(rows.length===2?'对比':''):homeTitle}
 function updateTitle(view,ids){
  const rows=ids.map(id=>schools.find(s=>s.school_id===id)).filter(Boolean);
