@@ -5,6 +5,10 @@ const CollegeAPI = (() => {
  function reviewed(rows){return rows.map(row=>{
   const facts=typeof QualityData==='undefined'?null:QualityData.aid[row.school_id];
   const result={...row};
+  const cost=typeof CollegeReferenceBudgets==='undefined'?null:CollegeReferenceBudgets[row.school_id];
+  if(Number.isFinite(cost?.tuition_fees_usd)&&cost.tuition_fees_year){
+   result.tuition_fees=cost.tuition_fees_usd;result.tuition_fees_year=cost.tuition_fees_year;
+  }
   for(const [key,field] of [['need','international_need_aid'],['merit','international_merit_aid']]){
    const fact=facts?.[key];
    if(fact&&Object.prototype.hasOwnProperty.call(fact,'expected_value')&&[null,'yes','no','limited'].includes(fact.expected_value))result[field]=fact.expected_value;

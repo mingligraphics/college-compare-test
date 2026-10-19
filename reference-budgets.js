@@ -961,5 +961,314 @@ const CollegeReferenceBudgets = Object.freeze({
         "year": "2026-27"
       }
     ]
+  },
+  "us_104151": {
+    "amount_usd": 69906,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "校方国际生预算含最高档学院费2,190美元，学院不同费用不同；食宿合计18,819美元。保险2,765美元仍采用2025–26估值，2026–27费率待更新。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://admission.asu.edu/cost-aid/international",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科、每学期12学分、校内食宿；奖助前",
+    "basis_cn": "校方预算表总额",
+    "tuition_fees_usd": 43009,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_164465": {
+    "amount_usd": 98160,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "未含按家庭住址确定的交通及医疗保险；必修教材已包含。保险可按规定豁免，不能视为零开支。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.amherst.edu/tuition",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "全日制本科、标准校内住宿与无限餐计划；奖助前",
+    "basis_cn": "同页明确分项合计：75,330+710+10,980+9,340+1,800",
+    "tuition_fees_usd": 76040,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_153603": {
+    "amount_usd": 50879,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "学杂费33,547美元适用most majors；生活费17,332美元含食宿、书本、个人与保险，未含国际往返交通。部分专业及高年级收费更高。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://isso.dso.iastate.edu/resources/students_scholars/expense-worksheet/undergraduate-expenses",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际全日制本科、秋春9个月；奖助前",
+    "basis_cn": "校方预算表总额"
+  },
+  "us_120254": {
+    "amount_usd": 99427,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "住校预算95,365美元加非美国公民必需OSHIP保险4,062美元；食宿合计21,022美元。未含金额不定的交通。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.oxy.edu/financial-aid/cost",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "非美国公民本科、住校平均食宿、秋春学年；奖助前",
+    "basis_cn": "校方住校总额95,365＋同页国际生必需保险4,062",
+    "tuition_fees_usd": 71103,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_190099": {
+    "amount_usd": 100274,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "校方新生预算100,224美元加首次学期成绩单费50美元；原交通预算仅为境内800美元起，不代表国际机票。未含医疗保险；保险费待核实。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.colgate.edu/admission-aid/tuition-fees/cost-attendance-2026-27",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "本科新生、校内住宿与Premier餐计划；奖助前",
+    "basis_cn": "校方新生总额100,224＋首次成绩单费50",
+    "tuition_fees_usd": 77290,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_233374": {
+    "amount_usd": 92320,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "校方住校/校外标准预算，含书本、个人及如适用的贷款费70美元；交通与国际生保险未列金额，需另核对。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://financialaid.richmond.edu/applying/cost.html",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "全日制本科、秋春学年、校内平均房型与Spider Unlimited餐计划；奖助前",
+    "basis_cn": "校方预算表总额"
+  },
+  "us_213543": {
+    "amount_usd": 92320,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "标准新生直接费用89,820美元，加书本1,000与个人1,500；未含交通、医疗保险及专业附加费。官网专业费有870/910美元差异，未并入。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www2.lehigh.edu/financial-aid/undergraduate",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "全日制本科新生、标准校内房型与完整餐计划、秋春；奖助前",
+    "basis_cn": "校方直接费用89,820＋明确书本1,000＋个人1,500",
+    "tuition_fees_usd": 70590,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_136950": {
+    "amount_usd": 87820,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "标准双人间食宿合计18,160美元；含如适用贷款费80美元。国际生医疗保险与额外国际交通是否包含未确认，须另预算。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://rollins.edu/scholarships-aid/tuition/",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "本科、校内双人间、秋春学年；奖助前",
+    "basis_cn": "校方预算表总额"
+  },
+  "us_194578": {
+    "amount_usd": 90967,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "艺术设计/写作/建设管理新生住校预算；食宿合计19,530美元。建筑新生另需电脑3,500美元，预算94,467美元。含如适用贷款费241；医疗保险、国际交通未包含在列示项目中，需另核对。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.pratt.edu/wp-content/uploads/2026/01/2026-27-UG-COA-1.22.26.pdf",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "全日制本科新生、12–18学分/学期、住校、9个月；奖助前",
+    "basis_cn": "校方预算表总额",
+    "tuition_fees_usd": 66727,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_232186": {
+    "amount_usd": 65890,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "国际生I-20参考估值：学杂费39,830美元，生活费21,865，必需医疗保险4,195；生活费含食宿、交通、个人。专业收费和个人支出可能不同，不含暑期学费。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://webdocs.gmu.edu/wp-content/uploads/Certificate-of-Financial-Responsibility-2026-2027.pdf",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "F-1/J-1国际本科、30学分、秋春9个月；奖助前",
+    "basis_cn": "校方预算表总额",
+    "tuition_fees_usd": 39830,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_156125": {
+    "amount_usd": 36650,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "国际本科奖助前估值，含食宿12,700、书本1,200、保险2,300及新生注册/迎新350美元；仅按每学期12学分估算，建议15学分的费用更高。个人、交通及专业附加费需另预算。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.wichita.edu/admissions/international/undergraduate/TotalExpenses.php",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科、秋春9个月；奖助前",
+    "basis_cn": "校方9个月总额36,300＋新生国际注册200＋迎新150",
+    "tuition_fees_usd": 20100,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_172699": {
+    "amount_usd": 40850,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "低年级普通专业：校方表37,250美元加表外书本和个人3,600；含食宿12,570及保险2,090。商科、工程及高年级费用更高；国际交通需另核对。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://wmich.edu/international/apply",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科低年级、24–30学分/年、标准双人间与Bronco14餐计划；奖助前",
+    "basis_cn": "校方普通专业总额37,250＋同页表外个人/书本3,600"
+  },
+  "us_109651": {
+    "amount_usd": 91132,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "本科校外食宿合计21,832美元；仅秋春两个学期，不含暑期与医疗保险。含如适用贷款费88美元。采用当前目录与2026-03-03预算一致数字，未采用旧预测表。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://handbooks.artcenter.edu/artcenter-catalog/fall-2026-through-summer-2027-tuition",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "全日制本科、校外住宿、秋春两学期；奖助前",
+    "basis_cn": "校方预算表总额",
+    "tuition_fees_usd": 58668,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_207500": {
+    "amount_usd": 56311,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "采用国际本科专表，非美国州外生表；食宿16,381，书本800，保险2,795，个人2,000。国际往返交通未单列；飞行专业及部分专业电脑另收费。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.ou.edu/sfc/estimating-costs/cost-of-attendance",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科新生、住校、秋春学年；奖助前",
+    "basis_cn": "校方预算表总额"
+  },
+  "us_126818": {
+    "amount_usd": 62186,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "国际本科预算：学杂费38,176、生活18,472、书本/个人/保险等5,538美元；保险按2,556计。部分课程及高年级差额学费未含，国际交通是否足额包含需另核对。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://international.colostate.edu/isss/resources/finances/estimated-expenses/",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科州外费率、每学期15学分、秋春学年；奖助前",
+    "basis_cn": "校方预算表总额",
+    "tuition_fees_usd": 38176,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_209807": {
+    "amount_usd": 51813,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "仅按每季度12学分、三季度计算；学费25,632，杂费及保险合计5,775，生活20,406美元。学费随学分增加，商科/工程/艺术等有差额；暑期生活另需6,552。原学杂费按不同学分口径，未强行覆盖。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.pdx.edu/admissions/international/financial-documentation",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科、基础专业、每季度12学分、9个月；奖助前",
+    "basis_cn": "校方预算表总额"
+  },
+  "us_227368": {
+    "amount_usd": 41668,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "F-1海外全日制、独立居住、非居民学费的I-20参考金额；不是墨西哥公民、边境通勤或州内优惠价格。至少12学分，个人实际支出及分项金额尚待核对。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.utrgv.edu/iss/funding-resources/cost-of-attendance/index.htm",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "F-1海外本科、独立居住、非居民费率、秋春学年；奖助前",
+    "basis_cn": "校方预算表总额"
+  },
+  "us_122755": {
+    "amount_usd": 51978,
+    "year": "2027-28",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "官方2027–28国际生I-20估值：每学期12学分，学杂费21,915、生活27,813、保险2,250美元。未含书本/用品每学期1,000–1,500美元、个人至少1,000美元及交通；额外学分/新生费用另核对。2026–27表与其他收费页差异待核实。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.sjsu.edu/admissions/internationalfinancialdocs.php",
+        "year": "2027-28"
+      }
+    ],
+    "scope_cn": "国际本科常规课程、12学分/学期、秋春学年；奖助前",
+    "basis_cn": "校方预算表总额",
+    "tuition_fees_usd": 21915,
+    "tuition_fees_year": "2027-28"
+  },
+  "us_100751": {
+    "amount_usd": 59102,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "I-20参考预算含秋春学费及12个月校外生活、保险；不是住校新生实际账单。课程/学院费按800美元估算，个人及交通仅1,200美元；校内餐计划可能更高，校外家具水电及国际机票需另核对。不含暑期学费。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://international.ua.edu/isss/future-new-students/expenses/",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科、秋春学费＋12个月校外生活、无家属；奖助前",
+    "basis_cn": "校方预算表总额",
+    "tuition_fees_usd": 36924,
+    "tuition_fees_year": "2026-27"
   }
 });
