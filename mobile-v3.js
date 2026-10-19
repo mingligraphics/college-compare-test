@@ -28,7 +28,7 @@ function setRoute(view,ids=[]){
  if(routeBusy)return;const currentRoute=new URLSearchParams(location.search);if(currentRoute.get('view')===view&&currentRoute.getAll('school').join('|')===ids.join('|')){updateTitle(view,ids);return}if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.hash='';u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
-const shareDescription='300所美国大学最新数据，比较费用、优势专业和申请要求';
+const shareDescription='301所美国大学，比较费用、优势专业和申请要求；各项数据请见标注年份';
 function shareTitle(rows){return rows.length?rows.map(s=>s.school_name_cn||s.school_name).join('、')+(rows.length===2?'对比':''):homeTitle}
 function updateTitle(view,ids){
  const rows=ids.map(id=>schools.find(s=>s.school_id===id)).filter(Boolean);

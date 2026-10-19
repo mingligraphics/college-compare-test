@@ -4251,6 +4251,26 @@ const QualityData = {
         "checked": "2026-10-16",
         "expected_value": "limited"
       }
+    },
+    "us_164465": {
+      "need": {
+        "text": "国际本科申请人可申请按经济需求提供的资助；学校承诺满足录取学生经校方计算的全部经济需求，初始方案不含学生贷款。金额由校方审核，不等于人人获全额资助。",
+        "sources": [
+          {
+            "url": "https://www.amherst.edu/offices/financialaid/international_students",
+            "year": "现行国际生政策；2027–28年度未单独确认"
+          }
+        ]
+      },
+      "review": {
+        "text": "Need-blind；国际生申请资助的意向不影响录取。",
+        "sources": [
+          {
+            "url": "https://www.amherst.edu/offices/financialaid/international_students",
+            "year": "现行国际生政策；2027–28年度未单独确认"
+          }
+        ]
+      }
     }
   },
   "tests": {

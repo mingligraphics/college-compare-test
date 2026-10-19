@@ -842,11 +842,11 @@ const CollegeReferenceBudgets = Object.freeze({
     "currency": "USD",
     "complete_coa": false,
     "scope_cn": "USC本科新生、校内住宿、两学期每学期12–18学分",
-    "note_cn": "USC本科新生、校内住宿、两学期每学期12–18学分。官方标准预算103162美元加首学期新生费450美元；含学费75384美元。适用保险、专业实验或工作室费和超出标准预算的国际交通另计。 奖助前参考预算，非完整COA。",
+    "note_cn": "2026-27住校本科生两个学期标准预算103,162美元，另加新生费450美元。纯学费75,384美元＋必缴费用1,952美元＝学费及必缴费用77,336美元，两者口径不同；保险及个人额外支出请另核对。",
     "basis_cn": "官方学年预算或明确分项合计；不是单独学费",
     "sources": [
       {
-        "url": "https://financialaid.usc.edu/undergraduate-financial-aid/cost-of-attendance/",
+        "url": "https://admission.usc.edu/cost-and-financial-aid/financial-aid-and-scholarships/",
         "year": "2026-27"
       }
     ],
@@ -931,5 +931,35 @@ const CollegeReferenceBudgets = Object.freeze({
       }
     ],
     "verified_at": "2026-10-15"
+  },
+  "us_122931": {
+    "amount_usd": 92556,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": true,
+    "scope_cn": "2026-27全日制本科生住校学年预算",
+    "note_cn": "含学费、学生费用、住宿餐饮、书本、交通、个人费用及贷款费用估算；非住校情形金额不同，个人保险及额外费用请另核对。",
+    "basis_cn": "校方公布预算表",
+    "sources": [
+      {
+        "url": "https://www.scu.edu/financialaid/cost-of-attendance/",
+        "year": "2026-27"
+      }
+    ]
+  },
+  "us_121150": {
+    "amount_usd": 99258,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "scope_cn": "2026-27 Seaver College本科新生住校，两学期各12–18学分",
+    "note_cn": "含学费74,370、住宿餐饮20,490、必缴费用832、书本1,000、交通1,000、个人费用1,500及贷款费用66美元；未含可能另收的医疗保险和个人额外费用。",
+    "basis_cn": "校方公布预算表",
+    "sources": [
+      {
+        "url": "https://admission.pepperdine.edu/affordability/financial-aid/costs/budget-costs.htm",
+        "year": "2026-27"
+      }
+    ]
   }
 });
