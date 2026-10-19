@@ -19,7 +19,7 @@ function restoreInitial(){
  // Both asynchronous data sources are ready; first visits also need a final render.
  if(!saved)apply();
  const requested=params.getAll('school'),view=params.get('view');
- if((view==='detail'&&(requested.length!==1||!schools.some(s=>s.school_id===requested[0])))||(view==='compare'&&(requested.length!==2||new Set(requested).size!==2||requested.some(id=>!schools.some(s=>s.school_id===id))))){modal('<h2>分享链接已失效或学校不存在</h2><p>请返回列表重新选择学校。</p><button id="close">返回列表</button>')}
+ if((view==='detail'&&(requested.length!==1||!schools.some(s=>s.school_id===requested[0])))||(view==='compare'&&(requested.length!==2||new Set(requested).size!==2||requested.some(id=>!schools.some(s=>s.school_id===id))))){modal('<h2>未能恢复这份比较</h2><p>链接中的学校信息不完整，请返回列表重新选择两所学校。</p><button id="close">返回列表</button>')}
  stateReady=true;saveState();updateChips();
 }
 function updateChips(){
@@ -27,7 +27,8 @@ function updateChips(){
  if($('activeFilters').children.length){const b=document.createElement('button');b.textContent='全部清除';b.onclick=()=>$('reset').click();$('activeFilters').append(b)}
 }
 function setRoute(view,ids=[]){
- if(routeBusy)return;const currentRoute=new URLSearchParams(location.search);if(currentRoute.get('view')===view&&currentRoute.getAll('school').join('|')===ids.join('|')){updateTitle(view,ids);return}if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.hash='';u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
+ if(routeBusy)return;const currentRoute=new URLSearchParams(location.search);if(currentRoute.get('view')===view&&currentRoute.getAll('school').join('|')===ids.join('|')){updateTitle(view,ids);return}if(!$('dialog').open){listScroll=scrollY;saveState();}const u=new URL(location.href);u.hash='';u.searchParams.delete('cc');u.searchParams.delete('school');u.searchParams.delete('view');if(view)u.searchParams.set('view',view);ids.forEach(id=>u.searchParams.append('school',id));
+ if(ids.length){const shared=new URL(CollegeShare.link(ids.map(school_id=>({school_id}))));u.searchParams.set('cc',shared.searchParams.get('cc'));u.hash=shared.hash;}
  if(u.href!==location.href)history.pushState({mobileV3:true,overlay:true},'',u);updateTitle(view,ids);
 }
 const shareDescription='301所美国大学，比较费用、优势专业和申请要求；各项数据请见标注年份';
@@ -36,6 +37,7 @@ function updateTitle(view,ids){
  const rows=ids.map(id=>schools.find(s=>s.school_id===id)).filter(Boolean);
  document.title=view==='about'?'关于我们｜明希教育':shareTitle(rows);
  const metadata={'meta[name="description"]':shareDescription,'meta[property="og:title"]':document.title,'meta[property="og:description"]':shareDescription,'meta[property="og:url"]':view==='about'?new URL('?view=about',location.href).href:rows.length?CollegeShare.link(rows):new URL('./',location.href).href,'meta[name="twitter:title"]':document.title,'meta[name="twitter:description"]':shareDescription};
+ const canonical=document.querySelector('link[rel=canonical]');if(canonical)canonical.href=metadata['meta[property="og:url"]'];
  for(const [selector,value] of Object.entries(metadata)){const tag=document.querySelector(selector);if(tag)tag.content=value}
 }
 
@@ -45,14 +47,24 @@ compare=async function(){if(selected.length!==2){notify('请先加入两所大�
 showAbout=function(){const consultAnchor=location.hash==='#aboutConsult';setRoute('about');originalAbout();wireConsultation($('dialogContent'));$('dialog').setAttribute('aria-labelledby','aboutTitle');if(consultAnchor)requestAnimationFrame(()=>$('aboutConsult')?.scrollIntoView({block:'start'}))};
 const originalComparison=showComparison;showComparison=function(rows){originalComparison(rows);addReplacementActions(rows);addLinkActions(rows);wireConsultation($('dialogContent'))};
 function wireConsultation(host){host.querySelectorAll('.contact-qr').forEach(a=>{const section=a.parentElement;section.querySelector('h3')?.remove();section.querySelector('small')?.remove();a.hidden=true;const b=document.createElement('button');b.textContent='预约免费 20 分钟初谈';b.onclick=()=>{a.hidden=false;countEvent('consultation')};a.before(b)})}
-async function shareLink(rows=[]){
- const url=rows.length?CollegeShare.link(rows):(()=>{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');return u.href})(),title=shareTitle(rows);
- updateTitle(rows.length===2?'compare':rows.length?'detail':null,rows.map(s=>s.school_id));
- if(/MicroMessenger/i.test(navigator.userAgent)){await copyLink(url);notify('链接已准备，请点击微信右上角「···」转发给朋友');return}
- if(navigator.share){try{await navigator.share({title,text:shareDescription,url});return}catch(e){if(e.name==='AbortError')return}}
- await copyLink(url);
+function sharePanel(url){
+ const host=$('dialog').open?$('dialogContent').querySelector('.share-link-actions'):$('homeShare').parentElement;
+ let panel=host.querySelector('.share-instructions');if(panel)panel.remove();
+ panel=document.createElement('section');panel.className='share-instructions';panel.setAttribute('role','status');
+ const text=document.createElement('p');text.textContent=/MicroMessenger/i.test(navigator.userAgent)?'微信内请长按复制下方链接，粘贴发送给家人；也可尝试右上角「···」转发。收件人打开链接即可查看两校比较。':'复制下方链接发给家人，打开即可查看。';
+ const input=document.createElement('textarea');input.readOnly=true;input.value=url;input.rows=3;input.setAttribute('aria-label','分享链接');input.style.cssText='width:100%;box-sizing:border-box;font-size:16px;overflow-wrap:anywhere';input.onclick=()=>input.select();
+ const status=document.createElement('p');status.textContent='可长按链接选择并复制。';
+ const copy=document.createElement('button');copy.type='button';copy.textContent='复制链接';copy.onclick=async()=>{input.select();let ok=false;try{ok=document.execCommand('copy')}catch{}if(!ok&&navigator.clipboard){try{await navigator.clipboard.writeText(url);ok=true}catch{}}status.textContent=ok?'链接已复制，请粘贴发送给家人。':'请长按上方链接，选择复制后发送给家人。'};
+ panel.append(text,input,copy,status);host.append(panel);panel.scrollIntoView({block:'nearest'});return status;
 }
-async function copyLink(url){try{await navigator.clipboard.writeText(url);notify('链接已复制')}catch{prompt('请复制以下链接',url)}}
+async function shareLink(rows=[]){
+ const url=rows.length?CollegeShare.link(rows):new URL('./',location.href).href,title=shareTitle(rows);
+ updateTitle(rows.length===2?'compare':rows.length?'detail':null,rows.map(s=>s.school_id));
+ // Visible inside the modal top layer, before any possibly blocked API call.
+ const status=sharePanel(url);
+ if(/MicroMessenger/i.test(navigator.userAgent))return;
+ if(navigator.share){try{await navigator.share({title,text:shareDescription,url});status.textContent='已打开系统分享；也可复制上方链接。';return}catch(e){status.textContent=e.name==='AbortError'?'已取消系统分享，仍可复制上方链接。':'系统分享不可用，请复制上方链接。'}}
+}
 function addLinkActions(rows){const box=document.createElement('div');box.className='share-link-actions';const share=document.createElement('button');share.textContent=$('dialog').classList.contains('school-detail')?'分享给家人':'分享给家人一起看';share.onclick=()=>shareLink(rows);box.append(share);($('dialogContent').querySelector('.share-link-actions')||$('dialogContent')).append(box)}
 $('homeShare').onclick=()=>shareLink();
 document.addEventListener('click',event=>{if(event.target.closest('.consult-qr'))countEvent('consultation')});
@@ -60,7 +72,7 @@ for(const id of stateFields)$(id).addEventListener(id==='search'?'input':'change
 $('reset').addEventListener('click',()=>{listScroll=0;saveState();updateChips()});
 const originalAdd=add;add=function(id){originalAdd(id);saveState()};
 addEventListener('scroll',()=>{if(!$('dialog').open){listScroll=scrollY;saveState()}},{passive:true});
-$('dialog').addEventListener('close',()=>{$('dialog').removeAttribute('aria-labelledby');detailRequest++;comparisonRequest++;if(routeBusy)return;if(history.state?.overlay){history.back()}else{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('school');history.replaceState({mobileV3:true},'',u);updateTitle(null,[]);requestAnimationFrame(()=>scrollTo(0,listScroll))}});
+$('dialog').addEventListener('close',()=>{$('dialog').removeAttribute('aria-labelledby');detailRequest++;comparisonRequest++;if(routeBusy)return;if(history.state?.overlay){history.back()}else{const u=new URL(location.href);u.searchParams.delete('view');u.searchParams.delete('cc');u.searchParams.delete('school');u.hash='';history.replaceState({mobileV3:true},'',u);updateTitle(null,[]);requestAnimationFrame(()=>scrollTo(0,listScroll))}});
 addEventListener('popstate',()=>{routeBusy=true;const p=new URLSearchParams(location.search),ids=p.getAll('school');for(const id of stateFields)$(id).value=p.get(id)||(id==='sort'?'rank':'');apply();updateChips();if($('dialog').open)$('dialog').close();if(p.get('view')==='detail'&&ids.length===1&&schools.some(s=>s.school_id===ids[0]))detail(ids[0]);else if(p.get('view')==='compare'&&ids.length===2&&new Set(ids).size===2&&ids.every(id=>schools.some(s=>s.school_id===id))){selected=[...ids];persistSelection();compare()}else if(p.get('view')==='about')showAbout();else{updateTitle(null,[]);render();tray();requestAnimationFrame(()=>scrollTo(0,listScroll))}updateTitle(p.get('view'),ids);setTimeout(()=>routeBusy=false,0)});
 
 
@@ -90,8 +102,8 @@ function addReplacementActions(rows){
   $('replacementResults').querySelectorAll('[data-replacement]').forEach(b=>b.onclick=()=>{
    const id=b.dataset.replacement;if(id===selected[1-slot]||!schools.some(s=>s.school_id===id)){notify('请选择另一所大学');return}
    selected[slot]=id;persistSelection();
-   const u=new URL(location.href);u.hash='';u.searchParams.delete('school');selected.forEach(id=>u.searchParams.append('school',id));u.searchParams.set('view','compare');
-   history.replaceState({...history.state},'',u);updateTitle('compare',selected);compare();
+   const u=new URL(location.href);u.hash='';u.searchParams.delete('cc');u.searchParams.delete('school');selected.forEach(id=>u.searchParams.append('school',id));u.searchParams.set('view','compare');
+   u.searchParams.set('cc',JSON.stringify(selected));u.hash=new URLSearchParams({cc:JSON.stringify(selected)}).toString();history.replaceState({...history.state},'',u);updateTitle('compare',selected);compare();
   });
  }
  rows.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.textContent='⇄';b.className='replace-school';b.title='更换学校';b.setAttribute('aria-label','更换'+(s.school_name_cn||s.school_name));b.onclick=()=>{slot=i;trigger=b;picker.hidden=false;$('pickerTitle').textContent='更换'+(s.school_name_cn||s.school_name);$('replacementSearch').value='';results();$('replacementSearch').focus()};$('compareSchool'+i).append(b)});
