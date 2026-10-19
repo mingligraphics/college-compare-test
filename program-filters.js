@@ -12,7 +12,7 @@ const ProgramFilters=(()=>{
   if(names.includes(old))el('program').value=old;
  }
  async function load(){try{
-  const response=await fetch('program-index.json?v=20261015-ui');if(!response.ok)throw Error();data=await response.json();
+  const response=await fetch('program-index.json?v=faacbf48ab16671b');if(!response.ok)throw Error();data=await response.json();
   if(Object.keys(data.schools).length!==114||Object.values(data.schools).reduce((n,ps)=>n+ps.length,0)!==228)throw Error();
   el('programCategory').replaceChildren(new Option('全部专业大类',''),...data.categories.map((c,i)=>new Option(['计算机','工程','商科','社会科学','自然科学','健康','艺术传媒','人文教育','农业环境'][i],c.id)));
   el('programCategory').disabled=false;el('program').disabled=false;
