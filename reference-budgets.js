@@ -1270,5 +1270,39 @@ const CollegeReferenceBudgets = Object.freeze({
     "basis_cn": "校方预算表总额",
     "tuition_fees_usd": 36924,
     "tuition_fees_year": "2026-27"
+  },
+  "us_209542": {
+    "amount_usd": 64732,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "官方国际本科表：学杂费42,371、生活费18,065、书本/用品/保险合计4,296美元。学费与必缴费、住宿与餐饮、保险未分别拆列；专业、学分及校区差异需另核对，国际交通是否足额包含未确认。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://internationalservices.oregonstate.edu/sites/internationalservices.oregonstate.edu/files/2026-02/international-student-yearly-costs-2026-2027.pdf",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "国际本科常规学位UG、I-20年度资金证明估值；无家属、奖助前；不适用于Pathway、语言或研究生项目",
+    "basis_cn": "官方国际本科UG年度总额",
+    "tuition_fees_usd": 42371,
+    "tuition_fees_year": "2026-27"
+  },
+  "us_126614": {
+    "amount_usd": 69244,
+    "year": "2026-27",
+    "currency": "USD",
+    "complete_coa": false,
+    "note_cn": "基础费率学杂费48,222，加国际合规费80；食宿19,242、书本1,200及一次性国际新生费500美元。未含个人、交通和医疗保险，不是完整COA。CMDI、工程/自然科学、商科费率更高；对应同口径参考额分别71,176、72,856、73,346美元。 实际年度支出可能更高。",
+    "sources": [
+      {
+        "url": "https://www.colorado.edu/bursar/costs/undergraduate",
+        "year": "2026-27"
+      }
+    ],
+    "scope_cn": "博尔德主校区国际本科新生、基础费率专业（人文/教育/音乐/社会科学等）、全日制秋春；标准双人间及每周19餐；奖助前",
+    "basis_cn": "国际本科基础费率表68,664＋国际新生费500＋合规费40×2",
+    "tuition_fees_usd": 48302,
+    "tuition_fees_year": "2026-27"
   }
 });
