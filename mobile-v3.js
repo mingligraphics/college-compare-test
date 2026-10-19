@@ -16,6 +16,8 @@ function restoreInitial(){
  const params=new URLSearchParams(location.search);const saved=initialSavedState;
  if(saved){if(!stateFields.some(id=>params.has(id))){for(const id of stateFields)$(id).value=saved.values?.[id]|| (id==='sort'?'rank':'');}
  apply();page=Math.max(1,Number(saved.page)||1);if(viewIsList(params)||(params.get('view')==='detail'&&saved.selected?.includes(params.get('school'))))selected=(saved.selected||[]).filter(id=>schools.some(s=>s.school_id===id)).slice(0,2);render();tray();listScroll=Number(saved.scroll)||0;if(!params.has('view'))requestAnimationFrame(()=>scrollTo(0,listScroll));}
+ // Both asynchronous data sources are ready; first visits also need a final render.
+ if(!saved)apply();
  const requested=params.getAll('school'),view=params.get('view');
  if((view==='detail'&&(requested.length!==1||!schools.some(s=>s.school_id===requested[0])))||(view==='compare'&&(requested.length!==2||new Set(requested).size!==2||requested.some(id=>!schools.some(s=>s.school_id===id))))){modal('<h2>分享链接已失效或学校不存在</h2><p>请返回列表重新选择学校。</p><button id="close">返回列表</button>')}
  stateReady=true;saveState();updateChips();
