@@ -175,7 +175,7 @@ async function compare(){
 }
 async function loadDirectory(){
  $('count').textContent='正在加载目录';$('pageInfo').textContent='';$('next').hidden=true;$('prev').hidden=true;$('grid').setAttribute('aria-busy','true');$('grid').innerHTML='<span class="loading-label" role="status">正在加载大学目录…</span>'+Array.from({length:6},()=>'<article class="school skeleton" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></article>').join(''); $('dataNote').hidden=true;
- try {schools=await CollegeAPI.directory();filtered=schools;$('catalogTotal').textContent=`301所高校官方数据，按照预算、专业、录取要求，选择最适合你的大学`;
+ try {schools=await CollegeAPI.directory();filtered=schools;$('catalogTotal').textContent=`301所高校官方数据，按照预算、专业和录取要求，选择最适合你的大学。`;
  let saved;try{saved=JSON.parse(localStorage.getItem('cc-discovery-prototype')||'[]')}catch(e){};
  selected=Array.isArray(saved)?[...new Set(saved)].filter(id=>schools.some(s=>s.school_id===id)).slice(0,2):[];
 
