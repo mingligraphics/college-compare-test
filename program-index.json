@@ -1,6 +1,6 @@
 {
   "version": "2026-10-19",
-  "source": "Existing 108-school public snapshot plus six TEST-only representative-program additions reviewed against official undergraduate pages on 2026-10-19.",
+  "source": "Existing 114-school TEST baseline (228 entries) plus 50 official-evidence undergraduate representative-program additions reviewed 2026-10-19; 164 schools, 278 entries.",
   "semantics": "Only recorded undergraduate signature/representative programs. Missing records mean unknown coverage, not absence. Category OR within each program; category and specific program AND across selectors.",
   "categories": [
     {
@@ -176,7 +176,8 @@
         "engineering"
       ],
       "original_names_en": [
-        "Engineering Sciences"
+        "Engineering Sciences",
+        "Engineering Science"
       ]
     },
     "经济学": {
@@ -1137,7 +1138,8 @@
         "arts"
       ],
       "original_names_en": [
-        "Game Design and Development"
+        "Game Design and Development",
+        "Games"
       ]
     },
     "摄影与影像艺术": {
@@ -1490,6 +1492,190 @@
       ],
       "original_names_en": [
         "Optical Sciences & Engineering"
+      ]
+    },
+    "金融经济学（本科课程序列）": {
+      "name": "金融经济学（本科课程序列）",
+      "categories": [
+        "business"
+      ],
+      "original_names_en": [
+        "Financial Economics Sequence"
+      ]
+    },
+    "林学": {
+      "name": "林学",
+      "categories": [
+        "environment",
+        "science"
+      ],
+      "original_names_en": [
+        "Forestry"
+      ]
+    },
+    "交通工具设计": {
+      "name": "交通工具设计",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Transportation Design"
+      ]
+    },
+    "角色动画": {
+      "name": "角色动画",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Character Animation"
+      ]
+    },
+    "动画与插画": {
+      "name": "动画与插画",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Animation & Illustration"
+      ]
+    },
+    "动画": {
+      "name": "动画",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Animation"
+      ]
+    },
+    "艺术创作（跨学科BFA）": {
+      "name": "艺术创作（跨学科BFA）",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Studio Art (Interdisciplinary BFA)"
+      ]
+    },
+    "环境研究（配合另一专业修读）": {
+      "name": "环境研究（配合另一专业修读）",
+      "categories": [
+        "environment",
+        "society"
+      ],
+      "original_names_en": [
+        "Environmental Studies Coordinate Major"
+      ]
+    },
+    "会计信息技术": {
+      "name": "会计信息技术",
+      "categories": [
+        "business",
+        "computing"
+      ],
+      "original_names_en": [
+        "Information Technology in Accounting"
+      ]
+    },
+    "音乐制作与录音工程": {
+      "name": "音乐制作与录音工程",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Music Production and Engineering"
+      ]
+    },
+    "媒体艺术制作": {
+      "name": "媒体艺术制作",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Media Arts Production"
+      ]
+    },
+    "国际与全球研究": {
+      "name": "国际与全球研究",
+      "categories": [
+        "society"
+      ],
+      "original_names_en": [
+        "International and Global Studies"
+      ]
+    },
+    "地质学": {
+      "name": "地质学",
+      "categories": [
+        "science"
+      ],
+      "original_names_en": [
+        "Geology"
+      ]
+    },
+    "城市发展与结构": {
+      "name": "城市发展与结构",
+      "categories": [
+        "society"
+      ],
+      "original_names_en": [
+        "Growth and Structure of Cities"
+      ]
+    },
+    "领导力研究": {
+      "name": "领导力研究",
+      "categories": [
+        "society"
+      ],
+      "original_names_en": [
+        "Leadership Studies"
+      ]
+    },
+    "数据分析": {
+      "name": "数据分析",
+      "categories": [
+        "computing"
+      ],
+      "original_names_en": [
+        "Data Analytics"
+      ]
+    },
+    "音乐与文理双学位项目": {
+      "name": "音乐与文理双学位项目",
+      "categories": [
+        "arts"
+      ],
+      "original_names_en": [
+        "Music and Liberal Arts Double Degree"
+      ]
+    },
+    "生物学": {
+      "name": "生物学",
+      "categories": [
+        "science"
+      ],
+      "original_names_en": [
+        "Biology"
+      ]
+    },
+    "全球酒店与服务业管理": {
+      "name": "全球酒店与服务业管理",
+      "categories": [
+        "business"
+      ],
+      "original_names_en": [
+        "Global Hospitality Leadership"
+      ]
+    },
+    "发酵与食品科学（发酵科技方向）": {
+      "name": "发酵与食品科学（发酵科技方向）",
+      "categories": [
+        "environment",
+        "science"
+      ],
+      "original_names_en": [
+        "Fermentation and Food Science: Fermentation Science and Technology"
       ]
     }
   },
@@ -5508,6 +5694,868 @@
           {
             "url": "https://optics.arizona.edu/prospective-students/undergraduate/bs-optical-sciences-engineering",
             "year": "现行本科BS项目页；页面未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_110422": [
+      {
+        "name_cn": "建筑学",
+        "name_en": "Architecture",
+        "program_key": "us_110422_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：五年制BArch以设计工作室、技术和实验训练结合，第五年完成贯穿全年的研究设计项目。",
+        "application_note": "代表专业：五年制BArch以设计工作室、技术和实验训练结合，第五年完成贯穿全年的研究设计项目。 五年制建筑学本科专业学位。",
+        "sources": [
+          {
+            "url": "https://architecture.calpoly.edu/about/undergraduate",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_168342": [
+      {
+        "name_cn": "经济学",
+        "name_en": "Economics",
+        "program_key": "us_168342_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科课程包含经济理论、计量经济学、导师讨论课及强调研究写作的高年级研讨课。",
+        "application_note": "代表专业：本科课程包含经济理论、计量经济学、导师讨论课及强调研究写作的高年级研讨课。 官网本科培养特色，不采用页面中的笼统实力宣传。",
+        "sources": [
+          {
+            "url": "https://www.williams.edu/academics/economics/the-major/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_164465": [
+      {
+        "name_cn": "神经科学",
+        "name_en": "Neuroscience",
+        "program_key": "us_164465_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：融合生物、化学、心理学和数学等学科，结合实验研究与当前研究研讨，高年级可选荣誉研究项目。",
+        "application_note": "代表专业：融合生物、化学、心理学和数学等学科，结合实验研究与当前研究研讨，高年级可选荣誉研究项目。 荣誉研究为可选项目，并非所有学生自动参加。",
+        "sources": [
+          {
+            "url": "https://www.amherst.edu/academiclife/departments/neuroscience",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_121345": [
+      {
+        "name_cn": "神经科学",
+        "name_en": "Neuroscience",
+        "program_key": "us_121345_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：以生物、心理和化学为基础，结合教学实验；学生可协助教师研究，或通过暑期本科研究计划开展项目。",
+        "application_note": "代表专业：以生物、心理和化学为基础，结合教学实验；学生可协助教师研究，或通过暑期本科研究计划开展项目。 暑期研究是可申请机会，不保证人人获得。",
+        "sources": [
+          {
+            "url": "https://www.pomona.edu/academics/departments/neuroscience",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_112260": [
+      {
+        "name_cn": "金融经济学（本科课程序列）",
+        "name_en": "Financial Economics Sequence",
+        "program_key": "us_112260_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：课程序列要求完成、展示并答辩金融经济学研究项目，可用毕业论文满足该研究要求。",
+        "application_note": "代表专业：课程序列要求完成、展示并答辩金融经济学研究项目，可用毕业论文满足该研究要求。 这是本科课程序列，不是独立金融学士专业；按该序列要求申请和修读。",
+        "sources": [
+          {
+            "url": "https://fei.cmc.edu/for-students/student-opportunities/",
+            "year": "未标学年；2026-10-19核查"
+          },
+          {
+            "url": "https://fei.cmc.edu/research-2/student-theses/",
+            "year": "含2024–2025本科论文档案；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_217493": [
+      {
+        "name_cn": "工业设计",
+        "name_en": "Industrial Design",
+        "program_key": "us_217493_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：四年制BFA通过工作室项目训练材料运用、三维模型和原型制作，兼顾制造、人因与用户研究。",
+        "application_note": "代表专业：四年制BFA通过工作室项目训练材料运用、三维模型和原型制作，兼顾制造、人因与用户研究。 本科工业设计BFA，不引用研究生排名。",
+        "sources": [
+          {
+            "url": "https://www.risd.edu/academics/industrial-design/bachelors-program",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_194578": [
+      {
+        "name_cn": "建筑学",
+        "name_en": "Architecture",
+        "program_key": "us_194578_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：五年制BArch结合设计、建造技术、历史理论和通识课程，以第五年的建筑研究设计项目收尾。",
+        "application_note": "代表专业：五年制BArch结合设计、建造技术、历史理论和通识课程，以第五年的建筑研究设计项目收尾。 五年制本科专业学位；不将学位等同于自动取得执业资格。",
+        "sources": [
+          {
+            "url": "https://www.pratt.edu/architecture/undergraduate-architecture/architecture-barch/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_228787": [
+      {
+        "name_cn": "计算机科学",
+        "name_en": "Computer Science",
+        "program_key": "us_228787_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：BS课程结合算法、数据结构、操作系统和数学基础，并可通过UTDesign团队毕业项目解决实际计算问题。",
+        "application_note": "代表专业：BS课程结合算法、数据结构、操作系统和数学基础，并可通过UTDesign团队毕业项目解决实际计算问题。 本科计算机科学BS；团队实践依据UTDesign官网，不外推研究生实力。",
+        "sources": [
+          {
+            "url": "https://catalog.utdallas.edu/2026/undergraduate/programs/ecs/computer-science",
+            "year": "2026本科目录；2026-10-19核查"
+          },
+          {
+            "url": "https://utdesignstudents.utdallas.edu/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_209542": [
+      {
+        "name_cn": "林学",
+        "name_en": "Forestry",
+        "program_key": "us_209542_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：Corvallis本科林学结合生态、管理与经济课程，专业阶段以野外课程开始，并要求累计六个月相关工作经验。",
+        "application_note": "代表专业：Corvallis本科林学结合生态、管理与经济课程，专业阶段以野外课程开始，并要求累计六个月相关工作经验。 适用Corvallis林学本科；工作经验可分多个暑期完成。",
+        "sources": [
+          {
+            "url": "https://catalog.oregonstate.edu/college-departments/forestry/forest-engineering-resources-management/forestry-bs-hbs/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_153603": [
+      {
+        "name_cn": "航空航天工程",
+        "name_en": "Aerospace Engineering",
+        "program_key": "us_153603_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BS结合航空航天工程基础与设计，Make To Innovate项目提供动手实践机会，深化工程原理应用。",
+        "application_note": "代表专业：本科BS结合航空航天工程基础与设计，Make To Innovate项目提供动手实践机会，深化工程原理应用。 M:2:I为学生实践机会，不宣称每名学生都参与。",
+        "sources": [
+          {
+            "url": "https://catalog.iastate.edu/collegeofengineering/aerospaceengineering/index.html",
+            "year": "2026–2027目录；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_218663": [
+      {
+        "name_cn": "国际商务",
+        "name_en": "International Business",
+        "program_key": "us_218663_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科国际商务提供跨国cohort培养路径，学生与合作大学同伴共同学习，在不同国家积累商务与文化经验。",
+        "application_note": "代表专业：本科国际商务提供跨国cohort培养路径，学生与合作大学同伴共同学习，在不同国家积累商务与文化经验。 此处介绍需单独竞争申请的cohort路径，名额有限，不等同于所有国际商务学生的安排。",
+        "sources": [
+          {
+            "url": "https://www.sc.edu/study/colleges_schools/moore/study/international_business/degree_programs/bachelors/curriculum/cohort_programs/index.php",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_109651": [
+      {
+        "name_cn": "交通工具设计",
+        "name_en": "Transportation Design",
+        "program_key": "us_109651_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BS结合手绘、实体与数字建模、车辆结构和可持续出行，提供外观、内饰或替代交通工具等培养方向。",
+        "application_note": "代表专业：本科BS结合手绘、实体与数字建模、车辆结构和可持续出行，提供外观、内饰或替代交通工具等培养方向。 这些为专业内方向，不是各自独立学士学位。",
+        "sources": [
+          {
+            "url": "https://handbooks.artcenter.edu/artcenter-catalog/program-requirements/undergraduate-programs/transportation-design",
+            "year": "2026秋/2027春入学方案；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_111081": [
+      {
+        "name_cn": "角色动画",
+        "name_en": "Character Animation",
+        "program_key": "us_111081_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：四年制BFA结合二维与计算机动画、绘画、角色设计和叙事，通过连续的影片工作坊发展制作能力。",
+        "application_note": "代表专业：四年制BFA结合二维与计算机动画、绘画、角色设计和叙事，通过连续的影片工作坊发展制作能力。 角色动画本科BFA，不混同实验动画或研究生项目。",
+        "sources": [
+          {
+            "url": "https://catalog.calarts.edu/programs/UvzOg8mt3npdQQJrTCkI/general-aoYks",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_117946": [
+      {
+        "name_cn": "电影与电视制作",
+        "name_en": "Film and Television Production",
+        "program_key": "us_117946_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BFA强调编剧、摄影灯光、导演、剪辑和声音等制作实践，以团队合作发展个人影像表达。",
+        "application_note": "代表专业：本科BFA强调编剧、摄影灯光、导演、剪辑和声音等制作实践，以团队合作发展个人影像表达。 按现行2026–2027目录为BFA；院系旧介绍仍可能写BA，申请时应按入学年份确认。",
+        "sources": [
+          {
+            "url": "https://bulletin.lmu.edu//schools-colleges/film-television/film-television-production/film-television-production-ba/",
+            "year": "2026–2027目录；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_122409": [
+      {
+        "name_cn": "国际商务",
+        "name_en": "International Business",
+        "program_key": "us_122409_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BA由文理学院与商学院联合提供，结合商科、外语和区域文化，包含海外学期与实习要求。",
+        "application_note": "代表专业：本科BA由文理学院与商学院联合提供，结合商科、外语和区域文化，包含海外学期与实习要求。 国际学生的语言及区域路径另有安排，具体海外学习要求应按个人培养方案确认。",
+        "sources": [
+          {
+            "url": "https://ib.sdsu.edu/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_122755": [
+      {
+        "name_cn": "动画与插画",
+        "name_en": "Animation & Illustration",
+        "program_key": "us_122755_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BFA结合二维与三维动画、绘画、故事板、角色设计和视觉开发，高年级可深化个人创作方向。",
+        "application_note": "代表专业：本科BFA结合二维与三维动画、绘画、故事板、角色设计和视觉开发，高年级可深化个人创作方向。 BFA在大学申请时录取，无校内转入；须通过阶段作品集审核才能继续BFA，否则转为设计研究BA路径。",
+        "sources": [
+          {
+            "url": "https://www.sjsu.edu/design/undergraduate-programs/animation-illustration/degrees.php",
+            "year": "2026-03-26更新；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_140951": [
+      {
+        "name_cn": "动画",
+        "name_en": "Animation",
+        "program_key": "us_140951_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BFA设置二维动画、三维角色动画及故事与概念开发方向，并通过前期、制作和后期课程完成毕业影片。",
+        "application_note": "代表专业：本科BFA设置二维动画、三维角色动画及故事与概念开发方向，并通过前期、制作和后期课程完成毕业影片。 适用官网列出的Atlanta/Savannah本科路径；方向并非额外独立学位。",
+        "sources": [
+          {
+            "url": "https://www.scad.edu/academics/programs/animation/degrees/bfa",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_143048": [
+      {
+        "name_cn": "艺术创作（跨学科BFA）",
+        "name_en": "Studio Art (Interdisciplinary BFA)",
+        "program_key": "us_143048_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BFA鼓励跨工作室与媒介探索，把艺术史、通识学习和创作实践结合，发展个人作品体系。",
+        "application_note": "代表专业：本科BFA鼓励跨工作室与媒介探索，把艺术史、通识学习和创作实践结合，发展个人作品体系。 学校强调不设传统单一major；本条为BFA in Studio学位培养模式，不虚构独立绘画或设计专业。",
+        "sources": [
+          {
+            "url": "https://www.saic.edu/academics/interdisciplinary-freedom",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_145725": [
+      {
+        "name_cn": "建筑学",
+        "name_en": "Architecture",
+        "program_key": "us_145725_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：五年制BArch围绕工作室设计，结合建造技术、结构、数字建模与可持续议题，并可选择设计建造等深化方向。",
+        "application_note": "代表专业：五年制BArch围绕工作室设计，结合建造技术、结构、数字建模与可持续议题，并可选择设计建造等深化方向。 本科BArch专业学位；选修深化方向不等同于独立本科专业。",
+        "sources": [
+          {
+            "url": "https://catalog.iit.edu/undergraduate/colleges/architecture/barch/",
+            "year": "2026–2027目录；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_153384": [
+      {
+        "name_cn": "经济学",
+        "name_en": "Economics",
+        "program_key": "us_153384_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：高年级经济学研讨课重视论文讨论和独立研究；具备理论与方法基础的学生可申请导师指导高级项目MAP。",
+        "application_note": "代表专业：高年级经济学研讨课重视论文讨论和独立研究；具备理论与方法基础的学生可申请导师指导高级项目MAP。 MAP须具备课程准备并获得教师指导，不是自动参加的项目。",
+        "sources": [
+          {
+            "url": "https://www.grinnell.edu/academics/majors-concentrations/economics/FAQs",
+            "year": "含2025前后专业申报说明；未标目录学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_161004": [
+      {
+        "name_cn": "环境研究（配合另一专业修读）",
+        "name_en": "Environmental Studies Coordinate Major",
+        "program_key": "us_161004_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：环境研究把科学、政策和历史文化结合，要求主题课程及高年级研讨，并与另一学科专业协调修读。",
+        "application_note": "代表专业：环境研究把科学、政策和历史文化结合，要求主题课程及高年级研讨，并与另一学科专业协调修读。 属于coordinate major，须同时满足所配合学科要求，不能作为独立单一专业理解。",
+        "sources": [
+          {
+            "url": "https://www.bowdoin.edu/environmental-studies/requirements/index.html",
+            "year": "含2025–2026起规则；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_160977": [
+      {
+        "name_cn": "心理学",
+        "name_en": "Psychology",
+        "program_key": "us_160977_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科心理学毕业论文可采用实证研究、社区研究或理论综述整合，在教师指导下发展研究与写作能力。",
+        "application_note": "代表专业：本科心理学毕业论文可采用实证研究、社区研究或理论综述整合，在教师指导下发展研究与写作能力。 不同论文形式有不同审批与研究要求，不将全部论文描述为实验研究。",
+        "sources": [
+          {
+            "url": "https://www.bates.edu/psychology/thesis/thesis-planning/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_164739": [
+      {
+        "name_cn": "会计信息技术",
+        "name_en": "Information Technology in Accounting",
+        "program_key": "us_164739_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BS把会计、信息系统和业务流程结合，学习信息系统审计、数据治理、信息安全与企业系统配置。",
+        "application_note": "代表专业：本科BS把会计、信息系统和业务流程结合，学习信息系统审计、数据治理、信息安全与企业系统配置。 这是会计与信息技术结合的本科专业，不保证毕业自动取得CPA或CISA资格。",
+        "sources": [
+          {
+            "url": "https://catalog.bentley.edu/undergraduate/programs/undergraduate-majors/information-technology-accounting-major/information-technology-accounting-major.pdf",
+            "year": "现行官网目录PDF；未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_164748": [
+      {
+        "name_cn": "音乐制作与录音工程",
+        "name_en": "Music Production and Engineering",
+        "program_key": "us_164748_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BM通过录音室课堂和制作项目，训练录音、混音、技术系统理解及跨角色音乐协作。",
+        "application_note": "代表专业：本科BM通过录音室课堂和制作项目，训练录音、混音、技术系统理解及跨角色音乐协作。 适用College of Music本科BM，须入校后另行竞争申请该专业，不混同在线BA或文凭课程。",
+        "sources": [
+          {
+            "url": "https://college.berklee.edu/undergraduate/music-production-and-engineering-bachelors-degree",
+            "year": "2025秋目录更新；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_165662": [
+      {
+        "name_cn": "媒体艺术制作",
+        "name_en": "Media Arts Production",
+        "program_key": "us_165662_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BA将媒体历史理论与摄影、剪辑、声音和叙事制作结合，提供与其他创作专业合作的实践环境。",
+        "application_note": "代表专业：本科BA将媒体历史理论与摄影、剪辑、声音和叙事制作结合，提供与其他创作专业合作的实践环境。 本条为Media Arts Production BA，不混同现行Film, Television, and Media Arts BFA。",
+        "sources": [
+          {
+            "url": "https://emerson.edu/programs/media-arts-production/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_167835": [
+      {
+        "name_cn": "工程科学",
+        "name_en": "Engineering Science",
+        "program_key": "us_167835_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：选择Design Clinic的高年级工程学生在两学期中组队，为企业或政府等客户完成真实设计项目，并接受教师及技术人员指导。",
+        "application_note": "代表专业：选择Design Clinic的高年级工程学生在两学期中组队，为企业或政府等客户完成真实设计项目，并接受教师及技术人员指导。 本科工程科学BS可选团队Design Clinic或教师指导的个人毕业设计，不把综合学位拆成多个独立工程专业。",
+        "sources": [
+          {
+            "url": "https://www.science.smith.edu/designclinic/",
+            "year": "未标学年；2026-10-19核查"
+          },
+          {
+            "url": "https://www.smith.edu/academics/engineering",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_168218": [
+      {
+        "name_cn": "神经科学",
+        "name_en": "Neuroscience",
+        "program_key": "us_168218_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科神经科学提供与教师合作的实验室研究，从低年级实验入门到高年级论文发展研究经验。",
+        "application_note": "代表专业：本科神经科学提供与教师合作的实验室研究，从低年级实验入门到高年级论文发展研究经验。 实验室研究机会须按项目安排参加，不保证每位学生取得论文或暑研名额。",
+        "sources": [
+          {
+            "url": "https://www.wellesley.edu/academics/department/neuroscience",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_173258": [
+      {
+        "name_cn": "计算机科学",
+        "name_en": "Computer Science",
+        "program_key": "us_173258_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科计算机科学有导师指导的Comps综合项目；2025届团队以课程探索为主题完成跨学科应用项目。",
+        "application_note": "代表专业：本科计算机科学有导师指导的Comps综合项目；2025届团队以课程探索为主题完成跨学科应用项目。 依据学校图书馆项目档案举例，项目主题逐年变化，不代表所有学生都做同一课题。",
+        "sources": [
+          {
+            "url": "https://digitalcommons.carleton.edu/comps/3813/",
+            "year": "2025届项目档案；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_173902": [
+      {
+        "name_cn": "国际研究",
+        "name_en": "International Studies",
+        "program_key": "us_173902_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科国际研究结合学科专题、外语、海外学习与高年级研讨或经批准的独立项目，形成个人研究计划。",
+        "application_note": "代表专业：本科国际研究结合学科专题、外语、海外学习与高年级研讨或经批准的独立项目，形成个人研究计划。 国际学生在Macalester完成一学期可满足该海外学习要求；以英语为第二语言的学生满足其语言要求。",
+        "sources": [
+          {
+            "url": "https://www.macalester.edu/international-studies/majorsminors/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_230959": [
+      {
+        "name_cn": "国际与全球研究",
+        "name_en": "International and Global Studies",
+        "program_key": "us_230959_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科专业将区域或全球议题与非英语语言学习结合，包含至少一学期海外学习及高年级研讨课程。",
+        "application_note": "代表专业：本科专业将区域或全球议题与非英语语言学习结合，包含至少一学期海外学习及高年级研讨课程。 语言、海外项目与返校课程按所选区域或主题方向执行，部分方向有特殊规则。",
+        "sources": [
+          {
+            "url": "https://www.middlebury.edu/college/academics/international-global-studies/requirements",
+            "year": "含2025秋起规则；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_126678": [
+      {
+        "name_cn": "地质学",
+        "name_en": "Geology",
+        "program_key": "us_126678_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：利用一次专注一门课的Block Plan，在落基山地区开展野外观察、实验和独立研究，将地质过程与实地问题结合。",
+        "application_note": "代表专业：利用一次专注一门课的Block Plan，在落基山地区开展野外观察、实验和独立研究，将地质过程与实地问题结合。 本科地质学培养特色；野外地点与项目按实际课程安排。",
+        "sources": [
+          {
+            "url": "https://www.coloradocollege.edu/academics/dept/geology/",
+            "year": "含2026–2027院系动态；培养说明未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_212911": [
+      {
+        "name_cn": "化学",
+        "name_en": "Chemistry",
+        "program_key": "us_212911_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科通过综合实验课Superlabs准备独立研究，所有高年级化学专业学生完成导师指导研究论文及口头、海报交流。",
+        "application_note": "代表专业：本科通过综合实验课Superlabs准备独立研究，所有高年级化学专业学生完成导师指导研究论文及口头、海报交流。 研究类型与具体实验室安排依教师和项目而定，不保证特定论文发表成果。",
+        "sources": [
+          {
+            "url": "https://www.haverford.edu/chemistry/academic-programs",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_211273": [
+      {
+        "name_cn": "城市发展与结构",
+        "name_en": "Growth and Structure of Cities",
+        "program_key": "us_211273_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科AB以规划、建筑、城市社会经济、历史和环境课程，研究建成环境与政治文化的关系，并通过高年级研讨整合。",
+        "application_note": "代表专业：本科AB以规划、建筑、城市社会经济、历史和环境课程，研究建成环境与政治文化的关系，并通过高年级研讨整合。 本条为城市研究本科，不等同于职业建筑学学位；3+2硕士路径需另按要求申请。",
+        "sources": [
+          {
+            "url": "https://www.brynmawr.edu/academics/majors-minors-and-concentrations/growth-structure-cities",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_211291": [
+      {
+        "name_cn": "机械工程",
+        "name_en": "Mechanical Engineering",
+        "program_key": "us_211291_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BS从低年级设计制作起步，高年级毕业设计为真实客户设计、建造和测试装置，结合实验与工程分析。",
+        "application_note": "代表专业：本科BS从低年级设计制作起步，高年级毕业设计为真实客户设计、建造和测试装置，结合实验与工程分析。 项目客户和主题逐年变化，不保证特定公司的实习或工作机会。",
+        "sources": [
+          {
+            "url": "https://www.bucknell.edu/academics/college-engineering/majors-departments/mechanical-engineering",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_213385": [
+      {
+        "name_cn": "土木工程",
+        "name_en": "Civil Engineering",
+        "program_key": "us_213385_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BS覆盖结构、环境、岩土、交通、施工及水资源领域实验，以两学期毕业设计串联工程分析与设计。",
+        "application_note": "代表专业：本科BS覆盖结构、环境、岩土、交通、施工及水资源领域实验，以两学期毕业设计串联工程分析与设计。 列举领域属于本科课程覆盖范围，不是分别授予的六个学士学位。",
+        "sources": [
+          {
+            "url": "https://ce.lafayette.edu/curriculum-overall/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_233374": [
+      {
+        "name_cn": "领导力研究",
+        "name_en": "Leadership Studies",
+        "program_key": "us_233374_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科结合人文与社会科学研究领导问题，课程包含正义与公民社会、领导理论、伦理毕业课程及Jepson实习。",
+        "application_note": "代表专业：本科结合人文与社会科学研究领导问题，课程包含正义与公民社会、领导理论、伦理毕业课程及Jepson实习。 本条为跨学科本科培养特色，不等同于MBA或职业管理资格。",
+        "sources": [
+          {
+            "url": "https://jepson.richmond.edu/academics/index.html",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_234207": [
+      {
+        "name_cn": "工商管理",
+        "name_en": "Business Administration",
+        "program_key": "us_234207_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科工商管理融入文理教育，并要求修读商科系之外的宏观环境、人文因素及能力技能等类别课程。",
+        "application_note": "代表专业：本科工商管理融入文理教育，并要求修读商科系之外的宏观环境、人文因素及能力技能等类别课程。 按本科专业要求修读，不引用未明确版次的商学院实力宣传。",
+        "sources": [
+          {
+            "url": "https://www.wlu.edu/the-williams-school/departments-and-programs/business-administration-department/resources-for-students",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_198385": [
+      {
+        "name_cn": "经济学",
+        "name_en": "Economics",
+        "program_key": "us_198385_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：通过计量、计算经济学和写作密集课程训练研究，高年级Senior Session可在教师指导下开展小组调查。",
+        "application_note": "代表专业：通过计量、计算经济学和写作密集课程训练研究，高年级Senior Session可在教师指导下开展小组调查。 独立研究和暑研依兴趣、资源及审批安排，不保证发表或资助。",
+        "sources": [
+          {
+            "url": "https://www.davidson.edu/academic-departments/economics/research",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_202523": [
+      {
+        "name_cn": "数据分析",
+        "name_en": "Data Analytics",
+        "program_key": "us_202523_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科把数学与计算机基础、跨学科领域和项目课程结合，包含研究或实习实践，并以相关毕业项目整合所学。",
+        "application_note": "代表专业：本科把数学与计算机基础、跨学科领域和项目课程结合，包含研究或实习实践，并以相关毕业项目整合所学。 官网现行专业提供BA/BS；具体实践路径和毕业要求按入学年份确认。",
+        "sources": [
+          {
+            "url": "https://denison.edu/academics/data-analytics/about",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_204501": [
+      {
+        "name_cn": "音乐与文理双学位项目",
+        "name_en": "Music and Liberal Arts Double Degree",
+        "program_key": "us_204501_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：通常五年结合音乐学院BM和文理学院BA，部分领域可选BS，以两院课程及双导师支持兼顾音乐与学术发展。",
+        "application_note": "代表专业：通常五年结合音乐学院BM和文理学院BA，部分领域可选BS，以两院课程及双导师支持兼顾音乐与学术发展。 这是双学位培养项目，需分别获两学院录取，不是名为“音乐与文理”的独立专业。",
+        "sources": [
+          {
+            "url": "https://www.oberlin.edu/double-degree-program-oberlin/double-degree-faq",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_209922": [
+      {
+        "name_cn": "生物学",
+        "name_en": "Biology",
+        "program_key": "us_209922_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BA把课程与教师研究相连，高年级在导师指导下完成原创研究论文，并通过口试展示研究与分析能力。",
+        "application_note": "代表专业：本科BA把课程与教师研究相连，高年级在导师指导下完成原创研究论文，并通过口试展示研究与分析能力。 论文可采用数据、模型或综合分析，不把每个项目都描述为湿实验。",
+        "sources": [
+          {
+            "url": "https://www.reed.edu/academics/majors-programs/biology.html",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_230764": [
+      {
+        "name_cn": "游戏设计与开发",
+        "name_en": "Games",
+        "program_key": "us_230764_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BS结合数学、计算技能、数字可玩体验设计与制作，含两阶段Capstone毕业项目及跨领域选修。",
+        "application_note": "代表专业：本科BS结合数学、计算技能、数字可玩体验设计与制作，含两阶段Capstone毕业项目及跨领域选修。 本条为BS in Games，不混同计算机科学的游戏方向；正式进入专业有先修课和成绩要求。",
+        "sources": [
+          {
+            "url": "https://games.utah.edu/prospective-students/bs-in-games/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_225511": [
+      {
+        "name_cn": "全球酒店与服务业管理",
+        "name_en": "Global Hospitality Leadership",
+        "program_key": "us_225511_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：Hilton College本科BS结合住宿、餐饮、营销和技术课程，通过服务业实践课程或实习积累行业经验。",
+        "application_note": "代表专业：Hilton College本科BS结合住宿、餐饮、营销和技术课程，通过服务业实践课程或实习积累行业经验。 依官网现行名称为Global Hospitality Leadership，不沿用旧Hotel and Restaurant Management名称作为现行学位名。",
+        "sources": [
+          {
+            "url": "https://www.uh.edu/hilton-college/degrees-and-programs/course-catalogs/undergraduate/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_201885": [
+      {
+        "name_cn": "工业设计",
+        "name_en": "Industrial Design",
+        "program_key": "us_201885_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：五年制本科设计培养将工作室课程与全职合作实习co-op交替安排，要求完成五个学期专业实践。",
+        "application_note": "代表专业：五年制本科设计培养将工作室课程与全职合作实习co-op交替安排，要求完成五个学期专业实践。 课程与co-op全年交替，通常五年完成；不同页面学分数字有差异，未引用具体总学分。",
+        "sources": [
+          {
+            "url": "https://www.daap.uc.edu/academic-programs/school-of-design/industrial-design/curriculum.html",
+            "year": "含2026秋课程指南；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_216339": [
+      {
+        "name_cn": "风险管理与保险",
+        "name_en": "Risk Management and Insurance",
+        "program_key": "us_216339_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BBA企业风险方向学习财产责任风险、风险融资和企业整体风险管理，以最后学期毕业课程整合。",
+        "application_note": "代表专业：本科BBA企业风险方向学习财产责任风险、风险融资和企业整体风险管理，以最后学期毕业课程整合。 本条具体介绍Managing Corporate Risk方向，其他方向课程不同；不等同于取得保险职业认证。",
+        "sources": [
+          {
+            "url": "https://bulletin.temple.edu/undergraduate/fox-business-management/risk-management-insurance-managing-corporate-risk-bba/",
+            "year": "2026–2027目录；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_221759": [
+      {
+        "name_cn": "供应链管理",
+        "name_en": "Supply Chain Management",
+        "program_key": "us_221759_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科专业通过课程和供应链企业交流，连接物流、采购和咨询等应用领域，提供专业招聘及实习交流活动。",
+        "application_note": "代表专业：本科专业通过课程和供应链企业交流，连接物流、采购和咨询等应用领域，提供专业招聘及实习交流活动。 活动为学习与职业探索机会，不保证特定企业实习、录用或薪酬。",
+        "sources": [
+          {
+            "url": "https://haslam.utk.edu/supply-chain-management/undergraduate/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_209551": [
+      {
+        "name_cn": "新闻学",
+        "name_en": "Journalism",
+        "program_key": "us_209551_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BA/BS结合报道、写作、视觉传播与新闻伦理，可通过学生刊物、广播网络等开展真实内容制作。",
+        "application_note": "代表专业：本科BA/BS结合报道、写作、视觉传播与新闻伦理，可通过学生刊物、广播网络等开展真实内容制作。 实践机会按课程或学生组织安排，不将参加某一媒体视为所有学生的必修要求。",
+        "sources": [
+          {
+            "url": "https://www.uoregon.edu/academics/undergraduate/explore-programs/journalism/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_236939": [
+      {
+        "name_cn": "葡萄栽培与酿酒学",
+        "name_en": "Viticulture and Enology",
+        "program_key": "us_236939_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科BS以多学科、动手实践方式学习葡萄种植与酿酒技术，将科学课程与设施中的实际操作结合。",
+        "application_note": "代表专业：本科BS以多学科、动手实践方式学习葡萄种植与酿酒技术，将科学课程与设施中的实际操作结合。 本条为葡萄与酿酒科学本科，校区及进阶实践安排须按培养方案确认。",
+        "sources": [
+          {
+            "url": "https://cahnrs.wsu.edu/academics/undergraduate-programs/viticulture-and-enology/",
+            "year": "未标学年；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_126818": [
+      {
+        "name_cn": "发酵与食品科学（发酵科技方向）",
+        "name_en": "Fermentation and Food Science: Fermentation Science and Technology",
+        "program_key": "us_126818_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科把有机化学、微生物、生物化学与食品安全结合，发酵科技方向包含酿造、感官评价和食品生产课程。",
+        "application_note": "代表专业：本科把有机化学、微生物、生物化学与食品安全结合，发酵科技方向包含酿造、感官评价和食品生产课程。 发酵科技是Fermentation and Food Science专业内方向，不再沿用旧页面将其描述为独立现行专业。",
+        "sources": [
+          {
+            "url": "https://catalog.colostate.edu/general-catalog/colleges/health-human-sciences/food-science-human-nutrition/fermentation-food-science-major-fermentation-science-technology-concentration/",
+            "year": "2026秋生效；2026-10-19核查"
+          }
+        ]
+      }
+    ],
+    "us_166939": [
+      {
+        "name_cn": "国际关系",
+        "name_en": "International Relations",
+        "program_key": "us_166939_representative",
+        "selection_basis": "representative",
+        "evidence_category": "特色本科项目",
+        "reason": "代表专业：本科以经济、地理、历史、政治和研究方法为基础，再选择国际安全、政治经济或全球公共议题等专题深化。",
+        "application_note": "代表专业：本科以经济、地理、历史、政治和研究方法为基础，再选择国际安全、政治经济或全球公共议题等专题深化。 专题为同一本科专业内的研究重点，并有外语能力要求。",
+        "sources": [
+          {
+            "url": "https://www.mtholyoke.edu/academics/find-your-program/international-relations",
+            "year": "未标学年；2026-10-19核查"
           }
         ]
       }
