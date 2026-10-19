@@ -51,19 +51,31 @@ function sharePanel(url){
  const host=$('dialog').open?$('dialogContent').querySelector('.share-link-actions'):$('homeShare').parentElement;
  let panel=host.querySelector('.share-instructions');if(panel)panel.remove();
  panel=document.createElement('section');panel.className='share-instructions';panel.setAttribute('role','status');
- const text=document.createElement('p');text.textContent=/MicroMessenger/i.test(navigator.userAgent)?'微信内请长按复制下方链接，粘贴发送给家人；也可尝试右上角「···」转发。收件人打开链接即可查看两校比较。':'复制下方链接发给家人，打开即可查看。';
+ const text=document.createElement('p');text.textContent='复制链接发给家人';
  const input=document.createElement('textarea');input.readOnly=true;input.value=url;input.rows=3;input.setAttribute('aria-label','分享链接');input.style.cssText='width:100%;box-sizing:border-box;font-size:16px;overflow-wrap:anywhere';input.onclick=()=>input.select();
  const status=document.createElement('p');status.textContent='可长按链接选择并复制。';
  const copy=document.createElement('button');copy.type='button';copy.textContent='复制链接';copy.onclick=async()=>{input.select();let ok=false;try{ok=document.execCommand('copy')}catch{}if(!ok&&navigator.clipboard){try{await navigator.clipboard.writeText(url);ok=true}catch{}}status.textContent=ok?'链接已复制，请粘贴发送给家人。':'请长按上方链接，选择复制后发送给家人。'};
  panel.append(text,input,copy,status);host.append(panel);panel.scrollIntoView({block:'nearest'});return status;
 }
+function showWechatShare(){
+ const previous=document.getElementById('wechatShareGuide');if(previous?.open)return;
+ const guide=document.createElement('dialog');guide.id='wechatShareGuide';guide.className='wechat-share-guide';guide.setAttribute('aria-label','微信分享提示');
+ guide.innerHTML='<div class="wechat-share-tip"><svg aria-hidden="true" viewBox="0 0 100 100"><path d="M12 88 Q76 82 82 12 M58 30 L82 12 L94 42"/></svg><p>点击右上角 ···，转发给家人</p><button type="button" autofocus>知道了</button></div>';
+ const dismiss=()=>guide.close();guide.querySelector('button').onclick=dismiss;
+ guide.onclick=e=>{if(e.target===guide)dismiss()};guide.addEventListener('close',()=>guide.remove(),{once:true});
+ document.body.append(guide);guide.showModal();
+}
 async function shareLink(rows=[]){
  const url=rows.length?CollegeShare.link(rows):new URL('./',location.href).href,title=shareTitle(rows);
  updateTitle(rows.length===2?'compare':rows.length?'detail':null,rows.map(s=>s.school_id));
- // Visible inside the modal top layer, before any possibly blocked API call.
- const status=sharePanel(url);
- if(/MicroMessenger/i.test(navigator.userAgent))return;
- if(navigator.share){try{await navigator.share({title,text:shareDescription,url});status.textContent='已打开系统分享；也可复制上方链接。';return}catch(e){status.textContent=e.name==='AbortError'?'已取消系统分享，仍可复制上方链接。':'系统分享不可用，请复制上方链接。'}}
+ if(/MicroMessenger/i.test(navigator.userAgent)){
+  // WeChat forwards the address bar URL: persist the complete selection first.
+  if(rows.length)history.replaceState(history.state,'',url);
+  showWechatShare();return;
+ }
+ // Keep the direct user gesture for Safari/Chrome's system share sheet.
+ if(navigator.share){try{await navigator.share({title,url});return}catch(e){if(e.name==='AbortError')return}}
+ sharePanel(url);
 }
 function addLinkActions(rows){const box=document.createElement('div');box.className='share-link-actions';const share=document.createElement('button');share.textContent=$('dialog').classList.contains('school-detail')?'分享给家人':'分享给家人一起看';share.onclick=()=>shareLink(rows);box.append(share);($('dialogContent').querySelector('.share-link-actions')||$('dialogContent')).append(box)}
 $('homeShare').onclick=()=>shareLink();
