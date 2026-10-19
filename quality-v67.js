@@ -13,7 +13,7 @@ const V67=(()=>{
  function programs(s){const known=QualityData.rankings[s.school_id]||[];const ps=(Array.isArray(s.signature_programs)?s.signature_programs:[]).map(p=>{const f=QualityData.programs?.[s.school_id]?.[p.program_key];return f&&links(f.sources)?{...p,application_note:f.text,sources:f.sources}:p});
  const ranked=known.map(p=>'<details><summary>'+esc(p.name_cn)+' · 第'+p.rank+'名<small>'+esc(p.system+' · '+p.year)+'</small></summary>'+ps.filter(x=>x.name_cn===p.name_cn||p.name_cn.includes(x.name_cn)||s.school_id==='penn'&&/商|business|finance/i.test(x.name_cn+' '+x.name_en)).map(x=>x.application_note?'<p>'+esc(clean(x.application_note))+'</p>':'').join('')+links(p.sources)+'</details>');
  for(const p of ps){if(known.some(k=>k.name_cn.includes(p.name_cn)||p.name_cn?.includes(k.name_cn)||s.school_id==='penn'&&/商|business|finance/i.test(p.name_cn+' '+p.name_en)))continue;
- const title=p.name_cn||p.name_en;if(!title)continue;
+ const title=(p.name_cn||p.name_en)+(p.audit_status==='ranking_pending'?' · 排名待核验':'');if(!title)continue;
  const text=String(p.reason||''),rank=p.evidence_category==='本科专业排名'&&text.match(/(?:并列)?第\s*\d+\s*(?:名)?/),year=(text+' '+(p.sources||[]).map(s=>s.year).join(' ')).match(/U\.S\. News\s*(20\d{2})/i);
  if(rank&&year&&/本科/.test(text)&&links(p.sources))ranked.push('<details><summary>'+esc(title)+' · '+esc(rank[0])+'<small>U.S. News '+year[1]+' 本科专业排名</small></summary><p>'+esc(clean(text))+'</p>'+links(p.sources)+'</details>');
  else ranked.push(p.application_note?'<details><summary>'+esc(title)+'</summary><p>'+esc(clean(p.application_note))+'</p>'+links(p.sources)+'</details>':'<span class="program-tag">'+esc(title)+'</span>');

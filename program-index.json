@@ -1,6 +1,6 @@
 {
   "version": "2026-10-19",
-  "source": "Preserved 164-school TEST baseline (278 entries) plus 137 official-evidence undergraduate representative-program additions reviewed 2026-10-19; 301 schools, 415 entries.",
+  "source": "TEST program quality review 2026-10-19: 301 schools / 415 entries; automated checks cover all entries; source retrieval is not full evidence recertification.",
   "semantics": "Only recorded undergraduate signature/representative programs. Missing records mean unknown coverage, not absence. Category OR within each program; category and specific program AND across selectors.",
   "categories": [
     {
@@ -327,8 +327,7 @@
     "国际商务": {
       "name": "国际商务",
       "categories": [
-        "business",
-        "society"
+        "business"
       ],
       "original_names_en": [
         "International Business"
@@ -1499,7 +1498,8 @@
     "金融经济学（本科课程序列）": {
       "name": "金融经济学（本科课程序列）",
       "categories": [
-        "business"
+        "business",
+        "society"
       ],
       "original_names_en": [
         "Financial Economics Sequence"
@@ -1683,6 +1683,7 @@
     "生物医学科学": {
       "name": "生物医学科学",
       "categories": [
+        "science",
         "health"
       ],
       "original_names_en": [
@@ -1871,8 +1872,7 @@
     "新闻与大众传播": {
       "name": "新闻与大众传播",
       "categories": [
-        "arts",
-        "society"
+        "arts"
       ],
       "original_names_en": [
         "Journalism and Mass Communications"
@@ -1910,8 +1910,7 @@
     "博雅教育（经典著作课程）": {
       "name": "博雅教育（经典著作课程）",
       "categories": [
-        "humanities",
-        "science"
+        "humanities"
       ],
       "original_names_en": [
         "Liberal Arts (Great Books Program)"
@@ -2230,8 +2229,7 @@
     "建筑研究": {
       "name": "建筑研究",
       "categories": [
-        "arts",
-        "engineering"
+        "arts"
       ],
       "original_names_en": [
         "Architectural Studies"
@@ -2280,7 +2278,7 @@
           }
         ],
         "program_key": "applied_mathematics",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       },
       {
@@ -2298,7 +2296,7 @@
           }
         ],
         "program_key": "computer_science",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -2346,7 +2344,7 @@
           }
         ],
         "program_key": "chemistry",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       },
       {
@@ -2471,7 +2469,7 @@
           }
         ],
         "program_key": "hotel_administration",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       },
       {
@@ -2489,7 +2487,7 @@
           }
         ],
         "program_key": "applied_economics_management",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       },
       {
@@ -2522,7 +2520,7 @@
           }
         ],
         "program_key": "engineering_sciences",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "application_note": "高中申请者通过Dartmouth本科申请，不直接申请Thayer；AB不等于BE，BE可能需要额外一至三学期。",
         "evidence_category": "特色本科项目"
       },
@@ -2566,7 +2564,7 @@
           }
         ],
         "program_key": "public_policy",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -2586,7 +2584,7 @@
           }
         ],
         "program_key": "music_theatre",
-        "application_note": "须艺术试演及独立大学申请；试演页仍2025/2026，不能沿用截止日或材料为2027承诺。生产无对应行，保留研究。 2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。 原保留研究状态仅反映旧快照；新学校ID须在获批建档后映射。",
+        "application_note": "须艺术试演及独立大学申请；试演页仍2025/2026，不能沿用截止日或材料为2027承诺。2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。",
         "evidence_category": "特色本科项目"
       },
       {
@@ -2600,7 +2598,7 @@
           }
         ],
         "program_key": "sport_management",
-        "application_note": "现行要求320小时、4学分及先修/进度条件；岗位须落实，不保证NFL等历史机构；生产无对应行，保留研究。 2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。 原保留研究状态仅反映旧快照；新学校ID须在获批建档后映射。",
+        "application_note": "现行要求320小时、4学分及先修/进度条件；岗位须落实，不保证NFL等历史机构；2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -2639,7 +2637,7 @@
           }
         ],
         "program_key": "business_administration",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "需达到sophomore standing并完成BBA先修要求后进入项目；不要沿用旧版一律大三入读的说法。",
         "evidence_category": "特色本科项目"
       }
@@ -2768,7 +2766,7 @@
           }
         ],
         "program_key": "public_health_studies",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -2923,7 +2921,7 @@
           }
         ],
         "program_key": "journalism",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       },
       {
@@ -2941,7 +2939,7 @@
           }
         ],
         "program_key": "materials_science_engineering",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -2989,7 +2987,7 @@
     ],
     "nyu": [
       {
-        "reason": "Tisch本科电影与电视项目培养了多位知名导演、摄影师和编剧，具有可追溯的本科行业人才培养记录。",
+        "reason": "代表专业：Tisch设有本科电影与电视培养项目。现有院系页不足以单独证明长期行业声誉。",
         "name_cn": "电影与电视",
         "name_en": "Film & Television",
         "sources": [
@@ -3003,8 +3001,9 @@
           }
         ],
         "program_key": "film_television",
-        "application_note": "须按Tisch本科要求另交创作作品集。",
-        "evidence_category": "有据可查的长期声誉"
+        "application_note": "须按Tisch本科要求另交创作作品集。 代表专业；仅确认本科项目，不据此认定长期行业优势。",
+        "evidence_category": "特色本科项目",
+        "selection_basis": "representative"
       },
       {
         "reason": "Tisch本科戏剧以专业工作室训练结合大学课程，提供表演、音乐剧及舞台制作等不同路径。",
@@ -3083,21 +3082,20 @@
     ],
     "penn": [
       {
-        "reason": "Wharton在Poets&Quants 2026本科商学院榜单中排名第一，证据针对本科商科而非MBA。",
+        "reason": "代表专业：沃顿本科结合商科基础、文理课程与高年级集中方向；不以未完成复核的第三方排名作为优势依据。",
         "name_cn": "商科（Wharton）",
         "name_en": "Business (Wharton)",
         "sources": [
           {
-            "url": "https://poetsandquantsforundergrads.com/school-profile/university-of-pennsylvania-the-wharton-school/",
-            "year": "2026榜单"
-          },
-          {
-            "url": "https://undergrad.wharton.upenn.edu/faq/",
-            "year": "2026-10-13核查；学位为BS in Economics"
+            "url": "https://undergrad.wharton.upenn.edu/academics/",
+            "year": "现行本科培养页；未标学年；2026-10-19核查"
           }
         ],
         "program_key": "business",
-        "evidence_category": "本科专业排名"
+        "evidence_category": "特色本科项目",
+        "selection_basis": "representative",
+        "application_note": "代表专业：本科课程包含经济学、写作、微积分与Wharton 1010，之后可选择集中方向。第三方排名依据尚待核验，本页暂不展示该排名。",
+        "audit_status": "ranking_pending"
       },
       {
         "reason": "护理学院与Wharton联合授予BSN和经济学BS，适合同时关注临床护理与医疗管理的学生。",
@@ -3293,7 +3291,7 @@
           }
         ],
         "program_key": "architecture",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "application_note": "建筑本科申请须另交设计作品集；专业B.Arch路径包含实习年，应单独核对总学制。",
         "evidence_category": "特色本科项目"
       }
@@ -3378,7 +3376,7 @@
           }
         ],
         "program_key": "nursing",
-        "application_note": "限Camden传统BSN；新生、校内转入、校外转学路径不同；毕业不自动获得护士执照。生产无对应行，候选占位ID不能用于UPDATE；保留研究。 2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。 原保留研究状态仅反映旧快照；新学校ID须在获批建档后映射。",
+        "application_note": "限Camden传统BSN；新生、校内转入、校外转学路径不同；毕业不自动获得护士执照。生产无对应行，候选占位ID不能用于UPDATE；保留研究。 2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。",
         "evidence_category": "特色本科项目"
       },
       {
@@ -3396,7 +3394,7 @@
           }
         ],
         "program_key": "digital_studies",
-        "application_note": "校级页面称BA，院系明确joint BA major；按联合主修保守标注，第二主修及2027要求待核对；生产无对应行，保留研究，不映射到Newark或New Brunswick。 2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。 原保留研究状态仅反映旧快照；新学校ID须在获批建档后映射。",
+        "application_note": "校级页面称BA，院系明确joint BA major；按联合主修保守标注，第二主修及2027要求待核对；生产无对应行，保留研究，不映射到Newark或New Brunswick。 2027入学政策、材料与课程版本须再次核对，现行页面不等于周期全面冻结。",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -3519,7 +3517,7 @@
           }
         ],
         "program_key": "animal_science",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "application_note": "申报或转入须满足规定课程和GPA；此条是动物科学学士，不是兽医学专业学位或兽医学院录取保证。",
         "evidence_category": "特色本科项目"
       },
@@ -3583,7 +3581,7 @@
           }
         ],
         "program_key": "psychology",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "本证据专指认知科学系Psychology BS及其可选荣誉项目；不是对全校心理学所有学位的排名判断。荣誉项目另有年级、成绩及导师推荐要求。",
         "evidence_category": "特色本科项目"
       },
@@ -3598,7 +3596,7 @@
           }
         ],
         "program_key": "software_engineering",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -3650,7 +3648,7 @@
           }
         ],
         "program_key": "chemical_engineering",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       },
       {
@@ -3668,7 +3666,7 @@
           }
         ],
         "program_key": "physics",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "application_note": "特色理由专指CCS物理路径；须另交CCS申请、意向信、至少两封推荐信及所需学业材料，普通UCSB/L&S物理录取不等于CCS录取。不采用页面旧周期截止日期。",
         "evidence_category": "特色本科项目"
       }
@@ -3685,7 +3683,7 @@
           }
         ],
         "program_key": "bioengineering",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "属于selective major；新生须将目标生物工程专业列为第一志愿。未直录者后续申请受筛选课程及名额限制，大学录取不保证专业。",
         "evidence_category": "特色本科项目"
       },
@@ -3704,7 +3702,7 @@
           }
         ],
         "program_key": "artificial_intelligence",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "2026–2027仅接受招生办直接录取AI专业者，暂不允许校内转入；政策拟于2027复核，不推断2027秋申请规则。新项目尚无长期本科毕业成果。",
         "evidence_category": "特色本科项目"
       },
@@ -3727,7 +3725,7 @@
           }
         ],
         "program_key": "data_science",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "数据科学属selective major；大学录取不保证该专业。未直录的新生后续转入须参加筛选；2025秋及以后入学的转学生不具备该专业校内转入资格。",
         "evidence_category": "特色本科项目"
       }
@@ -3836,7 +3834,7 @@
           }
         ],
         "program_key": "business_administration",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "可通过高中Assured Enrollment、校内申请或大三转学进入；普通UNC录取不保证商科名额，获预留资格者仍须遵守项目条件。",
         "evidence_category": "特色本科项目"
       },
@@ -5878,7 +5876,7 @@
           }
         ],
         "program_key": "commerce",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "通常先进入UVA，完成规定先修课后申请McIntire并从大二开始三年课程；录取UVA不等于录取商学。",
         "evidence_category": "特色本科项目"
       },
@@ -5893,7 +5891,7 @@
           }
         ],
         "program_key": "nursing",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "高中申请者通常直接申请UVA School of Nursing的四年传统BSN；不要与RN-to-BSN或转学路径混用。",
         "evidence_category": "特色本科项目"
       }
@@ -5944,7 +5942,7 @@
           }
         ],
         "program_key": "human_organizational_development",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       },
       {
@@ -5958,7 +5956,7 @@
           }
         ],
         "program_key": "special_education",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "evidence_category": "特色本科项目"
       }
     ],
@@ -6011,7 +6009,7 @@
           }
         ],
         "program_key": "business_administration",
-        "selection_basis": "renowned",
+        "selection_basis": "representative",
         "application_note": "BSBA可作为大一入读项目申请；普通WashU录取及后续转学院应分别核对。",
         "evidence_category": "特色本科项目"
       },
@@ -6030,7 +6028,7 @@
           }
         ],
         "program_key": "architecture",
-        "selection_basis": "relative_strength",
+        "selection_basis": "representative",
         "application_note": "建筑申请推荐提交作品集；申请学院奖学金时作品集必需。此处是BA/BS，不应标成专业B.Arch。",
         "evidence_category": "特色本科项目"
       }

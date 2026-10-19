@@ -5920,19 +5920,6 @@ const QualityData = {
     }
   },
   "rankings": {
-    "penn": [
-      {
-        "name_cn": "沃顿 · 本科商科",
-        "rank": 1,
-        "system": "Poets&Quants",
-        "year": "2026",
-        "sources": [
-          {
-            "url": "https://poetsandquantsforundergrads.com/news/best-undergraduate-business-schools-of-2026/"
-          }
-        ]
-      }
-    ],
     "jhu": [
       {
         "name_cn": "生物医学工程",
