@@ -1,6 +1,6 @@
 /* Mobile navigation state and local preview behavior. */
 const stateFields=['search','region','tuition','size','international','programCategory','program','sort'];
-const homeTitle='美国大学选校指南';
+const homeTitle='明希教育｜美国大学选校指南';
 let routeBusy=false, listScroll=0, searchTimer, stateReady=false;
 let initialSavedState;try{initialSavedState=JSON.parse(sessionStorage.getItem('cc-mobile-v3')||'null')}catch{}
 function saveState(){
