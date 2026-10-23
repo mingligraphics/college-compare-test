@@ -1,0 +1,1 @@
+const CatalogueConfig = {"url": "https://hmnoqybdcfwqbjhorwzd.supabase.co", "publicKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhtbm9xeWJkY2Z3cWJqaG9yd3pkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg4Nzg5NjYsImV4cCI6MjEwNDQ1NDk2Nn0.7xrP42mlY5MeHZKH45LtON8wOsh0RNM1nz6ZEbQtid4"};

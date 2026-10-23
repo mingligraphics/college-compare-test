@@ -26,5 +26,5 @@ const ProgramFilters=(()=>{
   if(category||program)ps=ps.filter(p=>(!category||data.mapping[p.name_cn]?.categories.includes(category))&&(!program||p.name_cn===program));
   return ps.length?`<p class="program-preview">代表专业：${ps.map(p=>esc(p.name_cn)).join(' · ')}</p>`:'<p class="program-preview"><span>暂无专业数据 · 未录入不代表未开设</span></p>';
  }
- return {load,options,matches,searchText,cardHTML};
+ return {load,options,matches,searchText,cardHTML,entries,hasEntries:id=>entries(id).length>0};
 })();
