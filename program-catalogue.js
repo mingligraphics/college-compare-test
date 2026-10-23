@@ -24,10 +24,10 @@ const ProgramCatalogue=(()=>{
  return {load,entries,message,fallback,directory};
 })();
 const originalCardPrograms=ProgramFilters.cardHTML;
-ProgramFilters.cardHTML=(id,escape)=>ProgramFilters.hasEntries(id)?originalCardPrograms(id,escape):ProgramCatalogue.fallback(id,true);
+ProgramFilters.cardHTML=(id,escape)=>ProgramFilters.hasEntries(id)?originalCardPrograms(id,escape):PopularPrograms.html(id,true)||ProgramCatalogue.fallback(id,true);
 const originalAcademicPrograms=V65.programs;
 const catalogueAcademicRow=row=>row.signature_programs?.length?row:{...row,signature_programs:ProgramFilters.entries(row.school_id)};
 const catalogueHasOriginal=row=>catalogueAcademicRow(row).signature_programs?.length||QualityData.rankings[row.school_id]?.length;
-V65.programs=row=>(catalogueHasOriginal(row)?'<h3>优势／代表专业</h3>'+originalAcademicPrograms(catalogueAcademicRow(row)):ProgramCatalogue.fallback(row.school_id))+ProgramCatalogue.directory(row.school_id);
+V65.programs=row=>(catalogueHasOriginal(row)?'<h3>优势／代表专业</h3>'+originalAcademicPrograms(catalogueAcademicRow(row)):(PopularPrograms.html(row.school_id)||ProgramCatalogue.fallback(row.school_id)))+(catalogueHasOriginal(row)?PopularPrograms.html(row.school_id):'')+ProgramCatalogue.directory(row.school_id);
 const originalComparisonPrograms=V64.programRows;
-V64.programRows=ss=>ss.every(catalogueHasOriginal)?originalComparisonPrograms(ss.map(catalogueAcademicRow))+ss.map(s=>'<div class="compare-value program-cell">'+ProgramCatalogue.directory(s.school_id)+'</div>').join(''):ss.map(s=>'<div class="compare-value program-cell">'+V65.programs(s)+'</div>').join('');
+V64.programRows=ss=>ss.every(catalogueHasOriginal)?originalComparisonPrograms(ss.map(catalogueAcademicRow))+ss.map(s=>'<div class="compare-value program-cell">'+PopularPrograms.html(s.school_id)+ProgramCatalogue.directory(s.school_id)+'</div>').join(''):ss.map(s=>'<div class="compare-value program-cell">'+V65.programs(s)+'</div>').join('');

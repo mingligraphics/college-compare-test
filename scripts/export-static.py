@@ -19,6 +19,11 @@ def main():
     directory=request('discover-schools-test',{})
     ids=[row['school_id'] for row in directory]
     assert len(ids)==301 and len(set(ids))==301
+    popular_config=json.loads((ROOT/'catalogue-config.js').read_text().split('=',1)[1].strip().rstrip(';'))
+    req=urllib.request.Request(popular_config['url']+'/rest/v1/rpc/get_verified_popular_programs',headers={'apikey':popular_config['publicKey']})
+    with urllib.request.urlopen(req,timeout=45) as response: popular_rows=json.load(response)
+    popular={r['school_id']:r['popular_programs'] for r in popular_rows}
+    assert len(popular)==59 and sum(map(len,popular.values()))==179
     rows={}
     for i in range(0,len(ids),2):
         a,b=ids[i],ids[(i+1)%len(ids)]
@@ -28,12 +33,14 @@ def main():
     assert set(rows)==set(ids)
     for row in directory:
         assert all(rows[row['school_id']][k]==v for k,v in row.items()), 'Directory/detail mismatch'
+    for row in directory: row['popular_programs']=popular.get(row['school_id'],[])
+    for row in rows.values(): row['popular_programs']=popular.get(row['school_id'],[])
     payload={'schema':1,'count':301,'exportedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'directory':directory,'details':[rows[id] for id in ids]}
     raw=json.dumps(payload,ensure_ascii=False,separators=(',',':')).encode()
     digest=hashlib.sha256(raw).hexdigest()
     filename='schools-'+digest[:16]+'.json'
     target=ROOT/'data';target.mkdir(exist_ok=True)
     (target/filename).write_bytes(raw)
-    (ROOT/'snapshot-config.js').write_text('const CollegeSnapshot = Object.freeze('+json.dumps({'schema':1,'count':301,'url':'data/'+filename,'sha256':digest,'detailFields':FIELDS})+');\n')
+    (ROOT/'snapshot-config.js').write_text('const CollegeSnapshot = Object.freeze('+json.dumps({'schema':1,'count':301,'url':'data/'+filename,'sha256':digest,'detailFields':FIELDS+['popular_programs']})+');\n')
     print(json.dumps({'count':301,'bytes':len(raw),'gzipBytes':len(gzip.compress(raw)),'file':filename}))
 if __name__=='__main__': main()
